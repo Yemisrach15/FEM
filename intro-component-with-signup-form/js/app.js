@@ -46,7 +46,10 @@ form.addEventListener('submit', (e) => {
         errorIcon.classList.add("hidden");
         errorIcon.classList.remove("unhidden");
         validEmail = true;
-    }    
+    } else {
+        hiddens.classList.add("hidden");
+        hiddens.classList.remove("unhidden");
+    }
 
     // submit form if all validations are passed
     if (!valid.includes(false) && validEmail) {
