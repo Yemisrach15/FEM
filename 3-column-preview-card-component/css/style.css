@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+body{
+    background-color: hsl(0, 0%, 95%);
+}
+main{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 87%;
+    margin: 6em auto;
+    max-width: 500px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3em 3.2em 4em 3.2em;
+}
+section img{
+    margin-bottom: 2.3em;
+}
+section h1{
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-bottom: 0.7em;
+    text-transform: uppercase;
+}
+section p{
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.7;
+    margin-bottom: 2.7em;
+}
+section a{
+    background-color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+    border-radius: 40px;
+    padding: .8em 2em;
+    text-decoration: none;
+}
+main section:nth-of-type(1){
+    background-color: hsl(31, 77%, 52%);
+}
+main section:nth-of-type(1) a{
+    color: hsl(31, 77%, 52%);
+}
+main section:nth-of-type(2){
+    background-color: hsl(184, 100%, 22%);
+}
+main section:nth-of-type(2) a{
+    color: hsl(184, 100%, 22%);
+}
+main section:nth-of-type(3){
+    background-color: hsl(179, 100%, 13%);
+}
+main section:nth-of-type(3) a{
+    color: hsl(179, 100%, 13%);
+}
+main section:nth-of-type(1) a:hover, 
+main section:nth-of-type(2) a:hover, 
+main section:nth-of-type(3) a:hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+}
+
+@media screen and (min-width: 768px) {
+    main{
+        flex-direction: row;
+        max-width: 922px;
+        margin: 11.5em auto;
+        /* width: 64%; */
+    }
+    section p{
+        margin-bottom: 5.5em;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 840px) {
+    section a{
+        padding: .8em 1.2em;
+    }
+}

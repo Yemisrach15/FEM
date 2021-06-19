@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; margin: 0 auto; text-align: center; width: 87%;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="intro-desc">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. 
+      </p>
+    </div>
+
+    <div class="intro-try">
+
+      <div class="intro-try-desc">
+        <h2>
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </h2>
+      </div>
+
+      <div class="intro-try-form">
+        <form class="form" novalidate>
+          <div class="input">
+            <input type="text" name="fn" placeholder="First Name">
+            <div class="icon-error hidden"></div>
+            <div  class="hidden empty">
+              <small>First Name cannot be empty</small>
+            </div>
+          </div>
+          <div class="input">
+            <input type="text" name="ln" placeholder="Last Name">
+            <div class="icon-error hidden"></div>
+            <div  class="hidden empty">
+              <small>Last Name cannot be empty</small>
+            </div>
+          </div>
+          <div class="input">
+            <input type="email" name="email" placeholder="Email Address">
+            <div class="icon-error hidden"></div>
+            <div class="hidden empty">
+              <small>Email cannot be empty</small>
+            </div>
+            <div class="hidden wrong-format">
+              <small>Looks like this is not an email</small>
+            </div>
+          </div>
+          <div class="input">
+            <input type="password" name="pwd" placeholder="Password">
+            <div class="icon-error hidden"></div>
+            <div class="hidden empty">
+              <small>Password cannot be empty</small>
+            </div>
+          </div>
+          <div class="submit-btn">
+            <input type="submit" value="claim your free trial">
+          </div>
+        </form>
+
+        <p>
+          By clicking the button, you are agreeing to our <span>Terms and Services</span>
+        </p>
+      </div>
+      
+    </div>
+
+  </div>
+
+  
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Yemisrach15</a>.
+    </p>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    background: url("../images/bg-intro-mobile.png") hsl(0, 100%, 74%) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrapper{
+    width: 87%;
+    margin: 5.5em auto;
+    max-width: 460px;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+}
+.intro-desc{
+    margin-bottom: 3.9em;
+    text-align: center;
+}
+.intro-desc h1{
+    font-size: 1.6em;
+    letter-spacing: 1px;
+    margin-bottom: .8em;
+}
+.intro-desc p{
+    line-height: 1.65;
+}
+
+.intro-try-desc{
+    background: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px hsl(249, 10%, 26%, 18%);
+    margin-bottom: 1.5em;
+    padding: 1.2em 3em;
+    text-align: center;
+}
+.intro-try-desc h2{
+    font-weight: 400;
+    letter-spacing: -0.3px;
+}
+.intro-try-desc h2 span{
+    font-weight: 700;
+}
+.intro-try-form{
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px hsl(249, 10%, 26%, 18%);
+    padding: 1.4em 1.5em;
+}
+.intro-try-form *{
+    width: 100%;
+}
+.intro-try-form form input/*:not([type="submit"])*/{
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: .9em;
+    font-weight: 600;
+    padding: 1.2em 1.2em;
+    text-overflow: ellipsis;
+}
+.intro-try-form form input:focus-visible{
+    border-color: hsl(249, 10%, 26%);
+    color: hsl(249, 10%, 26%);
+    outline: none;
+}
+.intro-try-form form input[type="submit"]{
+    background: hsl(154, 59%, 51%);
+    border: none;
+    box-shadow: 0px 4px 0px hsl(155, 58%, 46%);
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 1.2px;
+    padding: calc(1.1em + 4px) 1em calc(1.1em - 4px);
+    text-transform: uppercase;
+    transition: ease-out 0.1s;
+    white-space: normal;
+}
+.intro-try-form form input[type="submit"]:hover{
+    box-shadow: 0px 4px 0px hsl(154, 59%, 51%);
+    transform: translateY(4px);
+}
+.intro-try-form p, .intro-try-form p span{
+    font-size: .7rem;
+}
+.intro-try-form p{
+    box-sizing: border-box;
+    color: hsl(246, 25%, 77%);
+    letter-spacing: -0.1px;
+    line-height: 1.8;
+    padding: 0em 1.8em;
+    text-align: center;
+}
+.intro-try-form p span{
+    color: hsl(1, 73%, 76%);
+    font-weight: 600;
+}
+.intro-try-form form > div{
+    margin-bottom: 1em;
+    position: relative;
+}
+.icon-error{
+    background: url("../images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 17px;
+    right: 24px;
+}
+.intro-try-form form > div div{
+    text-align: right;
+}
+.intro-try-form form > div small{
+    color: hsl(0, 100%, 74%);
+    font-size: .7em;
+    font-style: italic;
+}
+.hidden{
+    display: none;
+    transition: ease-in-out 1s;
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        background: url("../images/bg-intro-desktop.png") hsl(0, 100%, 74%);
+        background-size: 100%;
+    }
+
+    .wrapper{
+        width: 77%;
+        margin: 7.5em auto;
+        max-width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 2em;
+    }
+    .wrapper > div{
+        flex: 1;
+    }
+    .intro-desc{
+        margin-top: 4.8em;
+        text-align: left;
+    }
+    .intro-desc h1{
+        font-size: 3em;
+        letter-spacing: 0.6px;
+        line-height: 1.1;
+        margin-bottom: 0.6em;
+    }
+    .intro-try-form{
+        padding: 2.4em 2.5em;
+    }
+    .intro-try-form form input{
+        padding: 1.2em 2em;
+    }
+    .intro-try-form form > div{
+        margin-bottom: 1.25em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .wrapper{
+        width: 60%;
+        margin: 5.5em auto;
+        flex-direction: column;
+    }
+    .intro-desc{
+        margin-top: 0;
+        text-align: center;
+    }
+}

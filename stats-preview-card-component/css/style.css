@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: hsl(233, 47%, 7%);
+    color: white;
+}
+.container{
+    width: 87%;
+    margin: 5.7em auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 590px;
+}
+.card-img{
+    background-image: url("../images/image-header-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 240px;
+    position: relative;
+    width: 100%;
+}
+.card-img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsl(277, 94%, 41%, 84%);
+    height: 100%;
+    width: 100%;
+    filter: opacity(0.8) brightness(0.6);
+}
+.card-img img{
+    width: 100%;
+}
+.card-desc > div{
+    background-color: hsl(244, 38%, 16%);
+    padding: 2.5em 2em .8em 2em;
+    text-align: center;
+}
+.card-desc h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8em;
+    letter-spacing: .8px;
+    line-height: 35px;
+    margin-bottom: .5em;
+}
+.card-desc h1 span.violet{
+    color: hsl(277, 64%, 61%);
+    font-size: 1em;
+}
+.card-desc > div > p{
+    line-height: 25px;
+    margin-bottom: 2.5em;
+}
+
+.card-extras{
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+}
+.card-extras div{
+    margin-bottom: 1.3em;
+}
+.card-extras h2{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6em;
+}
+.card-extras p, .card-extras div:nth-child(3) h2{
+    text-transform: uppercase;
+}
+.card-extras p{
+    font-size: .85em;
+    letter-spacing: .5px;
+}
+
+
+@media screen and (min-width: 1110px) {
+    .container{
+        flex-direction: row-reverse;
+        max-width: 1110px;
+        margin: 11.7em auto;
+    }
+    .card-img, .card-desc{
+        flex: 1 1 0px;
+        width: 0;
+    }
+    .card-img{
+        background-image: url("../images/image-header-desktop.jpg");
+        height: auto;
+    }
+    .card-desc > div{
+        padding: 5em 5em 4em 4.8em;
+        text-align: left;
+    }
+    .card-desc h1{
+        font-size: 2.3em;
+        line-height: 41.5px;
+        letter-spacing: .5px;
+        margin-bottom: .8em;
+    }
+    .card-desc > div > p{
+        margin-bottom: 4.8em;
+        margin-right: 3em;
+    }
+    .card-extras{
+        flex-direction: row;
+    }
+    .card-extras div{
+        margin-bottom: 0;
+        margin-right: 4.5em;
+    }
+    .card-extras p{   
+        font-family: 'Lexend Deca', sans-serif;
+    }
+}
