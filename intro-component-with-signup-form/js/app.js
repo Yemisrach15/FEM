@@ -33,13 +33,18 @@ form.addEventListener('submit', (e) => {
 
     // validate email address pattern
     hiddens = emailInput.parentElement.querySelector(".wrong-format");
+    errorIcon = emailInput.parentElement.querySelector(".icon-error");
     if (emailInput.value != "" && !regularExpression.test(emailInput.value)){
         hiddens.classList.remove("hidden");
         hiddens.classList.add("unhidden");
+        errorIcon.classList.remove("hidden");
+        errorIcon.classList.add("unhidden");
         validEmail = false;
     } else if (emailInput.value != "" && regularExpression.test(emailInput.value)){
         hiddens.classList.add("hidden");
         hiddens.classList.remove("unhidden");
+        errorIcon.classList.add("hidden");
+        errorIcon.classList.remove("unhidden");
         validEmail = true;
     }    
 
