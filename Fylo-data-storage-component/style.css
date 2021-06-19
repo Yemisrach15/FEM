@@ -1,0 +1,181 @@
+body{
+    background: url(bg-mobile.png);
+    background-size: cover;
+    color: #fff;
+    margin: 35% 7%;
+    font-size: 14px;
+}
+
+/* Fylo Logo Section */
+
+.fylo{
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 90px 10px 10px;
+    padding: 10% 25% 10% 10%;
+}
+.icons{
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 12px;
+    display: inline-block;
+    height: 48px;
+    margin: 15% 6% 0 0;
+    position: relative;
+    width: 48px;
+}
+.file-icon::after, .folder-icon::after, .upload-icon::after{
+    content: "";
+    height: 22px;
+    width: 22px;
+    position: absolute;
+}
+.file-icon::after{
+    background: url(icon-document.svg) no-repeat;
+    background-size: contain;
+    left: 15px;
+    top: 13px;
+}
+.folder-icon::after{
+    background: url(icon-folder.svg) no-repeat;
+    background-size: contain;
+    left: 13px;
+    top: 15px;
+}
+.upload-icon::after{
+    background: url(icon-upload.svg) no-repeat;
+    background-size: contain;
+    left: 13px;
+    top: 16px;
+}
+
+
+/* Storage Status section */
+
+.storage-status{
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    color: hsl(243, 100%, 93%);
+    font-family: 'Raleway', sans-serif;
+    margin-top: 5%;
+    padding: 10% 10% 15% 10%;
+    position: relative;
+    text-align: center;
+}
+.progress{
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 30px;
+    box-sizing: border-box;
+    height: 20px;
+    margin-bottom: 10%;
+    padding: 3px;
+    position: relative;
+    width: 100%;
+}
+.progress-gradient{
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 30px;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+    width: 70%;
+}
+.progress-circle{
+    background-color: #fff;
+    border-radius: 100%;
+    height: 11px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 11px;
+}
+.progress-start, .progress-end{
+    font-size: .75rem;
+    position: absolute;
+    top: 145%;
+}
+.progress-start{
+    left: 0;
+}
+.progress-end{
+    right: 0;
+}
+.left-storage{
+    background-color: #fff;
+    border-radius: 10px;
+    bottom: -30px;
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 700;
+    left: 22.5%;
+    position: absolute;
+    width: 55%;
+}
+.left-storage p{
+    margin: 10px;
+}
+.small{
+    color: hsl(229, 7%, 55%);
+    font-size: 10px;
+    letter-spacing: .7px;
+    position: relative;
+    top: -8px;
+}
+
+
+@media screen and (min-width: 376px){
+
+    body{
+        background: hsl(229, 57%, 11%);
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+    
+    body::before{
+        content: "";
+        background: url(bg-desktop.png) no-repeat;
+        background-size: cover;
+        min-width: 100%;
+        height: 50vh;
+        position: fixed;
+        top: 50%;
+        z-index: -1;
+    }
+    .container{
+        position: relative;
+    }
+    .fylo, .storage-status{
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        box-sizing: border-box;
+        bottom: -435px;
+    }
+    .fylo{
+        left: 15%;
+        width: 22%;
+        padding: 2%;
+    }
+    .storage-status{
+        left: 40%;
+        width: 47%;
+        padding: 1% 2%;
+        text-align: left;
+    }
+    .left-storage{
+        width: 23%;
+        height: 45%;
+        position: absolute;
+        top: -45px;
+        left: 465px;
+    }
+    .left-storage::after{
+        content: "";
+        border-top: 25px solid #fff;
+        border-left: 25px solid transparent;
+        position: absolute;
+        right: 0;
+        bottom: -18px;
+    }
+}

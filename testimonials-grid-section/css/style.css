@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+body{
+    background: hsl(210, 46%, 95%);
+}
+
+.wrapper{
+    display: grid;
+    gap: 1.8em;
+    padding: 5.5em 0;
+    margin: 0 auto;
+    max-width: 550px;
+    width: 87%;
+}
+
+article{
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px 0px hsla(0, 0%, 73%, 0.451);
+    padding: 1.8em 2.4em;
+}
+article img{
+    border: solid 2px hsla(263, 90%, 68%);
+    border-radius: 50%;
+    height: 28px;
+}
+.profile{
+    display: flex;
+}
+.profile .profile-name{
+    margin-left: 1em;
+}
+.profile-name h2{
+    font-weight: 400;
+}
+.verified{
+    font-size: .85em;
+    opacity: 50%;
+}
+article h1{
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: .35px;
+    margin: .8em 0;
+}
+article p{
+    line-height: 1.4;
+    margin-bottom: .7em;
+    opacity: 70%;
+}
+
+article:nth-child(1){
+    background: url(../images/bg-pattern-quotation.svg) no-repeat, hsl(263, 55%, 52%);
+    background-position: top right 1.8em;    
+}
+article:nth-child(2){
+    background: hsl(217, 19%, 35%);
+}
+article:nth-child(3){
+    background: hsl(0, 0%, 100%);
+}
+article:nth-child(4){
+    background: hsl(219, 29%, 14%);
+}
+article:nth-child(5){
+    background: hsl(0, 0%, 100%);
+}
+article:nth-child(1), article:nth-child(2), article:nth-child(4){
+    color: hsl(0, 0%, 100%);
+}
+article:nth-child(3), article:nth-child(5){
+    color: hsl(217, 19%, 35%);
+}
+article:nth-child(2) img, article:nth-child(3) img, article:nth-child(5) img{
+    border-color: transparent;
+}
+
+@media only screen and (min-width: 768px){
+    .wrapper{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        margin-top: 7em;
+        min-width: 730px;
+        max-width: 1180px;
+        width: 77%;
+    }
+    article:nth-child(1){
+        grid-area: 1 / span 2;
+        background-position: top right 20%;
+    }
+    article:nth-child(2){
+        grid-area: 1 / 3;
+    }
+    article:nth-child(3){
+        grid-area: 2 / 1;
+    }
+    article:nth-child(4){
+        grid-area: 2 / 2 / 3 / 4;
+    }
+    article:nth-child(5){
+        grid-area: 1 / 4 / 3 / 5;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1300px){
+    .wrapper{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+    article:nth-child(5){
+        grid-area: 3 / span 3;
+    }
+}

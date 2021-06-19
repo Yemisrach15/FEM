@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+h1, h2, h3{
+    color: hsl(234, 12%, 34%);
+}
+h1, h2{
+    font-size: 1.5em;
+    font-weight: 200;
+}
+h3{
+    font-size: 1.3em;
+    margin-bottom: .3em;
+}
+p{
+    color: hsl(229, 6%, 66%);
+    font-size: .95em;
+    line-height: 1.8;
+}
+.container{
+    margin: 5em auto;
+    width: 85%;
+}
+
+/* Header Section */
+
+header{
+    margin: 0 auto;
+    margin-bottom: 4em;
+    text-align: center;
+}
+header h2{
+    font-weight: 600;
+    margin-bottom: .6em;
+}
+
+/* Card-container Section */
+
+.card-container{
+    display: grid;
+    grid-gap: 2em;
+    justify-content: center;
+}
+.card{
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 15px 20px 0px hsl(229, 21%, 86%);
+    max-width: 365px;
+    overflow: hidden;
+}
+.top-accent{
+    height: 5px;
+}
+.card-1 .top-accent{
+    background-color: hsl(180, 62%, 55%);
+}
+.card-2 .top-accent{
+    background-color: hsl(0, 78%, 62%);
+}
+.card-3 .top-accent{
+    background-color: hsl(34, 97%, 64%);
+}
+.card-4 .top-accent{
+    background-color: hsl(212, 86%, 64%);
+}
+.content{
+    padding: 2em 1.8em;
+}
+.content P{
+    font-size: .85em;
+}
+.icon{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2.5em;
+    margin-bottom: 2%;
+}
+.icon img{
+    width: 23%;
+}
+
+/* For tablet and desktop size */
+
+@media only screen and (min-width: 768px) {
+    h1, h2{
+        font-size: 2.4em;
+    }
+    header{
+        max-width: 550px;
+    }
+    header p{
+        font-size: 1em;
+    }
+    .card-container{
+        grid-template-areas:
+        "a b d"
+        "a c d";
+    }
+    .card-1{
+        align-self: center;
+        grid-area: a;
+    }
+    .card-2{
+        grid-area: b;
+    }
+    .card-3{
+        grid-area: c;
+    }
+    .card-4{
+        align-self: center;
+        grid-area: d;
+    }
+}

@@ -1,0 +1,120 @@
+*{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(204, 43%, 93%);
+}
+h1{
+    color: hsl(179, 62%, 43%);
+    font-size: 1.5em; 
+    margin-bottom: 1em; 
+}
+h2{
+    font-size: 1.1em;
+    margin-bottom: 1em; 
+}
+p{
+    font-size: .95em;
+}
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0px hsl(219, 37%, 85%);
+    width: 45%;
+    min-width: 520px;
+    margin: 7.5em auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.desc, .subscription, .why-us{
+    padding: 2.3em; 
+}
+
+/* description section */
+.desc{
+    grid-column: span 2;
+    color: hsl(218, 22%, 67%);
+}
+.desc h2{
+    color: hsl(71, 73%, 54%);
+}
+.desc p{
+    line-height: 1.7;
+}
+
+/* subscription section */
+.subscription{
+    background-color: hsl(179, 62%, 43%);
+    border-bottom-left-radius: 5px;
+    color: #fff;
+}
+.subscription p:first-of-type{
+    color: hsla(223, 37%, 93%, 0.7);
+    margin-bottom: .7em;
+}
+.fee{
+    color: #fff;
+    font-size: 2.1em;
+    font-weight: 700;
+    margin-right: .25em;
+}
+.fee-dull{
+    vertical-align: super;
+}
+button{
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0px hsl(179, 58%, 33%);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 1.8em;
+    padding: 1em 2.5em;
+    width: 100%;
+}
+button:hover{
+    background-color: transparent;
+    border: 1px solid hsl(71, 73%, 54%);
+    color: hsl(71, 73%, 54%);
+}
+
+/* why-us section */
+.why-us{
+    background-color: hsl(179, 50%, 53%);
+    color: #fff;
+    border-bottom-right-radius: 5px;
+}
+ul{
+    margin-top: .2em;
+    list-style: none;
+}
+li{
+    color: hsl(204, 43%, 93%);
+    line-height: 1.7;
+    font-size: .85em;
+}
+
+@media only screen and (max-width: 600px){
+    .container{
+        grid-template-columns: none;
+        min-width: auto;
+        width: 85%;
+    }
+    .desc, .subscription, .why-us{
+        padding: 2em;
+    }
+    .desc{
+        grid-column: 1;
+    }
+    .subscription{
+        border-radius: 0;
+    }
+    .why-us{
+        border-bottom-left-radius: 5px;
+    }
+}
