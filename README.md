@@ -5,7 +5,7 @@ This repo contains all the solutions I have done for the frontendmentor.io chall
 
 #### Sunnyside agency landing page
 :arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/sunnyside-agency-landing-page)** <br>
-:arrow_upper_right: **[Live Site URL](https://fem-sunnyside-agency-landing-page.vercel.app/)
+:arrow_upper_right: **[Live Site URL](https://fem-sunnyside-agency-landing-page.vercel.app/)**
 
 
 #### Intro component with sign-up form
