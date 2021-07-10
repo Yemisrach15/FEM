@@ -3,6 +3,11 @@
 This repo contains all the solutions I have done for the frontendmentor.io challenges. 
 
 
+#### FAQ accordion card
+:arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/faq-accordion-card)** <br>
+:arrow_upper_right: **[Live Site URL](https://fem-faq-accordion-card-roan.vercel.app/)**
+
+
 #### Sunnyside agency landing page
 :arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/sunnyside-agency-landing-page)** <br>
 :arrow_upper_right: **[Live Site URL](https://fem-sunnyside-agency-landing-page.vercel.app/)**
