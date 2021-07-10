@@ -38,11 +38,9 @@ body{
             content: '';
             background: url('../images/bg-pattern-mobile.svg') no-repeat;
             background-size: contain;
-            // height: 140px;
             left: 11%;
             position: absolute;
             top: 120%;
-            // width: 240px;
             z-index: -1;
             height: 0;
             padding: 0;
@@ -127,35 +125,26 @@ body{
         margin-left: 3.5em;
         overflow: hidden;
         padding-bottom: 3em;
-        // position: relative;
 
         &::before{
             content: '';
             background: url('../images/illustration-box-desktop.svg') no-repeat;
             background-size: contain;
-            // left: 13%;
             position: absolute;
             height: 184px;
             width: 191px;
-            // top: 40%;
             z-index: 6;
             top: 16.9em;
             left: -4.1em;
         }
         .card-img{
             align-self: auto;
-            // height: auto;
             left: -7em;
-            // position: relative;
             top: 5.5em;
 
             &::after{
                 background: url('../images/bg-pattern-desktop.svg') no-repeat;
                 background-size: contain;
-                // height: 945px;
-                // left: -105%;
-                // top: -400%;
-                // width: 966px;
                 left: -105%;
                 top: -403%;
                 width: 205%;
