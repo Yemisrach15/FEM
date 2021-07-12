@@ -1,4 +1,5 @@
 .vscode
 *.md
+!README.md
 
 design/
