@@ -10,7 +10,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-bottom: 2em;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 
@@ -18,17 +18,37 @@
 </head>
 <body>
 
-  We're coming soon
+  <article class="card">
+    <div class="card__header">
+      <div class="card__logo"></div>
+    </div>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    <div class="card__hero">
+      <picture>
+        <source srcset="./images/hero-desktop.jpg" media="(min-width: 768px)">
+        <img class="card__img" src="./images/hero-mobile.jpg" alt="Image of model">
+      </picture>
+    </div>
 
-  Email Address
+    <div class="card__text">
+      <h1 class="card__title">We're <span class="card__title--black">coming soon</span></h1>
+      <p class="card__desc">
+        Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form class="form" action="/">
+        <input class="form__email" type="email" name="e" placeholder="Email Address">
+        <button class="form__submit" type="submit">
+          <!-- FIXME: remove line below if not needed -->
+          <!-- <img src="./images/icon-arrow.svg" alt="Sign up"> -->
+        </button>
+      </form>
+    </div>
+  </article>
   
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Yemisrach15</a>.
     </p>
   </footer>
 </body>
