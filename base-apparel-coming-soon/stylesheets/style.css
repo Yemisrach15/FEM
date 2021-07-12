@@ -104,6 +104,26 @@ body {
   color: #ce9797;
 }
 
+.form__error__icon {
+  background: url("../images/icon-error.svg") no-repeat;
+  background-size: contain;
+  height: 24px;
+  position: absolute;
+  right: 26%;
+  top: 30%;
+  width: 24px;
+  z-index: 3;
+}
+
+.form__error__desc {
+  color: #f96262;
+  font-size: .8em;
+  left: 7%;
+  letter-spacing: .7px;
+  position: absolute;
+  top: 120%;
+}
+
 .form__submit {
   background: url("../images/icon-arrow.svg") no-repeat, -webkit-gradient(linear, left top, right top, from(#f8bfbf), to(#ee8c8c));
   background: url("../images/icon-arrow.svg") no-repeat, linear-gradient(to right, #f8bfbf, #ee8c8c);
@@ -120,6 +140,7 @@ body {
   padding: 1.2em 1.6em;
   position: absolute;
   right: 0;
+  top: 0;
   width: 21%;
 }
 
@@ -130,6 +151,10 @@ body {
   background-position: center;
   -webkit-box-shadow: 0px 13px 20px 5px #ce979778;
           box-shadow: 0px 13px 20px 5px #ce979778;
+}
+
+.form--error {
+  border: 2px #f96262 solid;
 }
 
 @media screen and (min-width: 768px) {
@@ -145,7 +170,7 @@ body {
   .card::after {
     content: '';
     background: url("../images/bg-pattern-desktop.svg") no-repeat;
-    background-size: contain;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -211,7 +236,7 @@ body {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
   .card {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -221,7 +246,23 @@ body {
   .card::after {
     width: 50%;
   }
+  .card__header {
+    padding: 7.5% 10%;
+  }
+  .card__text {
+    padding: 3.5% 10% 10% 10%;
+  }
   .card__title {
     font-size: 2.5em;
   }
+  .form {
+    margin-right: 0;
+  }
+  .form__error__icon {
+    right: 5em;
+  }
+}
+
+.hidden {
+  display: none;
 }

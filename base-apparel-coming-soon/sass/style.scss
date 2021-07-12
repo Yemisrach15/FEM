@@ -80,7 +80,6 @@ body {
         border-radius: 2em;
         color: $neutral-color;
         font-family: 'Josefin sans', sans-serif;
-        // TODO: research on font inheritance
         font-size: inherit;
         letter-spacing: -.2px;
         padding: 1.2em 1.6em;
@@ -88,6 +87,24 @@ body {
         &::placeholder{
             color: $primary-color;
         }
+    }
+    &__error__icon{
+        background: url('../images/icon-error.svg') no-repeat;
+        background-size: contain;
+        height: 24px;
+        position: absolute;
+        right: 26%;
+        top: 30%;
+        width: 24px;
+        z-index: 3;
+    }
+    &__error__desc{
+        color: $primary-color-soft;
+        font-size: .8em;
+        left: 7%;
+        letter-spacing: .7px;
+        position: absolute;
+        top: 120%;
     }
     &__submit{
         background: url('../images/icon-arrow.svg') no-repeat, linear-gradient(to right, $gradient-light, $gradient-dark);
@@ -103,6 +120,7 @@ body {
         padding: 1.2em 1.6em;
         position: absolute;
         right: 0;
+        top: 0;
         width: 21%;
 
         &:hover{
@@ -111,6 +129,9 @@ body {
             background-position: center;
             box-shadow: 0px 13px 20px 5px #ce979778;
         }
+    }
+    &--error{
+        border: 2px $primary-color-soft solid;
     }
 }
 
@@ -124,7 +145,7 @@ body {
         &::after{
             content: '';
             background: url('../images/bg-pattern-desktop.svg') no-repeat;
-            background-size: contain;
+            background-size: cover;
             position: absolute;
             top: 0;
             left: 0;
@@ -136,18 +157,16 @@ body {
         &__header{
             grid-area: 1 / 1 / 2 / 2;
             padding: 7.5% 19%;
-            // padding: 4em 10em;
         }
         &__logo{
             min-width: 155px;
-            // width: 29%;
             height: 40%;
             width: 100%;
         }
         &__text{
             grid-area: 2 / 1 / 3 / 2;
             max-width: none;
-            padding: 3.5% 19% 10.2em 19.8%; // FIXME: not sure
+            padding: 3.5% 19% 10.2em 19.8%;
             text-align: left;
         }
         &__title{
@@ -166,7 +185,6 @@ body {
             grid-area: 1 / 2 / 3 / 3;
         }
         &__img{
-            // width: auto;
             height: 100%;
             object-fit: cover;
         }
@@ -183,7 +201,7 @@ body {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
     .card{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 4fr;
@@ -191,8 +209,26 @@ body {
         &::after{
             width: 50%;
         }
+        &__header{
+            padding: 7.5% 10%;
+        }
+        &__text{
+            padding: 3.5% 10% 10% 10%;
+        }
         &__title{
             font-size: 2.5em;
         }
     }
+    .form{
+        margin-right: 0;
+
+        &__error__icon{
+            right: 5em;
+        }
+    }
+}
+
+// js modifier
+.hidden{
+    display: none;
 }
