@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body>
+
+  <main class="container">
+    <div class="container__header">
+      <img src="./images/logo.svg" alt="Splitter">
+    </div>
+
+    <article class="card">
+    
+      <div class="card__form">
+        <form action="/">
+          <div class="card__form__input">
+            <label>Bill</label>
+            <input name="bill" type="number" placeholder="0" min="0">
+          </div>
+          <div class="card__form__input">
+            <label>Select Tip %</label>
+            <div>
+              <input type="radio" name="tip" value="5" id="value5">
+              <label for="value5">5%</label>
+
+              <input type="radio" name="tip" value="10" id="value10">
+              <label for="value10">10%</label>
+
+              <input type="radio" name="tip" value="15" id="value15">
+              <label for="value15">15%</label>
+
+              <input type="radio" name="tip" value="25">
+              <label for="value25">25%</label>
+
+              <input type="radio" name="tip" value="50">
+              <label for="value50">50%</label>
+
+              <input type="radio" name="tip" value="">
+              <label for="valueC">Custom</label>
+            </div>            
+          </div>
+          <div class="card__form__input">
+            <label>Number of People</label>
+            <input name="nop" type="number" placeholder="0" min="0">
+          </div>
+        </form>
+      </div>
+
+      <div class="card__display">
+        <div class="card__display__row">
+          <h1>
+            Tip Amount
+            <span>/ person</span>
+          </h1>
+          <p>$0.00</p>
+        </div>
+        <div class="card__display__row">
+          <h1>
+            Total
+            <span>/ person</span>
+          </h1>
+          <p>$0.00</p>
+        </div>
+      </div>
+      <div class="card__display__row">
+        <button>Reset</button>
+      </div>
+  
+    </article>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Yemisrach15</a>.
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
