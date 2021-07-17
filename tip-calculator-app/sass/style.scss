@@ -1,11 +1,340 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 @import 'variables';
 
+%focus-border{
+    &:focus-visible{
+        border: 2px solid $primary-color;
+        outline: none;
+    }
+}
+
+// TODO: improve effect
+%hover-effect{
+    &:hover{
+        background: $primary-color-hover;
+        // box-shadow: inset 0 0 0 25px $primary-color-hover;
+        color: $primary-color-100;
+        transform: scale3d(.95, .95, .95);
+    }
+}
+
+%transition-on-hover{
+    transition: .2s ease-in;
+}
+
 // reset
 *, *::before, *::after{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Space Mono', monospace;
     font-size: 24px;
 }
 
+body{
+    background: $primary-color-400;
+    min-height: 100vh;
+}
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+span{
+    font-size: 1em;
+}
+
+// remove arrows for input type number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.container{
+    margin: 2em auto;
+    max-width: 480px;
+    width: 100%;
+
+    &__header{
+        margin-bottom: 1.4em;
+        text-align: center;
+    }
+}
+
+.card{
+    background: $primary-color-600;
+    border-radius: 24px;
+    padding: 1.3em 1em;
+
+    &__form{
+        margin: 0 .4em 1.35em .3em;
+    }
+
+    &__display{
+        background: $primary-color-100;
+        border-radius: 14px;
+        color: $primary-color-600;
+        padding: 1.6em 1em 1em 1em;
+    }
+
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .4em .2em;
+        justify-content: space-between;
+        margin-bottom: 1em;
+
+        &__header{
+            font-size: .66em;
+            max-width: 7em;
+            width: 100%;
+
+            &__muted{
+                color: $primary-color-300;
+                display: block;
+                font-size: .8em;
+            }
+        }
+
+        &__desc{
+            color: $primary-color;
+            font-size: 1.3em;
+        }
+
+        &__btn{
+            color: $primary-color-100;
+            font-size: .8em;
+            font-weight: 700;
+            padding: .5em 1em;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        &:nth-of-type(3){
+            border-radius: 7px;
+            justify-content: center;
+            margin-top: 1.3em;
+            margin-bottom: 0;
+        }
+
+        &--cyan{
+            background: $primary-color;
+            color: $primary-color-100;
+
+            @extend %hover-effect;
+            @extend %transition-on-hover;
+        }
+    }
+}
+
+.form{
+    &__group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.2em;
+    }
+
+    &__label{
+        color: $primary-color-200;
+        font-size: .7em;
+        font-weight: 700;
+        letter-spacing: -.4px;
+        margin-bottom: .3em;
+        position: relative;
+    }
+
+    &__input{
+        background: $primary-color-500;
+        border: none;
+        border: 2px solid $primary-color-500;
+        border-radius: 8px;
+        color: $primary-color-100;
+        font-weight: 700;
+        padding: .3em .8em;
+        text-align: right;
+        width: 100%;
+
+        &__btns{
+            border: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .7em;
+            justify-content: space-around;
+            margin-top: .2em;
+            text-align: center;
+        }
+
+        &--transparent{
+            background: none;
+            padding: 0;
+        }
+
+        @extend %focus-border;
+    }
+
+    &__radio{
+        display: none;
+
+        &__group{
+            display: flex;
+            max-width: 150px;
+            // min-width: fit-content;
+            width: calc((100% - .7em) / 2);
+        }
+
+        &__label{
+            background: $primary-color-100;
+            border-radius: 5px;
+            color: $primary-color-600;
+            cursor: pointer;
+            padding: .25em .5em;
+            width: 100%;
+            
+            @extend %hover-effect;
+            @extend %transition-on-hover;
+
+            // &--gray{
+            //     background: $primary-color-500;
+            //     color: $primary-color-200;
+            // }
+        }
+
+        // FIXME: placeholder gets cut off at tablet size
+        &__input{
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: .85em;
+            // min-width: fit-content;
+            padding: 0em .5em;
+
+            @extend %focus-border;
+            &:focus-visible{
+                cursor: text;
+            }
+        }
+
+        &:checked ~ &__label{
+            background: $primary-color;
+            color: $primary-color-100;
+        }
+    }
+}
+
+.icon{
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        height: 17px;
+        width: 11px;
+    }
+
+    &--dollar::before{
+        background: url('../images/icon-dollar.svg') no-repeat;
+        background-size: contain;
+    }
+
+    &--person::before{
+        background: url('../images/icon-person.svg') no-repeat;
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        margin: 6.8em auto;
+        max-width: 922px;
+        width: 87%;
+
+        &__header{
+            margin-bottom: 3.2em;
+        }
+    }
+
+    .card{
+        box-shadow: 0 20px 20px 0 #7f9c9f40;
+        display: flex;
+        gap: 1.5em;
+        justify-content: space-between;
+        padding: 1.4em 1.35em 1.3em 2.05em;
+
+        &__form{
+            margin: 0;
+            margin-top: .55em;
+            width: 45%;
+        }
+
+        &__display{
+            display: flex;
+            flex-direction: column;
+            padding: 2.3em 1.7em 1em 1.7em;
+            width: 49.2%;
+        }
+
+        &__row{
+            // margin-bottom: 2.1em;
+
+            &__desc{
+                font-size: 2em;
+                font-weight: 700;
+                letter-spacing: -1px;
+                position: relative;
+                top: -.3em;
+            }
+            
+            &:nth-of-type(3){
+                margin-bottom: .7em;
+                margin-top: auto;
+            }
+        }
+    }
+
+    .form{
+        &__group{
+            margin-bottom: 1.6em;
+
+            &:nth-of-type(3){
+                margin-bottom: .6em;
+            }
+        }
+
+        &__input{
+            &__btns{
+                justify-content: flex-start;
+            }
+        }
+
+        &__radio{
+            &__group{
+                max-width: 100%;
+                width: calc((100% - 1.4em) / 3);
+            }
+        }
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.text-error{
+    color: $accent-color;
+    margin-left: auto;
+    position: absolute;
+    right: 0;
+}
+
+.border-error{
+    border-color: $accent-color;
+}

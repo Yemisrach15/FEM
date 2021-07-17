@@ -27,57 +27,75 @@
     
       <div class="card__form">
         <form action="/">
-          <div class="card__form__input">
-            <label>Bill</label>
-            <input name="bill" type="number" placeholder="0" min="0">
+          <div class="form__group">
+            <label class="form__label">Bill</label>
+            <span class="icon icon--dollar">
+              <input class="form__input" name="bill" type="number" placeholder="0" min="0">
+            </span>
           </div>
-          <div class="card__form__input">
-            <label>Select Tip %</label>
-            <div>
-              <input type="radio" name="tip" value="5" id="value5">
-              <label for="value5">5%</label>
+          <div class="form__group">
+            <label class="form__label">Select Tip %</label>
+            <div class="form__input form__input__btns form__input--transparent">
+              <div class="form__radio__group">
+                <input class="form__radio" type="radio" name="tip" value="5" id="value5">
+                <label class="form__radio__label" for="value5">5%</label>
+              </div>
 
-              <input type="radio" name="tip" value="10" id="value10">
-              <label for="value10">10%</label>
+              <div class="form__radio__group">
+                <input class="form__radio" type="radio" name="tip" value="10" id="value10">
+                <label class="form__radio__label" for="value10">10%</label>
+              </div>
 
-              <input type="radio" name="tip" value="15" id="value15">
-              <label for="value15">15%</label>
+              <div class="form__radio__group">
+                <input class="form__radio" type="radio" name="tip" value="15" id="value15">
+                <label class="form__radio__label" for="value15">15%</label>
+              </div>
 
-              <input type="radio" name="tip" value="25">
-              <label for="value25">25%</label>
+              <div class="form__radio__group">
+                <input class="form__radio" type="radio" name="tip" value="25" id="value25">
+                <label class="form__radio__label" for="value25">25%</label>
+              </div>
 
-              <input type="radio" name="tip" value="50">
-              <label for="value50">50%</label>
+              <div class="form__radio__group">
+                <input class="form__radio" type="radio" name="tip" value="50" id="value50">
+                <label class="form__radio__label" for="value50">50%</label>
+              </div>
 
-              <input type="radio" name="tip" value="">
-              <label for="valueC">Custom</label>
+              <div class="form__radio__group">
+                <input class="form__input form__radio__input" type="number" placeholder="Custom" min="0">
+              </div>
             </div>            
           </div>
-          <div class="card__form__input">
-            <label>Number of People</label>
-            <input name="nop" type="number" placeholder="0" min="0">
+          <div class="form__group">
+            <label class="form__label">
+              Number of People
+              <span class="text-error hidden">Can't be zero</span>
+            </label>
+            <span class="icon icon--person">
+              <input class="form__input" name="nop" type="number" placeholder="0" min="0">
+            </span>
           </div>
         </form>
       </div>
 
       <div class="card__display">
-        <div class="card__display__row">
-          <h1>
+        <div class="card__row">
+          <h1 class="card__row__header">
             Tip Amount
-            <span>/ person</span>
+            <span class="card__row__header__muted">/ person</span>
           </h1>
-          <p>$0.00</p>
+          <p class="card__row__desc">$0.00</p>
         </div>
-        <div class="card__display__row">
-          <h1>
+        <div class="card__row">
+          <h1 class="card__row__header">
             Total
-            <span>/ person</span>
+            <span class="card__row__header__muted">/ person</span>
           </h1>
-          <p>$0.00</p>
+          <p class="card__row__desc">$0.00</p>
         </div>
-      </div>
-      <div class="card__display__row">
-        <button>Reset</button>
+        <div class="card__row card__row--cyan">
+          <button class="card__row__btn">Reset</button>
+        </div>
       </div>
   
     </article>
