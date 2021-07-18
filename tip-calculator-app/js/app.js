@@ -7,6 +7,7 @@ let tipInput;
 
 let tipAmountDisplay = document.querySelector('.tip-amount');
 let totalAmountDisplay = document.querySelector('.total-amount');
+let textError = document.querySelector('.text-error');
 
 // reset all to default values when reset button gets clicked
 resetBtn.addEventListener('click', resetAll);
@@ -38,6 +39,10 @@ function resetAll(){
     // clear result display
     tipAmountDisplay.innerHTML = "$0.00";
     totalAmountDisplay.innerHTML = "$0.00";
+
+    // clear error message
+    peopleInput.classList.remove('border-error');
+    textError.classList.add('hidden');
 }
 
 function calculateTip(){
@@ -45,24 +50,39 @@ function calculateTip(){
     let bill = Number(billInput.value);
     let people = Number(peopleInput.value);
     let tip;
-
-    if(!tipInput){
-        tip = Number(customTipInput.value) / 100;
-    } else{
-        tip = Number(tipInput.value);
-    }
-
-    let tipAmount = (bill * tip) / people;
-    let total = (bill * (1 + tip)) / people;
-
-    if (isNumeric(tipAmount) && isNumeric(total)){
-        if (tipAmount != 0 && total != 0) {
-            tipAmountDisplay.innerHTML = "$" + Math.round(tipAmount * 100) / 100;
-            totalAmountDisplay.innerHTML = "$" + Math.round(total * 100) / 100;
-        } 
+    
+    // display error message if number of people is equal to zero
+    if(people == 0){
+        peopleInput.classList.add('border-error');
+        textError.classList.remove('hidden');
     } else {
-        tipAmountDisplay.innerHTML = "$0.00";
-        totalAmountDisplay.innerHTML = "$0.00";
+        peopleInput.classList.remove('border-error');
+        textError.classList.add('hidden');
+    };
+
+    // get tip percentage either from selected button or custom input
+    if(tipInput){
+        tip = Number(tipInput.value);
+    } else{
+        if(customTipInput.value != ""){
+            tip = Number(customTipInput.value) / 100;
+        }
+    };
+
+    // calculate if inputs are non-negative
+    if (isNonNegative(bill) && isNonNegative(people) && isNonNegative(tip)){
+        let tipAmount = (bill * tip) / people;
+        let total = (bill * (1 + tip)) / people;
+
+        if (isNumeric(tipAmount) && isNumeric(total)){
+            if (tipAmount != 0 && total != 0) {
+                tipAmountDisplay.innerHTML = "$" + Math.round(tipAmount * 100) / 100;
+                totalAmountDisplay.innerHTML = "$" + Math.round(total * 100) / 100;
+            } 
+        } else {
+            tipAmountDisplay.innerHTML = "$0.00";
+            totalAmountDisplay.innerHTML = "$0.00";
+        }
     }
 }
 
@@ -79,4 +99,8 @@ function clearCustomTip(){
 
 function isNumeric(n){
     return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function isNonNegative(n){
+    return n >= 0;
 }
