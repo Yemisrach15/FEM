@@ -146,8 +146,17 @@ input[type=number] {
 
 .form__label {
   color: #5e7a7d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: .7em;
   font-weight: 700;
+  gap: 0 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   letter-spacing: -.4px;
   margin-bottom: .3em;
   position: relative;
@@ -315,11 +324,8 @@ input[type=number] {
 
 .text-error {
   color: #ff5c33;
-  margin-left: auto;
-  position: absolute;
-  right: 0;
 }
 
 .border-error {
-  border-color: #ff5c33;
+  border-color: #ff5c33 !important;
 }

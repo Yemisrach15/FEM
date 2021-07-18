@@ -12,7 +12,6 @@
 %hover-effect{
     &:hover{
         background: $primary-color-hover;
-        // box-shadow: inset 0 0 0 25px $primary-color-hover;
         color: $primary-color-100;
         transform: scale3d(.95, .95, .95);
     }
@@ -144,8 +143,12 @@ input[type=number] {
 
     &__label{
         color: $primary-color-200;
+        display: flex;
+        flex-wrap: wrap;
         font-size: .7em;
         font-weight: 700;
+        gap: 0 1em;
+        justify-content: space-between;
         letter-spacing: -.4px;
         margin-bottom: .3em;
         position: relative;
@@ -186,7 +189,6 @@ input[type=number] {
         &__group{
             display: flex;
             max-width: 150px;
-            // min-width: fit-content;
             width: calc((100% - .7em) / 2);
         }
 
@@ -200,11 +202,6 @@ input[type=number] {
             
             @extend %hover-effect;
             @extend %transition-on-hover;
-
-            // &--gray{
-            //     background: $primary-color-500;
-            //     color: $primary-color-200;
-            // }
         }
 
         // FIXME: placeholder gets cut off at tablet size
@@ -212,7 +209,6 @@ input[type=number] {
             border-radius: 5px;
             cursor: pointer;
             font-size: .85em;
-            // min-width: fit-content;
             padding: 0em .5em;
 
             @extend %focus-border;
@@ -283,8 +279,6 @@ input[type=number] {
         }
 
         &__row{
-            // margin-bottom: 2.1em;
-
             &__desc{
                 font-size: 2em;
                 font-weight: 700;
@@ -330,11 +324,8 @@ input[type=number] {
 
 .text-error{
     color: $accent-color;
-    margin-left: auto;
-    position: absolute;
-    right: 0;
 }
 
 .border-error{
-    border-color: $accent-color;
+    border-color: $accent-color !important;
 }
