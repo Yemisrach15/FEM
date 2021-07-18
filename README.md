@@ -2,6 +2,11 @@
 
 This repo contains all the solutions I have done for the frontendmentor.io challenges. 
 
+#### Tip calculator app
+:arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/tip-calculator-app)** <br>
+:arrow_upper_right: **[Live Site URL](https://fem-tip-calculator-app.vercel.app/)**
+
+
 #### Base apparel coming soon
 :arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/base-apparel-coming-soon)** <br>
 :arrow_upper_right: **[Live Site URL](https://fem-base-apparel-coming-soon-kappa.vercel.app/)**
