@@ -92,7 +92,8 @@ Another lesson I learned is `<input>` does not have `::after` and `::before` pse
 }
 ```
 
-The final result looks like this :point-down:
+The final result looks like this 👇
+
 ![](./images/design-icon.png)
 
 
