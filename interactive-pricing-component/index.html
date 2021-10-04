@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <link rel="stylesheet" href="./stylesheets/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="article">
+    <div class="article__header">
+      <h1 class="article__header--big">Simple, traffic-based pricing</h1>
+      <p class="article__header--small">Sign-up for our 30-day trial. No credit card required.</p>
+    </div>
+    <div class="card">
+      <div class="card__price">
+        <p class="card__text uppercase">100k Pageviews</p>
+        <div class="slider">
+          <input type="range" name="r" min="0" max="4" step="1" value="2" id="price-input">
+        </div>
+        <p class="card__text">
+          <span class="card__text--big">$ 16.00 </span>
+          <span class="card__text--sub">/ month</span>
+        </p>
+      </div>
+
+      <div class="card__billing">
+        <p class="card__text billing__text">Monthly Billing</p>
+        <label class="toggle">
+          <input class="toggle--input" type="checkbox">
+          <span class="toggle__btn"></span>
+        </label>
+        <p class="card__text billing__text">Yearly Billing <span class="card__text--highlight">-25%<span class="hidden"> discount</span></span></p>
+      </div>
+      <hr>
+      <div class="card__cta">
+        <ul class="list">
+          <li class="list__item">Unlimited websites</li>
+          <li class="list__item">100% data ownership</li>
+          <li class="list__item">Email reports</li>
+        </ul>
+        <div class="btn--dark">
+          <a class="" href="#">Start my trial</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Yemisrach15</a>.
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
