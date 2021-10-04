@@ -2,6 +2,10 @@
 
 This repo contains all the solutions I have done for the frontendmentor.io challenges. 
 
+#### Interactive pricing component
+:arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/interactive-pricing-component)** <br>
+:arrow_upper_right: **[Live Site URL](https://fem-interactive-pricing-component-yemisrach15.vercel.app/)**
+
 #### Tip calculator app
 :arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/tip-calculator-app)** <br>
 :arrow_upper_right: **[Live Site URL](https://fem-tip-calculator-app.vercel.app/)**
