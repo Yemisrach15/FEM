@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import 'variables';
+
+// reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
+body{
+    background: $netural-color-100;
+    color: white;
+}
+main{
+    margin: 4.5em auto;
+    width: 87%;
+}
+h1{
+    font-size: 1.4em;
+    font-weight: 300;
+    letter-spacing: -.7px;
+}
+h2{
+    font-size: 1.75em;
+    font-weight: 300;
+}
+h2 ~ p{
+    font-size: .84em;
+}
+button{
+    background: none;
+    border: none;
+    color: $netural-color-400;
+    cursor: pointer;
+}
+
+.card{
+    border-radius: $border-radius;
+    margin: 0 auto;
+    margin-bottom: 1.35em;
+    max-width: 340px;
+    overflow: hidden;
+
+    &--dark{
+        background: $netural-color-200;
+    }
+    &__profile{
+        align-items: center;
+        background: $primary-color-100;
+        border-radius: $border-radius;
+        display: flex;
+        gap: .8em;
+        overflow: hidden;
+        padding: 1.7em 1.6em;
+    }
+    &__img{
+        border: solid 3px white;
+        border-radius: 50%;
+        height: 4em;
+        width: auto;
+    }
+    &__period{
+        display: flex;
+        justify-content: space-between;
+        padding: 1.3em 1em 1.3em 1.9em;
+        button{
+            &:hover{
+                color: white;
+            }
+        }
+    }
+    &__sub{
+        border-radius: $border-radius;
+        margin-top: 2.1em;
+        padding: 1.5em 1.3em;
+        &:hover{
+            // background: $netural-color-300; //FIXME: incorrect color
+        }
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .5em;
+        p{
+            letter-spacing: .4px;
+        }
+    }
+    &__body{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.card:nth-of-type(2){
+    background: url(../images/icon-work.svg) no-repeat,$secondary-work;
+    background-position: right 1em top -.8em;
+}
+.card:nth-of-type(3){
+    background: url(../images/icon-play.svg) no-repeat,$secondary-play;
+    background-position: right 1em top -.8em;
+}
+.card:nth-of-type(4){
+    background: url(../images/icon-study.svg) no-repeat,$secondary-study;
+    background-position: right 1em top -.8em;
+}
+.card:nth-of-type(5){
+    background: url(../images/icon-exercise.svg) no-repeat,$secondary-exercise;
+    background-position: right 1em top -.8em;
+}
+.card:nth-of-type(6){
+    background: url(../images/icon-social.svg) no-repeat,$secondary-social;
+    background-position: right 1em top -.8em;
+}
+.card:nth-of-type(7){
+    background: url(../images/icon-self-care.svg) no-repeat,$secondary-selfcare;
+    background-position: right 1em top -.8em;
+}
+
+.text{
+    &--sup{
+        color: $netural-color-400;
+        font-size: .85em;
+        font-weight: 300;
+    }
+}
+
+.btn{
+    &--active{
+        color: white;
+    }
+    &--ellipsis{
+        opacity: .7;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main{
+        display: grid;
+        gap: 1.6em;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin: 14em auto;
+        max-width: 1110px;
+        width: 90%;
+    }
+    h1{
+        font-size: 2.4em;
+    }
+    h2{
+        font-size: 3em;
+    }
+    .card:nth-of-type(1){
+        grid-area: span 2 / 1;
+    }
+    .card{
+        margin: 0;
+        position: relative;
+        &__profile{
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 2.2em;
+            padding: 2em 1.6em 4.2em 1.6em;
+        }
+        &__img{
+            height: 4.6em;
+        }
+        &__period{
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 1.1em;
+            padding: 1.4em 1em 1.8em 1.8em;
+        }
+        &__sub{
+            bottom: 0;
+            height: 81%;
+            padding: 1.6em 1.7em 2.4em 1.7em;
+            position: absolute;
+            width: 100%;
+        }
+        &__top{
+            margin-bottom: 1.5em;
+        }
+        &__body{
+            align-items: flex-start;
+            flex-direction: column;
+            gap: .5em;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 965px) {
+    h1{
+        font-size: 1.6em !important;
+    } 
+    h2{
+        font-size: 2.2em !important;
+    }
+    .card{
+        &__profile{
+            padding: 2em 1.6em 3em 1.6em;
+        }
+        &__top{
+            p{
+                font-size: .85em;
+            }
+        }
+    }
+    .text{
+        &--sup{
+            margin-bottom: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .card{
+        &__profile{
+            flex-direction: column;
+            text-align: center;
+        }
+        &__period{
+            padding: 1em 1em;
+        }
+        &__top{
+            margin-bottom: 1.5em;
+        }
+        &__body{
+            align-items: flex-start;
+            flex-direction: column;
+            gap: .5em;
+        }
+    }
+}
