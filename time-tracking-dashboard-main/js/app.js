@@ -1,18 +1,33 @@
-let mainContainer = document.querySelector('main');
-let dailyBtn = document.querySelector('.btn-daily');
-let weeklyBtn = document.querySelector('.btn-weekly');
-let monthlyBtn = document.querySelector('.btn-monthly');
+let profileContainer = document.querySelector('.card:first-of-type');
+let dailyBtn = document.querySelector('#btn-daily');
+let weeklyBtn = document.querySelector('#btn-weekly');
+let monthlyBtn = document.querySelector('#btn-monthly');
+let data;
 
 fetch("data.json")
     .then(response => response.json())
     .then(json => {
-        mainContainer.innerHTML += displayWeekly(json);
+        data = json;
+        profileContainer.insertAdjacentHTML('afterend', displayWeekly(data));
     })
     .catch(e => console.log(e));
 
-//FIXME: async code blocking
 dailyBtn.addEventListener("click", () => {
-    console.log('clicked!');
+    document.querySelector('.btn--active').classList.remove('btn--active');
+    dailyBtn.classList.add('btn--active');
+    profileContainer.insertAdjacentHTML('afterend', displayDaily(data));
+});
+
+weeklyBtn.addEventListener("click", () => {
+    document.querySelector('.btn--active').classList.remove('btn--active');
+    weeklyBtn.classList.add('btn--active');
+    profileContainer.insertAdjacentHTML('afterend', displayWeekly(data));
+});
+
+monthlyBtn.addEventListener("click", () => {
+    document.querySelector('.btn--active').classList.remove('btn--active');
+    monthlyBtn.classList.add('btn--active');
+    profileContainer.insertAdjacentHTML('afterend', displayMonthly(data));
 });
 
 function displayDaily(json) {
