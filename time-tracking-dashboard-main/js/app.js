@@ -1,22 +1,19 @@
 let mainContainer = document.querySelector('main');
+let dailyBtn = document.querySelector('.btn-daily');
+let weeklyBtn = document.querySelector('.btn-weekly');
+let monthlyBtn = document.querySelector('.btn-monthly');
 
 fetch("data.json")
     .then(response => response.json())
     .then(json => {
         mainContainer.innerHTML += displayWeekly(json);
-        console.log(json);
-    });
+    })
+    .catch(e => console.log(e));
 
-let dailyBtn = document.querySelector('.btn-daily');
-let weeklyBtn = document.querySelector('.btn-weekly');
-let monthlyBtn = document.querySelector('.btn-monthly');
-
-//FIXME: not working. Reason not figured out yet
+//FIXME: async code blocking
 dailyBtn.addEventListener("click", () => {
     console.log('clicked!');
-    // document.querySelector('.btn--active').classList.remove('btn--active');
-    // dailyBtn.classList.add('btn--active');
-})
+});
 
 function displayDaily(json) {
     let cards = "";
