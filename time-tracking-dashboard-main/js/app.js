@@ -1,18 +1,51 @@
-let mainContainer = document.querySelector('main');
+let mainContainer = document.querySelector('#container');
 let dailyBtn = document.querySelector('.btn-daily');
-let weeklyBtn = document.querySelector('.btn-weekly');
-let monthlyBtn = document.querySelector('.btn-monthly');
+let weeklyBtn = document.querySelector('#btn-weekly');
+let monthlyBtn = document.querySelector('#btn-monthly');
+// create a global variable
 
-fetch("data.json")
-    .then(response => response.json())
-    .then(json => {
-        mainContainer.innerHTML += displayWeekly(json);
-    })
-    .catch(e => console.log(e));
-
+async function fetchAll() {
+let allData;
+  
+  try{
+  
+const res = await fetch('data.json');
+      // assign the variable to the returned data 
+        allData= await res.json();
+        
+        // if you want to display a default data e.g daily
+        // then uncomment the following line
+        
+        /*
+        mainContainer.insertAdjacentHTML('beforeend',displayDaily(allData))
+        */
+return allData
+}
+catch(err){
+  console.error(err)
+}
+}
+fetchAll()
 //FIXME: async code blocking
-dailyBtn.addEventListener("click", () => {
-    console.log('clicked!');
+dailyBtn.addEventListener("click", async() => {
+   let d=await fetchAll();
+   mainContainer.innerHTML=''
+
+     mainContainer.insertAdjacentHTML('beforeend',displayDaily(d))
+
+  // mainContainer.innerHTML+=displayDaily(d)
+});
+weeklyBtn.addEventListener("click", async () => {
+   let d=await fetchAll()
+mainContainer.innerHTML=''
+  mainContainer.insertAdjacentHTML('beforeend',displayWeekly(d))
+
+  // mainContainer.innerHTML+=displayWeekly(d)
+});
+monthlyBtn.addEventListener("click", async () => {
+    let d=await fetchAll();
+mainContainer.innerHTML=''
+  mainContainer.insertAdjacentHTML('beforeend',displayMonthly(d))
 });
 
 function displayDaily(json) {
@@ -34,8 +67,9 @@ function displayDaily(json) {
         `;
         cards += cardContent;
     })
+    return cards
 
-    return cards;
+    
 }
 
 function displayWeekly(json) {
@@ -83,3 +117,4 @@ function displayMonthly(json) {
 
     return cards;
 }
+
