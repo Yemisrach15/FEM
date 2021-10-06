@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 @import 'variables';
-
+// TODO: animate transitions
 // reset
 *{
     margin: 0;
@@ -237,5 +237,47 @@ button{
             flex-direction: column;
             gap: .5em;
         }
+    }
+}
+
+
+.card:not(:first-child) *:not(.card__sub){
+    animation: .7s ease-in-out 0s forwards slide-in;
+    opacity: 0;
+}
+.card:not(:first-child){
+    animation: .4s ease-in-out 0s forwards slide-in;
+    opacity: 0;
+}
+.card:nth-of-type(3){
+    animation-delay: .1s;
+}
+.card:nth-of-type(4){
+    animation-delay: .2s;
+}
+.card:nth-of-type(5){
+    animation-delay: .3s;
+}
+.card:nth-of-type(6){
+    animation-delay: .4s;
+}
+.card:nth-of-type(7){
+    animation-delay: .5s;
+}
+
+@keyframes slide-in{
+    from {
+        transform: translateY(-6%);
+        opacity: 0.2;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes btn-transition{
+    from{
+        
     }
 }
