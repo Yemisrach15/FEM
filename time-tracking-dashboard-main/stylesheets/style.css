@@ -40,6 +40,17 @@ button {
   cursor: pointer;
 }
 
+.card:not(:first-child), .card:not(:first-child) *:not(.card__sub, .btn--ellipsis) {
+  -webkit-animation: .7s ease-in-out 0s forwards slide-in;
+          animation: .7s ease-in-out 0s forwards slide-in;
+  opacity: 0;
+}
+
+.card__period button.btn--active {
+  -webkit-animation: .4s ease-out 0s forwards btn-transition;
+          animation: .4s ease-out 0s forwards btn-transition;
+}
+
 .card {
   border-radius: 1em;
   margin: 0 auto;
@@ -93,6 +104,11 @@ button {
   padding: 1.5em 1.3em;
 }
 
+.card__sub:hover {
+  -webkit-box-shadow: inset 0 0 100px 100px rgba(111, 118, 200, 0.356);
+          box-shadow: inset 0 0 100px 100px rgba(111, 118, 200, 0.356);
+}
+
 .card__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,26 +141,36 @@ button {
 }
 
 .card:nth-of-type(3) {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
   background: url(../images/icon-play.svg) no-repeat, #56c2e6;
   background-position: right 1em top -.8em;
 }
 
 .card:nth-of-type(4) {
+  -webkit-animation-delay: .15s;
+          animation-delay: .15s;
   background: url(../images/icon-study.svg) no-repeat, #ff5c7c;
   background-position: right 1em top -.8em;
 }
 
 .card:nth-of-type(5) {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
   background: url(../images/icon-exercise.svg) no-repeat, #4acf81;
   background-position: right 1em top -.8em;
 }
 
 .card:nth-of-type(6) {
+  -webkit-animation-delay: .25s;
+          animation-delay: .25s;
   background: url(../images/icon-social.svg) no-repeat, #7536d3;
   background-position: right 1em top -.8em;
 }
 
 .card:nth-of-type(7) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
   background: url(../images/icon-self-care.svg) no-repeat, #f1c65b;
   background-position: right 1em top -.8em;
 }
@@ -285,43 +311,6 @@ button {
   }
 }
 
-.card:not(:first-child) *:not(.card__sub) {
-  -webkit-animation: .7s ease-in-out 0s forwards slide-in;
-          animation: .7s ease-in-out 0s forwards slide-in;
-  opacity: 0;
-}
-
-.card:not(:first-child) {
-  -webkit-animation: .4s ease-in-out 0s forwards slide-in;
-          animation: .4s ease-in-out 0s forwards slide-in;
-  opacity: 0;
-}
-
-.card:nth-of-type(3) {
-  -webkit-animation-delay: .1s;
-          animation-delay: .1s;
-}
-
-.card:nth-of-type(4) {
-  -webkit-animation-delay: .2s;
-          animation-delay: .2s;
-}
-
-.card:nth-of-type(5) {
-  -webkit-animation-delay: .3s;
-          animation-delay: .3s;
-}
-
-.card:nth-of-type(6) {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
-}
-
-.card:nth-of-type(7) {
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
-}
-
 @-webkit-keyframes slide-in {
   from {
     -webkit-transform: translateY(-6%);
@@ -350,10 +339,26 @@ button {
 
 @-webkit-keyframes btn-transition {
   from {
+    color: #bdc1ff;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    color: white;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes btn-transition {
   from {
+    color: #bdc1ff;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    color: white;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
