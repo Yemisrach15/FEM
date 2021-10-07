@@ -2,8 +2,8 @@ let profileContainer = document.querySelector('.card:first-of-type');
 let dailyBtn = document.querySelector('#btn-daily');
 let weeklyBtn = document.querySelector('#btn-weekly');
 let monthlyBtn = document.querySelector('#btn-monthly');
-let data;
-
+let data, currentActiveBtn;
+// TODO: REMOVE DUPLICATE ON INSERTADJACENTHTML
 fetch("data.json")
     .then(response => response.json())
     .then(json => {
@@ -13,20 +13,32 @@ fetch("data.json")
     .catch(e => console.log(e));
 
 dailyBtn.addEventListener("click", () => {
-    document.querySelector('.btn--active').classList.remove('btn--active');
+    currentActiveBtn = document.querySelector('.btn--active')
+    currentActiveBtn.classList.remove('btn--active');
+    currentActiveBtn.disabled = false;
+
     dailyBtn.classList.add('btn--active');
+    dailyBtn.disabled = true;
     profileContainer.insertAdjacentHTML('afterend', displayDaily(data));
 });
 
 weeklyBtn.addEventListener("click", () => {
-    document.querySelector('.btn--active').classList.remove('btn--active');
+    currentActiveBtn = document.querySelector('.btn--active')
+    currentActiveBtn.classList.remove('btn--active');
+    currentActiveBtn.disabled = false;
+
     weeklyBtn.classList.add('btn--active');
+    weeklyBtn.disabled = true;
     profileContainer.insertAdjacentHTML('afterend', displayWeekly(data));
 });
 
 monthlyBtn.addEventListener("click", () => {
-    document.querySelector('.btn--active').classList.remove('btn--active');
+    currentActiveBtn = document.querySelector('.btn--active')
+    currentActiveBtn.classList.remove('btn--active');
+    currentActiveBtn.disabled = false;
+
     monthlyBtn.classList.add('btn--active');
+    monthlyBtn.disabled = true;
     profileContainer.insertAdjacentHTML('afterend', displayMonthly(data));
 });
 
