@@ -2,6 +2,10 @@
 
 This repo contains all the solutions I have done for the frontendmentor.io challenges. 
 
+#### Time tracking dashboard
+:arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/time-tracking-dashboard-main)** <br>
+:arrow_upper_right: **[Live Site URL](https://fem-time-tracking-dashboard-yemisrach15.vercel.app/)**
+
 #### Interactive pricing component
 :arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/interactive-pricing-component)** <br>
 :arrow_upper_right: **[Live Site URL](https://fem-interactive-pricing-component-yemisrach15.vercel.app/)**
