@@ -1,9 +1,10 @@
+let mainContainer = document.querySelector('main');
 let profileContainer = document.querySelector('.card:first-of-type');
 let dailyBtn = document.querySelector('#btn-daily');
 let weeklyBtn = document.querySelector('#btn-weekly');
 let monthlyBtn = document.querySelector('#btn-monthly');
 let data, currentActiveBtn;
-// TODO: REMOVE DUPLICATE ON INSERTADJACENTHTML
+
 fetch("data.json")
     .then(response => response.json())
     .then(json => {
@@ -19,6 +20,7 @@ dailyBtn.addEventListener("click", () => {
 
     dailyBtn.classList.add('btn--active');
     dailyBtn.disabled = true;
+    removeChildrenExceptFirst(mainContainer);
     profileContainer.insertAdjacentHTML('afterend', displayDaily(data));
 });
 
@@ -29,6 +31,7 @@ weeklyBtn.addEventListener("click", () => {
 
     weeklyBtn.classList.add('btn--active');
     weeklyBtn.disabled = true;
+    removeChildrenExceptFirst(mainContainer);
     profileContainer.insertAdjacentHTML('afterend', displayWeekly(data));
 });
 
@@ -39,6 +42,7 @@ monthlyBtn.addEventListener("click", () => {
 
     monthlyBtn.classList.add('btn--active');
     monthlyBtn.disabled = true;
+    removeChildrenExceptFirst(mainContainer);
     profileContainer.insertAdjacentHTML('afterend', displayMonthly(data));
 });
 
@@ -109,4 +113,11 @@ function displayMonthly(json) {
     })
 
     return cards;
+}
+
+function removeChildrenExceptFirst(parentNode) {
+    Array.from(parentNode.children).forEach( node => {
+        if (node != parentNode.firstElementChild) 
+            parentNode.removeChild(node)
+    })
 }
