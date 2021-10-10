@@ -1,87 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
+
+  <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
+
 <body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+  <main>
+    <section>
+      <div class="section__top">
+        <div class="section__heading">
+          <h1 class="section__header">Social Media Dashboard</h1>
+          <p class="section__sub">Total Followers: 23,004</p>
+        </div>
+        <div class="toggle__container">
+          <span class="toggle__label">Dark Mode</span>
+          <label class="toggle">
+            <input class="toggle--input" type="checkbox">
+            <span class="toggle__btn"></span>
+          </label>
+        </div>
+      </div>
 
-  Dark Mode
+      <div class="card__container">
+        <div class="card card--facebook">
+          <p class="card__top">
+            <span class="card__icon card__icon--facebook"></span> @nathanf
+          </p>
+          <h3 class="card__header">1987</h3>
+          <p class="card__sub">Followers</p>
+          <p class="card__bottom card__status--up"><span class="status__icon status__icon--up"></span> 12 Today</p>
+        </div>
 
-  
+        <div class="card card--twitter">
+          <p class="card__top">
+            <span class="card__icon card__icon--twitter"></span> @nathanf
+          </p>
+          <h3 class="card__header">1044</h3>
+          <p class="card__sub">Followers</p>
+          <p class="card__bottom card__status--up"><span class="status__icon status__icon--up"></span> 99 Today</p>
+        </div>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+        <div class="card card--instagram">
+          <p class="card__top"><span class="card__icon card__icon--instagram"></span> @realnathanf</p>
+          <h3 class="card__header">11k</h3>
+          <p class="card__sub">Followers</p>
+          <p class="card__bottom card__status--up"><span class="status__icon status__icon--up"></span> 1099 Today</p>
+        </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+        <div class="card card--youtube">
+          <p class="card__top"><span class="card__icon card__icon--youtube"></span> Nathan F.</p>
+          <h3 class="card__header">8239</h3>
+          <p class="card__sub">Subscribers</p>
+          <p class="card__bottom card__status--down"><span class="status__icon status__icon--down"></span> 144 Today</p>
+        </div>
+      </div>
+    </section>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+    <section>
+      <h2>Overview - Today</h2>
+      <div>
+        <div class="card__overview">
+          <div class="overview__top">
+            <p class="overview__sub">Page Views</p>
+            <img class="overview__icon" src="./images/icon-facebook.svg" alt="Facebook">
+          </div>
+          <div class="overview__body">
+            <h4 class="overview__header">87</h4>
+            <p class="overview__status card__status--up"> 3%</p>
+          </div>
+        </div>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+        <div class="card__overview">
+          <div class="overview__top">
+            <p class="overview__sub">Likes</p>
+            <img class="overview__icon" src="./images/icon-facebook.svg" alt="Facebook">
+          </div>
+          <div class="overview__body">
+            <h4 class="overview__header">52</h4>
+            <p class="overview__status card__status--down"> 2%</p>
+          </div>
+        </div>
 
+        <div class="card__overview">
+          <div class="overview__top">
+            <p class="overview__sub">Likes</p>
+            <img class="overview__icon" src="./images/icon-instagram.svg" alt="Instagram">
+          </div>
+          <div class="overview__body">
+            <h4 class="overview__header">5462</h4>
+            <p class="overview__status card__status--up"> 2257%</p>
+          </div>
+        </div>
 
+        <div class="card__overview">
+          <div class="overview__top">
+            <p class="overview__sub">Profile Views</p>
+            <img class="overview__icon" src="./images/icon-instagram.svg" alt="Instagram">
+          </div>
+          <div class="overview__body">
+            <h4 class="overview__header">52k</h4>
+            <p class="overview__status card__status--up"> 1375%</p>
+          </div>
+        </div>
 
-  Overview - Today
+        <div class="card__overview">
+          <div class="overview__top">
+            <p class="overview__sub">Retweets</p>
+            <img class="overview__icon" src="./images/icon-twitter.svg" alt="Twitter">
+          </div>
+          <div class="overview__body">
+            <h4 class="overview__header">117</h4>
+            <p class="overview__status card__status--up"> 303%</p>
+          </div>
+        </div>
 
-  Page Views
-  87
-  3%
+        <div class="card__overview">
+          <div class="overview__top">
+            <p class="overview__sub">Likes</p>
+            <img class="overview__icon" src="./images/icon-twitter.svg" alt="Twitter">
+          </div>
+          <div class="overview__body">
+            <h4 class="overview__header">507</h4>
+            <p class="overview__status card__status--up"> 553%</p>
+          </div>
+        </div>
 
-  Likes
-  52
-  2%
+        <div class="card__overview">
+          <div class="overview__top">
+            <p class="overview__sub">Likes</p>
+            <img class="overview__icon" src="./images/icon-youtube.svg" alt="YouTube">
+          </div>
+          <div class="overview__body">
+            <h4 class="overview__header">107</h4>
+            <p class="overview__status card__status--down"> 19%</p>
+          </div>
+        </div>
 
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
+        <div class="card__overview">
+          <div class="overview__top">
+            <p class="overview__sub">Total Views</p>
+            <img class="overview__icon" src="./images/icon-youtube.svg" alt="YouTube">
+          </div>
+          <div class="overview__body">
+            <h4 class="overview__header">1407</h4>
+            <p class="overview__status card__status--down"> 12%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="./js/app.js"></script>
 </body>
+
 </html>

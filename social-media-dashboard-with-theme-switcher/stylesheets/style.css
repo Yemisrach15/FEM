@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background: white;
+}
+
+main {
+  margin: 2.5em auto;
+  width: 87%;
+}
+
+section {
+  margin-bottom: 3.4em;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+h2 {
+  color: #63687e;
+  font-size: 1.7em;
+  margin-bottom: 1.1em;
+}
+
+h3 {
+  font-size: 3.8em;
+}
+
+h4 {
+  font-size: 2.2em;
+}
+
+.section__heading {
+  border-bottom: 3px solid #f0f2fa;
+  padding-bottom: 1.7em;
+}
+
+.section__header {
+  margin-bottom: .2em;
+}
+
+.section__sub {
+  color: #63687e;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.toggle {
+  background: #aeb3cb;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  width: 48px;
+}
+
+.toggle__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1.4em 0 2.6em 0;
+}
+
+.toggle__label {
+  color: #63687e;
+  font-weight: 700;
+}
+
+.toggle--input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle--input:checked ~ .toggle__btn {
+  background: linear-gradient(45deg, #378fe6, #3eda82 75%);
+}
+
+.toggle--input:checked ~ .toggle__btn::after {
+  right: calc(100% - 8px - 14px);
+}
+
+.toggle__btn {
+  background: #aeb3cb;
+  border-radius: 20px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background .4s ease-in;
+  transition: background .4s ease-in;
+}
+
+.toggle__btn::after {
+  background: white;
+  border-radius: 50%;
+  content: '';
+  height: 14px;
+  right: 0;
+  margin: 4px 4px 0 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 14px;
+}
+
+.toggle__btn:hover {
+  background: linear-gradient(45deg, #378fe6, #3eda82 75%);
+}
+
+.card {
+  background: #f5f7ff;
+  border-radius: .4em;
+  margin-bottom: 1.6em;
+  overflow: hidden;
+  padding: 2.45em 2em 1.85em 2em;
+  position: relative;
+  text-align: center;
+}
+
+.card__top {
+  color: #63687e;
+  font-size: .85em;
+  font-weight: 700;
+  margin-bottom: 1.5em;
+}
+
+.card__icon {
+  content: url("../images/icon-facebook.svg");
+  margin-right: .3em;
+  vertical-align: middle;
+}
+
+.card__icon--twitter {
+  content: url("../images/icon-twitter.svg");
+}
+
+.card__icon--instagram {
+  content: url("../images/icon-instagram.svg");
+}
+
+.card__icon--youtube {
+  content: url("../images/icon-youtube.svg");
+}
+
+.card__header {
+  margin-bottom: 0em;
+}
+
+.card__sub {
+  color: #63687e;
+  font-size: .9em;
+  letter-spacing: 4.5px;
+  margin-bottom: 1.8em;
+  text-transform: uppercase;
+}
+
+.card__status--up {
+  color: #1db489;
+  font-size: .85em;
+  font-weight: 700;
+}
+
+.card__status--up::before {
+  content: url("../images/icon-up.svg");
+  position: relative;
+  top: -.2em;
+}
+
+.card__status--down {
+  color: #dc414c;
+  font-size: .85em;
+  font-weight: 700;
+}
+
+.card__status--down::before {
+  content: url("../images/icon-down.svg");
+  position: relative;
+  top: -.1em;
+}
+
+.card::before {
+  background: #198ff5;
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card--twitter::before {
+  background: #1ca0f2;
+}
+
+.card--instagram::before {
+  background: linear-gradient(45deg, #fdc468, #df4996);
+}
+
+.card--youtube::before {
+  background: #c4032a;
+}
+
+.card__overview {
+  background: #f5f7ff;
+  border-radius: .2em;
+  margin-bottom: 1em;
+  padding: 1.8em 1.8em;
+  padding-right: 2.2em;
+}
+
+.card__overview div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.overview__top {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.overview__body {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.overview__sub {
+  color: #63687e;
+  font-weight: 700;
+}
