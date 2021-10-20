@@ -1,0 +1,79 @@
+@import '../variables';
+
+body{
+    background: $netural-color-100-dark;
+    color: $netural-color-500-dark;
+}
+
+h2{
+    color: $netural-color-200-dark;
+}
+
+.section{
+    &__heading{
+        border-bottom-color: $netural-color-400-dark;
+    }
+    &__sub{
+        color: $netural-color-400-dark;
+    }
+}
+
+.toggle{
+    background: $secondary-toggle-light;
+    &__label{
+        color: $netural-color-400-dark;
+    }
+    &--input{
+        &:checked{
+            ~ .toggle__btn{
+                background: linear-gradient(45deg, $secondary-toggle-dark-gradient1,  $secondary-toggle-dark-gradient2 75%);
+            }
+        }
+    }
+    &__btn{
+        background: $secondary-toggle-light;
+        &::after{
+            background: $netural-color-100-dark;
+        }
+    }
+    &:hover{
+        background: linear-gradient(45deg, $secondary-toggle-dark-gradient1,  $secondary-toggle-dark-gradient2 75%);
+    }
+}
+.card{
+    background: $netural-color-300-dark;
+    &__top{
+        color: $netural-color-400-dark;
+    }
+    &__sub{
+        color: $netural-color-400-dark;
+    }
+    &__status{
+        &--up{
+            color: $primary-color-up;
+        }
+        &--down{
+            color: $primary-color-down;
+        }
+    }
+    &::before{
+        background: $primary-color-facebook;
+    }
+    &--twitter::before{
+        background: $primary-color-twitter;
+    }
+    &--instagram::before{
+        background: linear-gradient(45deg, $primary-color-instagram-gradient1, $primary-color-instagram-gradient2);
+    }
+    &--youtube::before{
+        background: $primary-color-youtube;
+    }
+}
+.card__overview{
+    background: $netural-color-300-dark;
+}
+.overview{
+    &__sub{
+        color: $netural-color-400-dark;
+    }
+}

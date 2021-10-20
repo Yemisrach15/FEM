@@ -1,0 +1,83 @@
+body {
+  background: white;
+}
+
+h2 {
+  color: #63687e;
+}
+
+.section__heading {
+  border-bottom-color: #f0f2fa;
+}
+
+.section__sub {
+  color: #63687e;
+}
+
+.toggle {
+  background: #aeb3cb;
+}
+
+.toggle__label {
+  color: #63687e;
+}
+
+.toggle--input:checked ~ .toggle__btn {
+  background: linear-gradient(45deg, #378fe6, #3eda82 75%);
+}
+
+.toggle__btn {
+  background: #aeb3cb;
+}
+
+.toggle__btn::after {
+  background: white;
+}
+
+.toggle:hover {
+  background: linear-gradient(45deg, #378fe6, #3eda82 75%);
+}
+
+.card {
+  background: #f5f7ff;
+}
+
+.card__top {
+  color: #63687e;
+}
+
+.card__sub {
+  color: #63687e;
+}
+
+.card__status--up {
+  color: #1db489;
+}
+
+.card__status--down {
+  color: #dc414c;
+}
+
+.card::before {
+  background: #198ff5;
+}
+
+.card--twitter::before {
+  background: #1ca0f2;
+}
+
+.card--instagram::before {
+  background: linear-gradient(45deg, #fdc468, #df4996);
+}
+
+.card--youtube::before {
+  background: #c4032a;
+}
+
+.card__overview {
+  background: #f5f7ff;
+}
+
+.overview__sub {
+  color: #63687e;
+}

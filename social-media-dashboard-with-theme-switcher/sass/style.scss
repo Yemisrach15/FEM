@@ -8,9 +8,7 @@
     font-size: $base-font-size;
 }
 
-body{
-    background: $netural-color-500-light;
-}
+// REMOVE: all commented out colors
 main{
     margin: 2.5em auto;
     width: 87%;
@@ -22,7 +20,6 @@ h1{
     font-size: 1.7em;
 }
 h2{
-    color: $netural-color-200-light;
     font-size: 1.7em;
     margin-bottom: 1.1em;
 }
@@ -35,20 +32,19 @@ h4{
 
 .section{
     &__heading{
-        border-bottom: 3px solid $netural-color-300-light;
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
         padding-bottom: 1.7em;
     }
     &__header{
         margin-bottom: .2em;
     }
     &__sub{
-        color: $netural-color-200-light;
         font-weight: 700;
         letter-spacing: .2px;
     }
 }
 .toggle{
-    background: $secondary-toggle-light;
     border-radius: 20px;
     cursor: pointer;
     display: inline-block;
@@ -62,7 +58,6 @@ h4{
         margin: 1.4em 0 2.6em 0;
     }
     &__label{
-        color: $netural-color-200-light;
         font-weight: 700;
     }
     &--input{
@@ -72,8 +67,6 @@ h4{
 
         &:checked{
             ~ .toggle__btn{
-                background: linear-gradient(45deg, $secondary-toggle-dark-gradient1,  $secondary-toggle-dark-gradient2 75%);
-
                 &::after{
                     right: calc(100% - 8px - 14px);
                 }
@@ -81,7 +74,7 @@ h4{
         }
     }
     &__btn{
-        background: $secondary-toggle-light;
+        // background: $secondary-toggle-light;
         border-radius: 20px;
         bottom: 0;
         left: 0;
@@ -91,7 +84,7 @@ h4{
         transition: background .4s ease-in;
     
         &::after{
-            background: $netural-color-500-light;
+            // background: $netural-color-500-light;
             border-radius: 50%;
             content: '';
             height: 14px;
@@ -103,12 +96,12 @@ h4{
             width: 14px;
         }
         &:hover{
-            background: linear-gradient(45deg, $secondary-toggle-dark-gradient1,  $secondary-toggle-dark-gradient2 75%);
+            // background: linear-gradient(45deg, $secondary-toggle-dark-gradient1,  $secondary-toggle-dark-gradient2 75%);
         }
     }
 }
 .card{
-    background: $netural-color-400-light;
+    // background: $netural-color-400-light;
     border-radius: .4em;
     margin-bottom: 1.6em;
     overflow: hidden;
@@ -118,7 +111,7 @@ h4{
     text-align: center;
 
     &__top{
-        color: $netural-color-200-light;
+        // color: $netural-color-200-light;
         font-size: .85em;
         font-weight: 700;
         margin-bottom: 1.5em;
@@ -141,7 +134,7 @@ h4{
         margin-bottom: 0em;
     }
     &__sub{
-        color: $netural-color-200-light;
+        // color: $netural-color-200-light;
         font-size: .9em;
         letter-spacing: 4.5px;
         margin-bottom: 1.8em;
@@ -149,7 +142,7 @@ h4{
     }
     &__status{
         &--up{
-            color: $primary-color-up;
+            // color: $primary-color-up;
             font-size: .85em;
             font-weight: 700;
             &::before{
@@ -159,7 +152,7 @@ h4{
             }
         }
         &--down{
-            color: $primary-color-down;
+            // color: $primary-color-down;
             font-size: .85em;
             font-weight: 700;
             &::before{
@@ -170,7 +163,7 @@ h4{
         }
     }
     &::before{
-        background: $primary-color-facebook;
+        // background: $primary-color-facebook;
         content: '';
         height: 4px;
         left: 0;
@@ -179,17 +172,17 @@ h4{
         width: 100%;
     }
     &--twitter::before{
-        background: $primary-color-twitter;
+        // background: $primary-color-twitter;
     }
     &--instagram::before{
-        background: linear-gradient(45deg, $primary-color-instagram-gradient1, $primary-color-instagram-gradient2);
+        // background: linear-gradient(45deg, $primary-color-instagram-gradient1, $primary-color-instagram-gradient2);
     }
     &--youtube::before{
-        background: $primary-color-youtube;
+        // background: $primary-color-youtube;
     }
 }
 .card__overview{
-    background: $netural-color-400-light;
+    // background: $netural-color-400-light;
     border-radius: .2em;
     margin-bottom: 1em;
     padding: 1.8em 1.8em;
@@ -209,7 +202,7 @@ h4{
         align-items: flex-end;
     }
     &__sub{
-        color: $netural-color-200-light;
+        // color: $netural-color-200-light;
         font-weight: 700;
     }
 }
