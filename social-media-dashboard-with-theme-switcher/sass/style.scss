@@ -8,7 +8,6 @@
     font-size: $base-font-size;
 }
 
-// REMOVE: all commented out colors
 main{
     margin: 2.5em auto;
     width: 87%;
@@ -74,7 +73,6 @@ h4{
         }
     }
     &__btn{
-        // background: $secondary-toggle-light;
         border-radius: 20px;
         bottom: 0;
         left: 0;
@@ -84,7 +82,6 @@ h4{
         transition: background .4s ease-in;
     
         &::after{
-            // background: $netural-color-500-light;
             border-radius: 50%;
             content: '';
             height: 14px;
@@ -95,23 +92,17 @@ h4{
             transition: .4s;
             width: 14px;
         }
-        &:hover{
-            // background: linear-gradient(45deg, $secondary-toggle-dark-gradient1,  $secondary-toggle-dark-gradient2 75%);
-        }
     }
 }
 .card{
-    // background: $netural-color-400-light;
     border-radius: .4em;
     margin-bottom: 1.6em;
     overflow: hidden;
     padding: 2.45em 2em 1.85em 2em;
-    // padding: 3.45em 2em;
     position: relative;
     text-align: center;
 
     &__top{
-        // color: $netural-color-200-light;
         font-size: .85em;
         font-weight: 700;
         margin-bottom: 1.5em;
@@ -134,7 +125,6 @@ h4{
         margin-bottom: 0em;
     }
     &__sub{
-        // color: $netural-color-200-light;
         font-size: .9em;
         letter-spacing: 4.5px;
         margin-bottom: 1.8em;
@@ -142,7 +132,6 @@ h4{
     }
     &__status{
         &--up{
-            // color: $primary-color-up;
             font-size: .85em;
             font-weight: 700;
             &::before{
@@ -152,7 +141,6 @@ h4{
             }
         }
         &--down{
-            // color: $primary-color-down;
             font-size: .85em;
             font-weight: 700;
             &::before{
@@ -163,7 +151,6 @@ h4{
         }
     }
     &::before{
-        // background: $primary-color-facebook;
         content: '';
         height: 4px;
         left: 0;
@@ -171,18 +158,8 @@ h4{
         top: 0;
         width: 100%;
     }
-    &--twitter::before{
-        // background: $primary-color-twitter;
-    }
-    &--instagram::before{
-        // background: linear-gradient(45deg, $primary-color-instagram-gradient1, $primary-color-instagram-gradient2);
-    }
-    &--youtube::before{
-        // background: $primary-color-youtube;
-    }
 }
 .card__overview{
-    // background: $netural-color-400-light;
     border-radius: .2em;
     margin-bottom: 1em;
     padding: 1.8em 1.8em;
@@ -202,7 +179,6 @@ h4{
         align-items: flex-end;
     }
     &__sub{
-        // color: $netural-color-200-light;
         font-weight: 700;
     }
 }
