@@ -6,6 +6,11 @@
   font-size: 14px;
 }
 
+body, .card {
+  -webkit-transition: background .3s ease-in;
+  transition: background .3s ease-in;
+}
+
 main {
   margin: 2.5em auto;
   width: 87%;

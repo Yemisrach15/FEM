@@ -8,6 +8,10 @@
     font-size: $base-font-size;
 }
 
+body, .card{
+    transition: background .3s ease-in;
+}
+
 main{
     margin: 2.5em auto;
     width: 87%;
