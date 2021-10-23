@@ -9,7 +9,7 @@
     font-size: $base-font-size;
 }
 
-body, .card{
+body, .card, .card__overview{
     transition: background .3s ease-in;
 }
 
@@ -103,6 +103,7 @@ h4{
 .card{
     border-radius: .4em;
     margin-bottom: 1.6em;
+    cursor: pointer;
     overflow: hidden;
     padding: 2.45em 2em 1.85em 2em;
     position: relative;
@@ -167,6 +168,7 @@ h4{
 }
 .card__overview{
     border-radius: .2em;
+    cursor: pointer;
     margin-bottom: 1em;
     padding: 1.8em 1.8em;
     padding-right: 2.2em;

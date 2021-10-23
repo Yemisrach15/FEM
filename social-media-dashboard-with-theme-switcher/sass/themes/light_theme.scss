@@ -30,17 +30,25 @@ h2{
         }
     }
     &__btn{
-        background: $secondary-toggle-light;
+        transition: --myColor1 .2s ease-in, --myColor2 .2s ease-in;
+        background: linear-gradient(45deg, var(--myColor1), var(--myColor2) 75%);
+
         &::after{
             background: $netural-color-500-light;
         }
-    }
-    &:hover{
-        background: linear-gradient(45deg, $secondary-toggle-dark-gradient1,  $secondary-toggle-dark-gradient2 75%);
+        &:hover{
+            // Doesn't work with sass variables, need to be color value
+            --myColor1: hsl(210, 78%, 56%);
+            --myColor2: hsl(146, 68%, 55%);
+        }
     }
 }
 .card{
     background: $netural-color-400-light;
+
+    &:hover{
+        background: $netural-color-300-light;
+    }
     &__top{
         color: $netural-color-200-light;
     }
@@ -55,7 +63,7 @@ h2{
             color: $primary-color-down;
         }
     }
-    &::before{
+    &--facebook::before{
         background: $primary-color-facebook;
     }
     &--twitter::before{
@@ -70,9 +78,26 @@ h2{
 }
 .card__overview{
     background: $netural-color-400-light;
+
+    &:hover{
+        background: $netural-color-300-light;
+    }
 }
 .overview{
     &__sub{
         color: $netural-color-200-light;
     }
+}
+
+
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: $secondary-toggle-light;
+    inherits: false;
+}
+  
+@property --myColor2 {
+syntax: '<color>';
+initial-value: $secondary-toggle-light;
+inherits: false;
 }

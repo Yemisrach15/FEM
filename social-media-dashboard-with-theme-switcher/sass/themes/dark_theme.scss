@@ -33,11 +33,17 @@ body{
         }
     }
     &:hover{
-        background: linear-gradient(45deg, $secondary-toggle-dark-gradient1,  $secondary-toggle-dark-gradient2 75%);
+        .toggle__btn::after{
+            background: $netural-color-300-dark;
+        }
     }
 }
 .card{
     background: $netural-color-300-dark;
+
+    &:hover{
+        background: $netural-color-dark-hover;
+    }
     &__top{
         color: $netural-color-400-dark;
     }
@@ -52,7 +58,7 @@ body{
             color: $primary-color-down;
         }
     }
-    &::before{
+    &--facebook::before{
         background: $primary-color-facebook;
     }
     &--twitter::before{
@@ -67,6 +73,10 @@ body{
 }
 .card__overview{
     background: $netural-color-300-dark;
+
+    &:hover{
+        background: $netural-color-dark-hover;
+    }
 }
 .overview{
     &__sub{

@@ -27,19 +27,25 @@ h2 {
 }
 
 .toggle__btn {
-  background: #aeb3cb;
+  transition: --myColor1 .2s ease-in, --myColor2 .2s ease-in;
+  background: linear-gradient(45deg, var(--myColor1), var(--myColor2) 75%);
 }
 
 .toggle__btn::after {
   background: white;
 }
 
-.toggle:hover {
-  background: linear-gradient(45deg, #378fe6, #3eda82 75%);
+.toggle__btn:hover {
+  --myColor1: hsl(210, 78%, 56%);
+  --myColor2: hsl(146, 68%, 55%);
 }
 
 .card {
   background: #f5f7ff;
+}
+
+.card:hover {
+  background: #f0f2fa;
 }
 
 .card__top {
@@ -58,7 +64,7 @@ h2 {
   color: #dc414c;
 }
 
-.card::before {
+.card--facebook::before {
   background: #198ff5;
 }
 
@@ -78,6 +84,22 @@ h2 {
   background: #f5f7ff;
 }
 
+.card__overview:hover {
+  background: #f0f2fa;
+}
+
 .overview__sub {
   color: #63687e;
+}
+
+@property --myColor1 {
+  syntax: '<color>';
+  initial-value: #aeb3cb;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: '<color>';
+  initial-value: #aeb3cb;
+  inherits: false;
 }

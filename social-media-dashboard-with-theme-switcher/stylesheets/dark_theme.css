@@ -31,12 +31,16 @@ body {
   background: #1e202a;
 }
 
-.toggle:hover {
-  background: linear-gradient(45deg, #378fe6, #3eda82 75%);
+.toggle:hover .toggle__btn::after {
+  background: #252a41;
 }
 
 .card {
   background: #252a41;
+}
+
+.card:hover {
+  background: rgba(111, 118, 200, 0.231);
 }
 
 .card__top {
@@ -55,7 +59,7 @@ body {
   color: #dc414c;
 }
 
-.card::before {
+.card--facebook::before {
   background: #198ff5;
 }
 
@@ -73,6 +77,10 @@ body {
 
 .card__overview {
   background: #252a41;
+}
+
+.card__overview:hover {
+  background: rgba(111, 118, 200, 0.231);
 }
 
 .overview__sub {
