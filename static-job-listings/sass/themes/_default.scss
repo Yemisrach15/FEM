@@ -1,0 +1,36 @@
+@import '../base/color';
+
+body {
+    background: $netural-color-100;
+}
+
+.card{
+    background: $neutral-color-white;
+
+    &__body{
+        border-bottom-color: $netural-color-300;
+    }&__top{
+        & >span:first-child{
+            color: $primary-color;
+        }
+    }
+    &__detail{
+        color: $netural-color-300;
+    }
+}
+
+.tag{
+    color: $neutral-color-white;
+
+    &--new{
+        background: $primary-color;
+    }
+    &--featured{
+        background: $neutral-color-black;
+    }
+}
+
+.filter{
+    background: $netural-color-200;
+    color: $primary-color;
+}

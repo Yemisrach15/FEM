@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+body {
+  background: #effafa;
+}
+
+.card {
+  background: white;
+}
+
+.card__body {
+  border-bottom-color: #7b8e8e;
+}
+
+.card__top > span:first-child {
+  color: #5ba4a4;
+}
+
+.card__detail {
+  color: #7b8e8e;
+}
+
+.tag {
+  color: white;
+}
+
+.tag--new {
+  background: #5ba4a4;
+}
+
+.tag--featured {
+  background: black;
+}
+
+.filter {
+  background: #eef6f6;
+  color: #5ba4a4;
+}
+
+.card__top {
+  font-weight: 700;
+}
+
+.card__top > span:first-child {
+  letter-spacing: -1.2px;
+}
+
+.card__detail > span {
+  letter-spacing: 1px;
+}
+
+.tag {
+  font-size: .8em;
+  font-weight: 500;
+  letter-spacing: -0.35px;
+  text-transform: uppercase;
+}
+
+.filter {
+  font-weight: 700;
+}
+
+.circle {
+  font-size: .5em;
+  vertical-align: middle;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+}
+
+.card__top {
+  font-weight: 700;
+}
+
+.card__top > span:first-child {
+  letter-spacing: -1.2px;
+}
+
+.card__detail > span {
+  letter-spacing: 1px;
+}
+
+.tag {
+  font-size: .8em;
+  font-weight: 500;
+  letter-spacing: -0.35px;
+  text-transform: uppercase;
+}
+
+.filter {
+  font-weight: 700;
+}
+
+.circle {
+  font-size: .5em;
+  vertical-align: middle;
+}
+
+header {
+  background: url("../images/bg-header-mobile.svg") no-repeat, #5ba4a4;
+  background-size: cover, auto;
+  height: 10.5em;
+}
+
+main {
+  margin: 3.5em auto;
+  width: 87%;
+}
+
+.card {
+  border-radius: .3em;
+  -webkit-box-shadow: 0px 14px 20px 0px rgba(91, 164, 164, 0.161);
+          box-shadow: 0px 14px 20px 0px rgba(91, 164, 164, 0.161);
+  padding: 1em 1.5em;
+  position: relative;
+}
+
+.card__logo {
+  position: absolute;
+  top: -1.56em;
+  width: 3.3em;
+}
+
+.card__body {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+.card__top {
+  margin-bottom: 1em;
+}
+
+.card__top > span:first-child {
+  margin-right: .5em;
+}
+
+.card__header {
+  margin-bottom: .9em;
+}
+
+.tag {
+  border-radius: 1em;
+  margin-left: .4em;
+  padding: .6em .6em .35em .6em;
+}
+
+.filter {
+  padding: .5em .5em;
+}
+
+.filter__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1em;
+}
