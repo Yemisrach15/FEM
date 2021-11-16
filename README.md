@@ -2,6 +2,10 @@
 
 This repo contains all the solutions I have done for the frontendmentor.io challenges. 
 
+#### Social media dashboard with theme switcher
+:arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/social-media-dashboard-with-theme-switcher)** <br>
+:arrow_upper_right: **[Live Site URL](https://fem-social-media-dashboard-with-theme-switcher-seven.vercel.app/)**
+
 #### Time tracking dashboard
 :arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/time-tracking-dashboard-main)** <br>
 :arrow_upper_right: **[Live Site URL](https://fem-time-tracking-dashboard-yemisrach15.vercel.app/)**
