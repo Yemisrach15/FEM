@@ -1,0 +1,16 @@
+@import '../utils/fonts';
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: $font-family-default;
+    font-size: $base-font-size;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline-block;
+    margin: 0 .5em;
+}

@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  margin: 0 .5em;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url(../images/bg-stars.svg) no-repeat top, url(../images/pattern-hills.svg) no-repeat 86% bottom, #191a24;
+  background-size: auto, auto 25%,auto;
+  color: white;
+  padding: 10.2em 0 0 0;
+}
+
+h1 {
+  font-size: 1.25em;
+  letter-spacing: 6.5px;
+  margin-bottom: 3.2em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.3em;
+}
+
+footer {
+  bottom: 0;
+  margin-top: 5em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  width: 87%;
+}
+
+.timer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  width: calc((100% - 3em) / 4);
+}
+
+.card__top {
+  background: #343650;
+  border-radius: .5em;
+  -webkit-box-shadow: 0px 7px 0px 0px #191a24;
+          box-shadow: 0px 7px 0px 0px #191a24;
+  color: #fb6087;
+  margin-bottom: 1em;
+  padding: .8em .5em;
+}
+
+.card__sub {
+  color: #8486a9;
+  font-size: .65em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.social__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.3em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: .5em;
+}
+
+.card__time {
+  border-radius: .5em;
+  display: inline-block;
+  -webkit-box-shadow: 0.05em 0.05em 0.2em 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0.05em 0.05em 0.2em 0 rgba(0, 0, 0, 0.3);
+  line-height: 1.6em;
+  font-weight: bold;
+  padding: 1.335em 1.33em;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  position: relative;
+}
+
+.card__time:after {
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+}
+
+.card__time > span {
+  font-size: 2.3em;
+}
+
+@-webkit-keyframes flip-top {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  10% {
+    background-color: #161722;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-top {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  10% {
+    background-color: #161722;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+}
+
+@-webkit-keyframes flip-bottom {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  10% {
+    background-color: #494b6f;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  20% {
+    background-color: #343650;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes flip-bottom {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  10% {
+    background-color: #494b6f;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  20% {
+    background-color: #343650;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.half {
+  background-color: #343650;
+  overflow: hidden;
+  padding: .6em .6em;
+  position: absolute;
+  left: 0;
+}
+
+.top {
+  -webkit-animation: flip-top 2s linear 0s infinite;
+          animation: flip-top 2s linear 0s infinite;
+  border-radius: .1em .1em 0 0;
+  bottom: 50%;
+  top: 0;
+  -webkit-transform-origin: 50% 100% 0;
+          transform-origin: 50% 100% 0;
+}
+
+.bottom {
+  -webkit-animation: flip-bottom 2s linear 0s infinite;
+          animation: flip-bottom 2s linear 0s infinite;
+  border-radius: 0 0 .1em .1em;
+  top: 15%;
+  -webkit-transform-origin: 50% 0 0;
+          transform-origin: 50% 0 0;
+}
+
+.bottom:before {
+  content: '';
+  display: block;
+  margin-top: -0.8em;
+}
