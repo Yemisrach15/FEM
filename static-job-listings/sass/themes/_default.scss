@@ -17,6 +17,9 @@ body {
     &__detail{
         color: $netural-color-300;
     }
+    &--featured{
+        border-left-color: $primary-color;
+    }
 }
 
 .tag{

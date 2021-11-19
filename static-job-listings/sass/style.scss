@@ -13,9 +13,9 @@ main{
 }
 
 .card{
-    border-radius: .3em;
+    border-radius: .4em;
     box-shadow: 0px 14px 20px 0px $card-box-shadow;
-    padding: 1em 1.5em;
+    padding: 1em 1.5em 1.5em 1.1em;
     position: relative;
 
     &__logo{
@@ -27,9 +27,12 @@ main{
         border-bottom-style: solid;
         border-bottom-width: 1px;
         margin-top: 1.5em;
-        padding-bottom: 1em;
+        padding-bottom: 1.2em;
     }
     &__top{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .6em;
         margin-bottom: 1em;
 
         & >span:first-child{
@@ -39,16 +42,21 @@ main{
     &__header{
         margin-bottom: .9em;
     }
+    &--featured{
+        border-left-style: solid;
+        border-left-width: .4em;
+    }
 }
 
 .tag{
     border-radius: 1em;
-    margin-left: .4em;
+    margin-right: .4em;
     padding: .6em .6em .35em .6em;
 }
 
 .filter{
-    padding: .5em .5em;
+    border-radius: 5px;
+    padding: .75em .6em .5em .5em;
 
     &__container{
         display: flex;
@@ -56,4 +64,8 @@ main{
         gap: 1em;
         margin-top: 1em;
     }
+}
+
+.circle{
+    margin: 0 .3em;
 }
