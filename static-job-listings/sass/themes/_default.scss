@@ -4,6 +4,28 @@ body {
     background: $netural-color-100;
 }
 
+.header-content{
+    background: $neutral-color-white;
+}
+.job-filter{
+    background: $netural-color-200;
+    color: $primary-color;
+}
+.remove-filter-btn{
+    background: $primary-color;
+
+    &:hover{
+        background: $netural-color-400;
+    }
+}
+.clear-btn{
+    color: $netural-color-300;
+
+    &:hover{
+        color: $primary-color;
+        text-decoration: underline;
+    }
+}
 .card{
     background: $neutral-color-white;
 
@@ -20,6 +42,14 @@ body {
     &--featured{
         border-left-color: $primary-color;
     }
+    &__header{
+        color: $netural-color-400;
+
+        &:hover{
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
 }
 
 .tag{
@@ -29,11 +59,17 @@ body {
         background: $primary-color;
     }
     &--featured{
-        background: $neutral-color-black;
+        background: $netural-color-400;
     }
 }
 
 .filter{
     background: $netural-color-200;
     color: $primary-color;
+
+    &:hover{
+        color: $neutral-color-white;
+        cursor: pointer;
+        background: $primary-color;
+    }
 }

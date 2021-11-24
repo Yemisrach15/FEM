@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+.job-filter {
+  font-size: .9em;
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+
 .card__top {
   font-weight: 700;
 }
@@ -38,8 +44,40 @@
   font-size: 15px;
 }
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 body {
   background: #effafa;
+}
+
+.header-content {
+  background: white;
+}
+
+.job-filter {
+  background: #eef6f6;
+  color: #5ba4a4;
+}
+
+.remove-filter-btn {
+  background: #5ba4a4;
+}
+
+.remove-filter-btn:hover {
+  background: #2c3a3a;
+}
+
+.clear-btn {
+  color: #7b8e8e;
+}
+
+.clear-btn:hover {
+  color: #5ba4a4;
+  text-decoration: underline;
 }
 
 .card {
@@ -62,6 +100,15 @@ body {
   border-left-color: #5ba4a4;
 }
 
+.card__header {
+  color: #2c3a3a;
+}
+
+.card__header:hover {
+  color: #5ba4a4;
+  cursor: pointer;
+}
+
 .tag {
   color: white;
 }
@@ -71,7 +118,7 @@ body {
 }
 
 .tag--featured {
-  background: black;
+  background: #2c3a3a;
 }
 
 .filter {
@@ -79,16 +126,64 @@ body {
   color: #5ba4a4;
 }
 
+.filter:hover {
+  color: white;
+  cursor: pointer;
+  background: #5ba4a4;
+}
+
 header {
   background: url("../images/bg-header-mobile.svg") no-repeat, #5ba4a4;
   background-position: bottom center, center;
   background-size: cover, auto;
-  height: 10.5em;
+  height: 10.4em;
 }
 
 main {
-  margin: 3.5em auto;
+  margin: 1.1em auto;
+  position: relative;
   width: 87%;
+}
+
+.header-content {
+  border-radius: .4em;
+  -webkit-box-shadow: 0px 14px 20px 0px rgba(91, 164, 164, 0.161);
+          box-shadow: 0px 14px 20px 0px rgba(91, 164, 164, 0.161);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em;
+  padding-top: 1.2em;
+  position: relative;
+  top: -3.6em;
+}
+
+.job-filter {
+  border-radius: 5px;
+  overflow: hidden;
+  padding: .75em 3em .5em .5em;
+  position: relative;
+}
+
+.job-filter__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: .8em;
+}
+
+.remove-filter-btn {
+  height: 100%;
+  padding: 0.6em;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .card {

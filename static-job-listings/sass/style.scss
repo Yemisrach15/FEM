@@ -6,13 +6,44 @@ header {
     background: url('../images/bg-header-mobile.svg') no-repeat, $primary-color;
     background-position: bottom center, center;
     background-size: cover, auto;
-    height: 10.5em;
+    height: 10.4em;
 }
 main{
-    margin: 3.5em auto;
+    margin: 1.1em auto;
+    position: relative;
     width: 87%;
 }
 
+.header-content{
+    border-radius: .4em;
+    box-shadow: 0px 14px 20px 0px $card-box-shadow;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em;
+    padding-top: 1.2em;
+    position: relative;
+    top: -3.6em;
+}
+.job-filter{
+    border-radius: 5px;
+    overflow: hidden;
+    padding: .75em 3em .5em .5em;
+    position: relative;
+
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .8em;
+    }
+}
+.remove-filter-btn{
+    height: 100%;
+    padding: 0.6em;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 .card{
     border-radius: .4em;
     box-shadow: 0px 14px 20px 0px $card-box-shadow;

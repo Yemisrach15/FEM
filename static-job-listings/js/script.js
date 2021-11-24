@@ -1,4 +1,4 @@
-let mainContainer = document.querySelector('main');
+let cardContainer = document.querySelector('.card__container');
 
 fetch("../data.json")
     .then(response => response.json())
@@ -14,7 +14,7 @@ fetch("../data.json")
             }
         });
 
-        mainContainer.innerHTML = cards;
+        cardContainer.innerHTML = cards;
     })
 
 
