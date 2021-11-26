@@ -64,11 +64,13 @@ body {
 }
 
 .remove-filter-btn {
-  background: #5ba4a4;
+  background: url("../images/icon-remove.svg") no-repeat, #5ba4a4;
+  background-position: center;
 }
 
 .remove-filter-btn:hover {
-  background: #2c3a3a;
+  background: url("../images/icon-remove.svg") no-repeat, #2c3a3a;
+  background-position: center;
 }
 
 .clear-btn {
@@ -179,7 +181,7 @@ main {
 
 .remove-filter-btn {
   height: 100%;
-  padding: 0.6em;
+  padding: 1em;
   overflow: hidden;
   position: absolute;
   right: 0;

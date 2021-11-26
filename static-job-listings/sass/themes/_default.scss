@@ -12,10 +12,12 @@ body {
     color: $primary-color;
 }
 .remove-filter-btn{
-    background: $primary-color;
+    background: url('../images/icon-remove.svg') no-repeat, $primary-color;
+    background-position: center;
 
     &:hover{
-        background: $netural-color-400;
+        background: url('../images/icon-remove.svg') no-repeat, $netural-color-400;
+        background-position: center;
     }
 }
 .clear-btn{
