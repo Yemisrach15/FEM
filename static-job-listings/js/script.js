@@ -1,4 +1,7 @@
 let cardContainer = document.querySelector('.card__container');
+let jobFilterContainer = document.querySelector('.job-filter__container');
+let clearFiltersBtn = document.querySelector('.clear-btn');
+let filters;
 
 fetch("../data.json")
     .then(response => response.json())
@@ -15,8 +18,49 @@ fetch("../data.json")
         });
 
         cardContainer.innerHTML = cards;
-    })
 
+        // add listener for each filter on each card
+        filters = document.querySelectorAll('.filter');
+        filters.forEach((filter) => {
+            filter.addEventListener('click', handleFilterClick);
+        });
+    });
+
+// add listener for clearing filters
+clearFiltersBtn.addEventListener('click', handleClearBtnClick);
+
+function handleClearBtnClick(e) {
+    e.target.previousElementSibling.innerHTML = '';
+}
+
+function handleFilterClick(e) {
+    // If filter is already selected, do nothing
+    if (isFilterSelected(e.target.innerText)) return;
+
+    // If not, add filter btn and listener (to remove filter)
+    if (jobFilterContainer.innerText === '') {
+        jobFilterContainer.innerHTML = constructFilterBtn(e.target.innerText);
+    } else {
+        let lastFilterBtn = jobFilterContainer.lastElementChild;
+        lastFilterBtn.insertAdjacentHTML('afterend', constructFilterBtn(e.target.innerText));
+    }
+
+    let removeFilterBtn = jobFilterContainer.lastElementChild.querySelector('.remove-filter-btn');
+    removeFilterBtn.addEventListener('click', (e) => {
+        e.target.parentElement.remove();
+    });
+}
+
+function isFilterSelected(filterText) {
+    return jobFilterContainer.innerText.includes(filterText);
+}
+
+function constructFilterBtn(text) {
+    return `
+    <span class="job-filter">${text} 
+        <button class="remove-filter-btn"></button>
+    </span>`;
+}
 
 function constructFeaturedCard(json) {
     let html = `
