@@ -279,7 +279,7 @@ main {
 
 @media screen and (min-width: 768px) {
   main {
-    width: 77%;
+    max-width: 1108.8px;
   }
   .card {
     -webkit-box-align: center;
@@ -305,14 +305,45 @@ main {
   .card__header {
     margin-bottom: .5em;
   }
+  .card__detail {
+    white-space: nowrap;
+  }
   .card--featured {
     padding: 1em 2.5em 1.2em 2.1em;
   }
   .filter__container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     margin-left: auto;
     margin-top: 0;
   }
   .circle {
     margin: 0 1.2em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main {
+    max-width: 650px;
+  }
+  .card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card__body {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  .filter__container {
+    border-top-color: #7b8e8e;
+    border-top-style: solid;
+    border-top-width: 1px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 0;
+    padding-top: 1em;
+    width: 100%;
   }
 }
