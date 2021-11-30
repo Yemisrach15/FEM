@@ -1,6 +1,7 @@
 let cardContainer = document.querySelector('.card__container');
 let jobFilterContainer = document.querySelector('.job-filter__container');
 let clearFiltersBtn = document.querySelector('.clear-btn');
+let headerContent = document.querySelector('.header-content');
 let selectedFilters = [];
 let filters;
 
@@ -34,6 +35,11 @@ function handleClearBtnClick(e) {
     e.target.previousElementSibling.innerHTML = '';
     selectedFilters = [];
     filterCards();
+
+    // hide selected filters container if selectedFilters == []
+    if (selectedFilters.length === 0) {
+        headerContent.classList.add('invisible');
+    }
 }
 
 function handleFilterClick(e) {
@@ -42,7 +48,10 @@ function handleFilterClick(e) {
     if (isFilterSelected(filterText)) return;
 
     // If not, add filter btn and listener (to remove filter)
-    if (jobFilterContainer.innerText === '') {
+    if (selectedFilters.length === 0) {
+        // unhide selected filters container
+        headerContent.classList.remove('invisible');
+
         jobFilterContainer.innerHTML = constructFilterBtn(filterText);
     } else {
         let lastFilterBtn = jobFilterContainer.lastElementChild;
@@ -65,6 +74,11 @@ function handleRemoveFilterClick(e, filterText) {
     const filterIndex = selectedFilters.indexOf(filterText);
     selectedFilters.splice(filterIndex, 1); // remove filter from list
     filterCards();
+
+    // hide selected filters container if selectedFilters == []
+    if (selectedFilters.length === 0) {
+        headerContent.classList.add('invisible');
+    }
 }
 
 // function to customise cards based on selected filters
