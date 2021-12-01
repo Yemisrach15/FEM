@@ -269,7 +269,7 @@ main {
   margin: 0 .3em;
 }
 
-.hidden {
+.card.hidden {
   display: none;
 }
 
