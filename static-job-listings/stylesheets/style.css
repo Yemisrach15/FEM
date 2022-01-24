@@ -143,6 +143,12 @@ body {
   background: #5ba4a4;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .filter__container {
+    border-top-color: #7b8e8e;
+  }
+}
+
 header {
   background: url("../images/bg-header-mobile.svg") no-repeat, #5ba4a4;
   background-position: bottom center, center;
@@ -336,7 +342,6 @@ main {
     padding-bottom: 0;
   }
   .filter__container {
-    border-top-color: #7b8e8e;
     border-top-style: solid;
     border-top-width: 1px;
     -webkit-box-pack: start;
