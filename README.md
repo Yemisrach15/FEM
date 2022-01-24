@@ -2,6 +2,10 @@
 
 This repo contains all the solutions I have done for the frontendmentor.io challenges. 
 
+#### Job listings with filtering
+:arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/static-job-listings)** <br>
+:arrow_upper_right: **[Live Site URL](https://static-job-listings-yemisrach15.vercel.app/)**
+
 #### Social media dashboard with theme switcher
 :arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/social-media-dashboard-with-theme-switcher)** <br>
 :arrow_upper_right: **[Live Site URL](https://fem-social-media-dashboard-with-theme-switcher-seven.vercel.app/)**
