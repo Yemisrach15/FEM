@@ -66,34 +66,68 @@ footer{
     }
 }
 
-// Dark Gray
-$color-base: darken(#4e4e4e, 15%);
-
-$card-height: 1.6em;
-
-.card__time {
-//   background-color: $color-base;
-  border-radius: .5em;
-  display: inline-block;
-  box-shadow: .05em .05em .2em 0 rgba(#000, .3);
-  line-height: $card-height;
-//   margin: .2em;
-//   font-size: 10em;
-  font-weight: bold;
-  padding: 1.335em 1.33em;
+.card__time{
+  background: $netural-color-100;
+  overflow: hidden;
   perspective: 500px;
   position: relative;
-  &:after {
-    border: 1px solid rgba(#000, .75);
-    content: '';
+
+  &__divider{
+    bottom: 52%;
+    left: 0;
+    opacity: 45%;
     position: absolute;
-      top: 50%;
-      right: 0;
-      left: 0;
+    height: 2px;
+    width: 100%;
+    box-shadow: inset 1px 6px 6px 8px hsla(0, 0%, 0%, 0.212);
+  }
+
+  &::before, &::after{
+    content: "";
+    background: $netural-color-200;
+    border-radius: 50%;
+    bottom: calc(50% - 4px);
+    height: 10px;
+    left: -7px;
+    position: absolute;
+    width: 10px;
+    z-index: 999;
+  }
+  &::after{
+    left: initial;
+    right: -7px;
   }
 }
-.card__time > span{
-    font-size: 2.3em;
+
+.number{
+  font-size: 2.3em;
+}
+.half{
+  animation: flip-top 2s linear 0s infinite;
+  background: $netural-color-100;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.top{
+  bottom: 50%;
+  padding: .8rem .5rem 0rem .5rem;
+  transform-origin: 50% 100% 0;
+  top: 0;
+}
+.bottom{
+  animation: flip-bottom 2s linear 0s infinite;
+  top: 50%;
+  padding: 0rem .5rem .8rem .5rem;
+  bottom: 0;
+  transform-origin: 50% 0 0;
+
+  &::before{
+    content: "";
+    display: block;
+    margin-top: -1.5em;
+  }
 }
 
 @keyframes flip-top {
@@ -102,8 +136,7 @@ $card-height: 1.6em;
   }
   10% {
     background-color: darken($netural-color-100, 15%);
-    // box-shadow: inset 0 .02em 0 0 white;
-    // box-shadow: inset 0 -6em 6em -6em rgba(#000, 1), inset 0 .02em 0 0 white;
+    box-shadow: inset 0 .02em 0 0 white;
     transform: rotateX(-90deg);
   }
   100% {
@@ -117,41 +150,12 @@ $card-height: 1.6em;
   }
   10% {
     background-color: lighten($netural-color-100, 10%);
-    // box-shadow: inset 0 -.02em 0 0 black;
-    // box-shadow: inset 0 6em 6em -6em rgba(#fff, .5), inset 0 -.02em 0 0 black;
+    box-shadow: inset 0 -.02em 0 0 black;
     transform: rotateX(90deg);
   }
   20% {
     background-color: lighten($netural-color-100, 0%);
-    // box-shadow: none;
+    box-shadow: none;
     transform: rotateX(0deg);
-  }
-}
-
-.half {
-  background-color: $netural-color-100;
-  overflow: hidden;
-  padding: .6em .6em;
-  position: absolute;
-left: 0;
-}
-
-.top {
-  animation: flip-top 2s linear 0s infinite;
-  border-radius: .1em .1em 0 0;
-  bottom: 50%;
-  top: 0;
-  transform-origin: 50% 100% 0;
-}
-
-.bottom {
-  animation: flip-bottom 2s linear 0s infinite;
-  border-radius: 0 0 .1em .1em;
-  top: 15%;
-  transform-origin: 50% 0 0;
-  &:before {
-    content: '';
-    display: block;
-    margin-top: -$card-height/2;
   }
 }
