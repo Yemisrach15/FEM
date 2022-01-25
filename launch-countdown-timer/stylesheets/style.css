@@ -138,8 +138,6 @@ footer {
 }
 
 .half {
-  -webkit-animation: flip-top 2s linear 0s infinite;
-          animation: flip-top 2s linear 0s infinite;
   background: #343650;
   left: 0;
   overflow: hidden;
@@ -156,8 +154,6 @@ footer {
 }
 
 .bottom {
-  -webkit-animation: flip-bottom 2s linear 0s infinite;
-          animation: flip-bottom 2s linear 0s infinite;
   top: 50%;
   padding: 0rem .5rem .8rem .5rem;
   bottom: 0;
@@ -169,6 +165,21 @@ footer {
   content: "";
   display: block;
   margin-top: -1.5em;
+}
+
+.animate-flip-top {
+  -webkit-animation: flip-top 1s linear 0s;
+          animation: flip-top 1s linear 0s;
+}
+
+.animate-flip-bottom {
+  -webkit-animation: flip-bottom 1s linear 0s;
+          animation: flip-bottom 1s linear 0s;
+}
+
+.seconds.animate-flip-top, .seconds.animate-flip-bottom {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes flip-top {

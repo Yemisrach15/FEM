@@ -103,7 +103,6 @@ footer{
   font-size: 2.3em;
 }
 .half{
-  animation: flip-top 2s linear 0s infinite;
   background: $netural-color-100;
   left: 0;
   overflow: hidden;
@@ -117,7 +116,6 @@ footer{
   top: 0;
 }
 .bottom{
-  animation: flip-bottom 2s linear 0s infinite;
   top: 50%;
   padding: 0rem .5rem .8rem .5rem;
   bottom: 0;
@@ -128,6 +126,16 @@ footer{
     display: block;
     margin-top: -1.5em;
   }
+}
+
+.animate-flip-top {
+  animation: flip-top 1s linear 0s;
+}
+.animate-flip-bottom {
+  animation: flip-bottom 1s linear 0s;
+}
+.seconds.animate-flip-top, .seconds.animate-flip-bottom {
+  animation-iteration-count: infinite;
 }
 
 @keyframes flip-top {
