@@ -1,78 +1,94 @@
-@import './base/index';
-@import './themes/index';
-@import './utils/index';
+@import "./base/index";
+@import "./themes/index";
+@import "./utils/index";
 
-html, body{
-    height: 100%;
+body {
+  background: url(../images/bg-stars.svg) no-repeat top,
+    url(../images/pattern-hills.svg) no-repeat 86% bottom, $netural-color-300;
+  background-size: auto, auto 25%, auto;
+  color: white;
+  padding: 10.2em 0 0 0;
 }
-body{
-    background: url(../images/bg-stars.svg) no-repeat top, url(../images/pattern-hills.svg) no-repeat 86% bottom, $netural-color-300;
-    background-size: auto, auto 25%,auto;
-    color: white;
-    padding: 10.2em 0 0 0;
+h1 {
+  font-size: 1.25em;
+  letter-spacing: 6.5px;
+  margin-bottom: 3.2em;
+  text-transform: uppercase;
 }
-h1{
-    font-size: 1.25em;
-    letter-spacing: 6.5px;
-    margin-bottom: 3.2em;
+h2 {
+  font-size: 2.3em;
+}
+footer {
+  bottom: 0;
+  margin-top: 18.5em;
+  position: sticky;
+  top: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  width: 87%;
+}
+.timer__container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+.card {
+  width: calc((100% - 3em) / 4);
+
+  &__top {
+    background: $netural-color-100;
+    border-radius: 0.5em;
+    box-shadow: 0px 7px 0px 0px $netural-color-300;
+    color: $primary-color-time;
+    margin-bottom: 1em;
+    padding: 0.8em 0.5em;
+  }
+  &__sub {
+    color: $primary-color-card;
+    font-size: 0.65em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-}
-h2{
-    font-size: 2.3em;
-}
-footer{
-    bottom: 0;
-    margin-top: 5em;
-    position: sticky;
-    top: 100%;
+  }
 }
 
-.wrapper{
-    height: 100%;
-    margin: 0 auto;
-    text-align: center;
-    width: 87%;
-}
-.timer__container{
+.social {
+  &__icons {
     display: flex;
-    gap: 1em;
+    gap: 1.3em;
     justify-content: center;
-}
-.card{
-    width: calc((100% - 3em) / 4);
-
-    &__top{
-        background: $netural-color-100;
-        border-radius: .5em;
-        box-shadow: 0px 7px 0px 0px $netural-color-300;
-        color: $primary-color-time;
-        margin-bottom: 1em;
-        padding: .8em .5em;
-    }
-    &__sub{
-        color: $primary-color-card;
-        font-size: .65em;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-    }
+    margin-bottom: 0.5em;
+  }
 }
 
-.social{
-    &__icons{
-        display: flex;
-        gap: 1.3em;
-        justify-content: center;
-        margin-bottom: .5em;
-    }
+.icon {
+  background-color: #8385a9;
+  height: 24px;
+  mask: url("../images/icon-facebook.svg") no-repeat center;
+  mask-size: contain;
+  width: 24px;
+
+  &--pinterest {
+    mask-image: url("../images/icon-pinterest.svg");
+  }
+  &--instagram {
+    mask-image: url("../images/icon-instagram.svg");
+  }
+  &:hover {
+    background-color: $primary-color-time;
+  }
 }
 
-.card__time{
+.card__time {
   background: $netural-color-100;
   overflow: hidden;
   perspective: 500px;
   position: relative;
 
-  &__divider{
+  &__divider {
     bottom: 52%;
     left: 0;
     opacity: 45%;
@@ -82,7 +98,8 @@ footer{
     box-shadow: inset 1px 6px 6px 8px hsla(0, 0%, 0%, 0.212);
   }
 
-  &::before, &::after{
+  &::before,
+  &::after {
     content: "";
     background: $netural-color-200;
     border-radius: 50%;
@@ -93,38 +110,85 @@ footer{
     width: 10px;
     z-index: 999;
   }
-  &::after{
+  &::after {
     left: initial;
     right: -7px;
   }
 }
 
-.number{
+.number {
   font-size: 2.3em;
 }
-.half{
+.half {
   background: $netural-color-100;
   left: 0;
   overflow: hidden;
   position: absolute;
   width: 100%;
 }
-.top{
+.top {
   bottom: 50%;
-  padding: .8rem .5rem 0rem .5rem;
+  padding: 0.8rem 0.5rem 0rem 0.5rem;
   transform-origin: 50% 100% 0;
   top: 0;
 }
-.bottom{
+.bottom {
   top: 50%;
-  padding: 0rem .5rem .8rem .5rem;
+  padding: 0rem 0.5rem 0.8rem 0.5rem;
   bottom: 0;
   transform-origin: 50% 0 0;
 
-  &::before{
+  &::before {
     content: "";
     display: block;
     margin-top: -1.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url(../images/bg-stars.svg) no-repeat top,
+      url(../images/pattern-hills.svg) no-repeat 86% bottom, #191a24;
+    background-size: auto, auto, auto;
+    padding: 9.5em 0 0 0;
+  }
+  main {
+    margin: 0 auto;
+    max-width: 690px;
+  }
+  h1 {
+    font-size: 1.65em;
+    margin-bottom: 4.5em;
+  }
+  footer {
+    margin-top: 18em;
+  }
+  .timer {
+    &__container {
+      gap: 2em;
+    }
+  }
+  .number {
+    font-size: 6.3em;
+  }
+  .bottom {
+    &::before {
+      margin-top: -4.2em;
+    }
+  }
+  .card {
+    &__top {
+      margin-bottom: 2em;
+    }
+    &__sub {
+      font-size: 1em;
+      letter-spacing: 0.4em;
+    }
+    &__time {
+      &__divider {
+        bottom: 50%;
+      }
+    }
   }
 }
 
@@ -134,7 +198,8 @@ footer{
 .animate-flip-bottom {
   animation: flip-bottom 1s linear 0s;
 }
-.seconds.animate-flip-top, .seconds.animate-flip-bottom {
+.seconds.animate-flip-top,
+.seconds.animate-flip-bottom {
   animation-iteration-count: infinite;
 }
 
@@ -144,11 +209,11 @@ footer{
   }
   10% {
     background-color: darken($netural-color-100, 15%);
-    box-shadow: inset 0 .02em 0 0 white;
+    box-shadow: inset 0 0.02em 0 0 white;
     transform: rotateX(-90deg);
   }
   100% {
-    transform: rotateX(-90deg);    
+    transform: rotateX(-90deg);
   }
 }
 
@@ -158,7 +223,7 @@ footer{
   }
   10% {
     background-color: lighten($netural-color-100, 10%);
-    box-shadow: inset 0 -.02em 0 0 black;
+    box-shadow: inset 0 -0.02em 0 0 black;
     transform: rotateX(90deg);
   }
   20% {
