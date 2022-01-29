@@ -7,6 +7,7 @@ body {
     url(../images/pattern-hills.svg) no-repeat 86% bottom, $netural-color-300;
   background-size: auto, auto 25%, auto;
   color: white;
+  height: 100vh;
   padding: 10.2em 0 0 0;
 }
 h1 {
@@ -150,6 +151,7 @@ footer {
     background: url(../images/bg-stars.svg) no-repeat top,
       url(../images/pattern-hills.svg) no-repeat 86% bottom, #191a24;
     background-size: auto, auto, auto;
+    height: auto;
     padding: 9.5em 0 0 0;
   }
   main {
@@ -193,10 +195,10 @@ footer {
 }
 
 .animate-flip-top {
-  animation: flip-top 1s linear 0s;
+  animation: flip-top 1s ease-out 0s;
 }
 .animate-flip-bottom {
-  animation: flip-bottom 1s linear 0s;
+  animation: flip-bottom 1s ease-out 0s;
 }
 .seconds.animate-flip-top,
 .seconds.animate-flip-bottom {
