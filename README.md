@@ -2,6 +2,10 @@
 
 This repo contains all the solutions I have done for the frontendmentor.io challenges. 
 
+#### Launch countdown timer
+:arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/launch-countdown-timer)** <br>
+:arrow_upper_right: **[Live Site URL](https://fem-launch-countdown-timer-yemisrach15.vercel.app/)**
+
 #### Job listings with filtering
 :arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/static-job-listings)** <br>
 :arrow_upper_right: **[Live Site URL](https://static-job-listings-yemisrach15.vercel.app/)**
