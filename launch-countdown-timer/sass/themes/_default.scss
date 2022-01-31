@@ -1,0 +1,36 @@
+@import "../utils/colors";
+
+body {
+  color: white;
+}
+
+.card {
+  &__top {
+    background: $netural-color-100;
+    color: $primary-color-time;
+  }
+  &__sub {
+    color: $primary-color-card;
+  }
+}
+
+.icon {
+  background-color: #8385a9;
+
+  &:hover {
+    background-color: $primary-color-time;
+  }
+}
+
+.card__time {
+  background: $netural-color-100;
+
+  &::before,
+  &::after {
+    background: $netural-color-200;
+  }
+}
+
+.half {
+  background: $netural-color-100;
+}

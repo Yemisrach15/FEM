@@ -6,18 +6,11 @@ body {
   background: url(../images/bg-stars.svg) no-repeat top,
     url(../images/pattern-hills.svg) no-repeat 86% bottom, $netural-color-300;
   background-size: auto, auto 25%, auto;
-  color: white;
   height: 100vh;
   padding: 10.2em 0 0 0;
 }
 h1 {
-  font-size: 1.25em;
-  letter-spacing: 6.5px;
   margin-bottom: 3.2em;
-  text-transform: uppercase;
-}
-h2 {
-  font-size: 2.3em;
 }
 footer {
   bottom: 0;
@@ -29,7 +22,6 @@ footer {
 .wrapper {
   height: 100%;
   margin: 0 auto;
-  text-align: center;
   width: 87%;
 }
 .timer__container {
@@ -41,18 +33,10 @@ footer {
   width: calc((100% - 3em) / 4);
 
   &__top {
-    background: $netural-color-100;
     border-radius: 0.5em;
     box-shadow: 0px 7px 0px 0px $netural-color-300;
-    color: $primary-color-time;
     margin-bottom: 1em;
     padding: 0.8em 0.5em;
-  }
-  &__sub {
-    color: $primary-color-card;
-    font-size: 0.65em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
   }
 }
 
@@ -66,7 +50,6 @@ footer {
 }
 
 .icon {
-  background-color: #8385a9;
   height: 24px;
   mask: url("../images/icon-facebook.svg") no-repeat center;
   mask-size: contain;
@@ -78,13 +61,9 @@ footer {
   &--instagram {
     mask-image: url("../images/icon-instagram.svg");
   }
-  &:hover {
-    background-color: $primary-color-time;
-  }
 }
 
 .card__time {
-  background: $netural-color-100;
   overflow: hidden;
   perspective: 500px;
   position: relative;
@@ -102,7 +81,6 @@ footer {
   &::before,
   &::after {
     content: "";
-    background: $netural-color-200;
     border-radius: 50%;
     bottom: calc(50% - 4px);
     height: 10px;
@@ -117,11 +95,7 @@ footer {
   }
 }
 
-.number {
-  font-size: 2.3em;
-}
 .half {
-  background: $netural-color-100;
   left: 0;
   overflow: hidden;
   position: absolute;
@@ -159,7 +133,6 @@ footer {
     max-width: 690px;
   }
   h1 {
-    font-size: 1.65em;
     margin-bottom: 4.5em;
   }
   footer {
@@ -170,9 +143,6 @@ footer {
       gap: 2em;
     }
   }
-  .number {
-    font-size: 6.3em;
-  }
   .bottom {
     &::before {
       margin-top: -4.2em;
@@ -181,10 +151,6 @@ footer {
   .card {
     &__top {
       margin-bottom: 2em;
-    }
-    &__sub {
-      font-size: 1em;
-      letter-spacing: 0.4em;
     }
     &__time {
       &__divider {
@@ -203,34 +169,4 @@ footer {
 .seconds.animate-flip-top,
 .seconds.animate-flip-bottom {
   animation-iteration-count: infinite;
-}
-
-@keyframes flip-top {
-  0% {
-    transform: rotateX(0deg);
-  }
-  10% {
-    background-color: darken($netural-color-100, 15%);
-    box-shadow: inset 0 0.02em 0 0 white;
-    transform: rotateX(-90deg);
-  }
-  100% {
-    transform: rotateX(-90deg);
-  }
-}
-
-@keyframes flip-bottom {
-  0% {
-    transform: rotateX(90deg);
-  }
-  10% {
-    background-color: lighten($netural-color-100, 10%);
-    box-shadow: inset 0 -0.02em 0 0 black;
-    transform: rotateX(90deg);
-  }
-  20% {
-    background-color: lighten($netural-color-100, 0%);
-    box-shadow: none;
-    transform: rotateX(0deg);
-  }
 }

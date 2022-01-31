@@ -1,0 +1,42 @@
+h1 {
+  font-size: 1.25em;
+  letter-spacing: 6.5px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.3em;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.card {
+  &__sub {
+    font-size: 0.65em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+.number {
+  font-size: 2.3em;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 1.65em;
+  }
+
+  .number {
+    font-size: 6.3em;
+  }
+
+  .card {
+    &__sub {
+      font-size: 1em;
+      letter-spacing: 0.4em;
+    }
+  }
+}
