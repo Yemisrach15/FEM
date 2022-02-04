@@ -1,0 +1,84 @@
+@import "./base/index";
+@import "./themes/index";
+@import "./utils/index";
+
+body {
+  height: 100vh;
+}
+
+main,
+footer {
+  margin: 1.5em auto;
+  margin-top: 0;
+  padding-top: 1.5em;
+  width: 87%;
+}
+
+h1 {
+  margin-bottom: 1.1em;
+}
+
+h2 {
+  margin-bottom: 0.9em;
+}
+
+form {
+  margin-bottom: 1.35em;
+  position: relative;
+}
+
+input {
+  border-radius: $border-radius;
+  padding: 1em 1.3em;
+  width: 100%;
+}
+
+button {
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  height: 100%;
+  padding: 1.6em;
+  position: absolute;
+  right: 0;
+}
+
+.wrapper {
+  height: 107%;
+  position: relative;
+}
+
+.addr {
+  position: relative;
+}
+
+.addr__info {
+  border-radius: $border-radius;
+  padding: 1.5em 2em;
+  position: absolute;
+  width: 100%;
+  z-index: 1002;
+}
+
+.addr__section {
+  margin-bottom: 1.38em;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.map__container {
+  height: calc(100% - #{$background-image-height});
+  position: absolute;
+  top: $background-image-height;
+  width: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.attribution {
+  padding-bottom: 2em;
+}

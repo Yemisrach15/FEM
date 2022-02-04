@@ -1,0 +1,36 @@
+@import "../utils/variables";
+
+main,
+footer {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: 500;
+  letter-spacing: $letter-spacing;
+}
+
+h2 {
+  font-size: 0.5em;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+input {
+  letter-spacing: $letter-spacing;
+  text-overflow: ellipsis;
+}
+
+.addr__section {
+  & p {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}

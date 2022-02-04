@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  background: none;
+  border: none;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+main,
+footer {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 0.5em;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+input {
+  letter-spacing: 0.01em;
+  text-overflow: ellipsis;
+}
+
+.addr__section p {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: #969696;
+}
+
+input {
+  background: white;
+  color: #2b2b2b;
+}
+
+input::-webkit-input-placeholder {
+  color: #969696;
+}
+
+input:-ms-input-placeholder {
+  color: #969696;
+}
+
+input::-ms-input-placeholder {
+  color: #969696;
+}
+
+input::placeholder {
+  color: #969696;
+}
+
+button {
+  background: url("../images/icon-arrow.svg") no-repeat center, black;
+}
+
+.wrapper {
+  background: url("../images/pattern-bg.png") no-repeat top center;
+  background-size: auto 36.3%;
+}
+
+.addr__info {
+  background: white;
+}
+
+.addr__section p {
+  color: #2b2b2b;
+}
+
+.map__container {
+  background: #969696;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+body {
+  height: 100vh;
+}
+
+main,
+footer {
+  margin: 1.5em auto;
+  margin-top: 0;
+  padding-top: 1.5em;
+  width: 87%;
+}
+
+h1 {
+  margin-bottom: 1.1em;
+}
+
+h2 {
+  margin-bottom: 0.9em;
+}
+
+form {
+  margin-bottom: 1.35em;
+  position: relative;
+}
+
+input {
+  border-radius: 0.85rem;
+  padding: 1em 1.3em;
+  width: 100%;
+}
+
+button {
+  border-top-right-radius: 0.85rem;
+  border-bottom-right-radius: 0.85rem;
+  height: 100%;
+  padding: 1.6em;
+  position: absolute;
+  right: 0;
+}
+
+.wrapper {
+  height: 107%;
+  position: relative;
+}
+
+.addr {
+  position: relative;
+}
+
+.addr__info {
+  border-radius: 0.85rem;
+  padding: 1.5em 2em;
+  position: absolute;
+  width: 100%;
+  z-index: 1002;
+}
+
+.addr__section {
+  margin-bottom: 1.38em;
+}
+
+.addr__section:last-of-type {
+  margin-bottom: 0;
+}
+
+.map__container {
+  height: calc(100% - 36.3%);
+  position: absolute;
+  top: 36.3%;
+  width: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.attribution {
+  padding-bottom: 2em;
+}

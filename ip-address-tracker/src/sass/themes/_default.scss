@@ -1,0 +1,45 @@
+@import "../utils/colors";
+
+h1 {
+  color: $netural-color-white;
+}
+
+h2 {
+  color: $primary-color-100;
+}
+
+input {
+  background: $netural-color-white;
+  color: $primary-color-200;
+
+  &::placeholder {
+    color: $primary-color-100;
+  }
+}
+
+button {
+  background: url("../images/icon-arrow.svg") no-repeat center, $netural-color-black;
+}
+
+.wrapper {
+  background: url("../images/pattern-bg.png") no-repeat top center;
+  background-size: auto $background-image-height;
+}
+
+.addr__info {
+  background: $netural-color-white;
+}
+
+.addr__section {
+  & p {
+    color: $primary-color-200;
+  }
+}
+
+.map__container {
+  background: $primary-color-100;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
