@@ -6,6 +6,7 @@ import Section from './Section';
 class Main extends React.Component {
 
     state = {
+        clientIpaddr: "",
         inputIpaddr: "",
         ipaddr: "",
         location: "",
@@ -16,8 +17,18 @@ class Main extends React.Component {
         loading: true
     }
 
+    getClientIP = () => {
+        axios.get(`/apiIpify/?format=json`)
+            .then(res => {
+                this.setState({
+                    clientIpaddr: res.data.ip
+                })
+            });
+    }
+
     componentDidMount() {
-        axios.get(`/country,city?apiKey=${process.env.REACT_APP_GEO_API_KEY}&ipAddress=8.8.8.8`)
+        this.getClientIP();
+        axios.get(`/apiGeoIpify/country,city?apiKey=${process.env.REACT_APP_GEO_API_KEY}&ipAddress=${this.state.clientIpaddr}`)
             .then(res => {
                 const locationString = `${res.data.location.city}, ${res.data.location.country} ${res.data.location.postalCode}`;
 
@@ -40,7 +51,7 @@ class Main extends React.Component {
     }
 
     handleSubmit = () => {
-        axios.get(`/country,city?apiKey=${process.env.REACT_APP_GEO_API_KEY}&ipAddress=${this.state.inputIpaddr}`)
+        axios.get(`/apiGeoIpify/country,city?apiKey=${process.env.REACT_APP_GEO_API_KEY}&ipAddress=${this.state.inputIpaddr}`)
             .then(res => {
                 const locationString = `${res.data.location.city}, ${res.data.location.country} ${res.data.location.postalCode}`;
 
@@ -61,7 +72,7 @@ class Main extends React.Component {
                 <main className='addr'>
                     <h1>IP Address Tracker</h1>
                     <form>
-                        <input onChange={this.handleInputChange} name='addr' type='text' placeholder='Search for any IP address or domain' defaultValue={this.state.ipaddr} />
+                        <input onChange={this.handleInputChange} name='addr' type='text' placeholder='Search for any IP address or domain' defaultValue={this.state.clientIpaddr} />
                         <button onClick={this.handleSubmit} type='button'></button>
                     </form>
                     <div className='addr__info'>
