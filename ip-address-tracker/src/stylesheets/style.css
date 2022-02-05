@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -35,11 +37,24 @@ h1 {
   letter-spacing: 0.01em;
 }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 1.7em;
+  }
+}
+
 h2 {
   font-size: 0.5em;
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 0.6em;
+    letter-spacing: 0.23em;
+  }
 }
 
 input {
@@ -50,6 +65,12 @@ input {
 .addr__section p {
   font-size: 1.1em;
   font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .addr__section p {
+    font-size: 1.4em;
+  }
 }
 
 .attribution {
@@ -90,9 +111,13 @@ button {
   background: url("../images/icon-arrow.svg") no-repeat center, black;
 }
 
+button:hover {
+  background-color: #2b2b2b;
+}
+
 .wrapper {
   background: url("../images/pattern-bg.png") no-repeat top center;
-  background-size: auto 36.3%;
+  background-size: auto 35%;
 }
 
 .addr__info {
@@ -101,6 +126,12 @@ button {
 
 .addr__section p {
   color: #2b2b2b;
+}
+
+@media screen and (min-width: 768px) {
+  .addr__section:not(:last-of-type)::after {
+    background: #969696;
+  }
 }
 
 .map__container {
@@ -123,12 +154,40 @@ footer {
   width: 87%;
 }
 
+@media screen and (min-width: 768px) {
+  main,
+  footer {
+    min-width: 1000px;
+    padding-top: 1.6em;
+    width: 77%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  main,
+  footer {
+    min-width: auto;
+  }
+}
+
 h1 {
   margin-bottom: 1.1em;
 }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    margin-bottom: 0.9em;
+  }
+}
+
 h2 {
   margin-bottom: 0.9em;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    margin-bottom: 1.5em;
+  }
 }
 
 form {
@@ -136,8 +195,16 @@ form {
   position: relative;
 }
 
+@media screen and (min-width: 768px) {
+  form {
+    margin-bottom: 2.7em;
+    width: 50%;
+  }
+}
+
 input {
   border-radius: 0.85rem;
+  cursor: pointer;
   padding: 1em 1.3em;
   width: 100%;
 }
@@ -156,8 +223,29 @@ button {
   position: relative;
 }
 
+@media screen and (min-width: 768px) {
+  .wrapper {
+    height: 100%;
+  }
+}
+
 .addr {
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .addr {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .addr__info {
@@ -168,18 +256,69 @@ button {
   z-index: 1002;
 }
 
+@media screen and (min-width: 768px) {
+  .addr__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    position: static;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .addr__info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 2em 0;
+    padding: 2em 0;
+  }
+}
+
 .addr__section {
   margin-bottom: 1.38em;
+  position: relative;
 }
 
 .addr__section:last-of-type {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .addr__section {
+    margin: 2em 0;
+    padding: 0 1.9em;
+    width: 25%;
+  }
+  .addr__section:last-of-type {
+    margin-bottom: auto;
+  }
+  .addr__section:not(:last-of-type)::after {
+    content: "";
+    height: 83%;
+    position: absolute;
+    right: 0;
+    top: 8.5%;
+    width: 1px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .addr__section {
+    margin: 0;
+    padding: 0 2.5em;
+    width: 50%;
+  }
+  .addr__section:nth-of-type(2)::after {
+    content: none;
+  }
+}
+
 .map__container {
-  height: calc(100% - 36.3%);
+  height: calc(100% - 35%);
   position: absolute;
-  top: 36.3%;
+  top: 35%;
   width: 100%;
 }
 

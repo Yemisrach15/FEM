@@ -1,4 +1,4 @@
-@import "../utils/variables";
+@import "../utils/index";
 
 main,
 footer {
@@ -9,6 +9,10 @@ h1 {
   font-size: 1.4em;
   font-weight: 500;
   letter-spacing: $letter-spacing;
+
+  @include screen-desktop {
+    font-size: 1.7em;
+  }
 }
 
 h2 {
@@ -16,6 +20,11 @@ h2 {
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
+
+  @include screen-desktop {
+    font-size: 0.6em;
+    letter-spacing: 0.23em;
+  }
 }
 
 input {
@@ -27,6 +36,10 @@ input {
   & p {
     font-size: 1.1em;
     font-weight: 500;
+
+    @include screen-desktop {
+      font-size: 1.4em;
+    }
   }
 }
 

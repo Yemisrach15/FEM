@@ -1,4 +1,4 @@
-@import "../utils/colors";
+@import "../utils/index";
 
 h1 {
   color: $netural-color-white;
@@ -19,11 +19,15 @@ input {
 
 button {
   background: url("../images/icon-arrow.svg") no-repeat center, $netural-color-black;
+
+  &:hover {
+    background-color: $primary-color-200;
+  }
 }
 
 .wrapper {
   background: url("../images/pattern-bg.png") no-repeat top center;
-  background-size: auto $background-image-height;
+  background-size: auto $map-height;
 }
 
 .addr__info {
@@ -34,6 +38,12 @@ button {
   & p {
     color: $primary-color-200;
   }
+
+  @include screen-desktop {
+    &:not(:last-of-type)::after {
+      background: $primary-color-100;
+    }
+  }
 }
 
 .map__container {
@@ -41,5 +51,5 @@ button {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: $secondary-color;
 }

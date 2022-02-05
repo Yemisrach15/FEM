@@ -12,23 +12,47 @@ footer {
   margin-top: 0;
   padding-top: 1.5em;
   width: 87%;
+
+  @include screen-desktop {
+    min-width: 1000px;
+    padding-top: 1.6em;
+    width: 77%;
+  }
+
+  @include screen-hybrid {
+    min-width: auto;
+  }
 }
 
 h1 {
   margin-bottom: 1.1em;
+
+  @include screen-desktop {
+    margin-bottom: 0.9em;
+  }
 }
 
 h2 {
   margin-bottom: 0.9em;
+
+  @include screen-desktop {
+    margin-bottom: 1.5em;
+  }
 }
 
 form {
   margin-bottom: 1.35em;
   position: relative;
+
+  @include screen-desktop {
+    margin-bottom: 2.7em;
+    width: 50%;
+  }
 }
 
 input {
   border-radius: $border-radius;
+  cursor: pointer;
   padding: 1em 1.3em;
   width: 100%;
 }
@@ -45,10 +69,20 @@ button {
 .wrapper {
   height: 107%;
   position: relative;
+
+  @include screen-desktop {
+    height: 100%;
+  }
 }
 
 .addr {
   position: relative;
+
+  @include screen-desktop {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .addr__info {
@@ -57,20 +91,63 @@ button {
   position: absolute;
   width: 100%;
   z-index: 1002;
+
+  @include screen-desktop {
+    display: flex;
+    padding: 0;
+    position: static;
+    text-align: left;
+  }
+
+  @include screen-hybrid {
+    flex-wrap: wrap;
+    gap: 2em 0;
+    padding: 2em 0;
+  }
 }
 
 .addr__section {
   margin-bottom: 1.38em;
+  position: relative;
 
   &:last-of-type {
     margin-bottom: 0;
   }
+
+  @include screen-desktop {
+    margin: 2em 0;
+    padding: 0 1.9em;
+    width: 25%;
+
+    &:last-of-type {
+      margin-bottom: auto;
+    }
+
+    &:not(:last-of-type)::after {
+      content: "";
+      height: 83%;
+      position: absolute;
+      right: 0;
+      top: 8.5%;
+      width: 1px;
+    }
+  }
+
+  @include screen-hybrid {
+    margin: 0;
+    padding: 0 2.5em;
+    width: 50%;
+
+    &:nth-of-type(2)::after {
+      content: none;
+    }
+  }
 }
 
 .map__container {
-  height: calc(100% - #{$background-image-height});
+  height: calc(100% - #{$map-height});
   position: absolute;
-  top: $background-image-height;
+  top: $map-height;
   width: 100%;
 }
 
