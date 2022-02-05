@@ -66,13 +66,20 @@ class Main extends React.Component {
             });
     }
 
+    preventSubmitOnEnter = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            this.handleSubmit();
+        }
+    }
+
     render() {
         return (
             <div>
                 <main className='addr'>
                     <h1>IP Address Tracker</h1>
                     <form>
-                        <input onChange={this.handleInputChange} name='addr' type='text' placeholder='Search for any IP address or domain' defaultValue={this.state.clientIpaddr} />
+                        <input onChange={this.handleInputChange} name='addr' type='text' placeholder='Search for any IP address or domain' defaultValue={this.state.clientIpaddr} onKeyPress={this.preventSubmitOnEnter} />
                         <button onClick={this.handleSubmit} type='button'></button>
                     </form>
                     <div className='addr__info'>
