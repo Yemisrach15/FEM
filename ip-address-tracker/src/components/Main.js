@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Map from './Map';
 import Section from './Section';
+import SectionType from './SectionType';
 
 class Main extends React.Component {
 
@@ -20,9 +21,7 @@ class Main extends React.Component {
     getClientIP = () => {
         axios.get(`/apiIpify/?format=json`)
             .then(res => {
-                this.setState({
-                    clientIpaddr: res.data.ip
-                })
+                this.setState({ clientIpaddr: res.data.ip })
             });
     }
 
@@ -45,23 +44,23 @@ class Main extends React.Component {
     }
 
     handleInputChange = (e) => {
-        this.setState({
-            inputIpaddr: e.target.value
-        });
+        this.setState({ inputIpaddr: e.target.value });
     }
 
     handleSubmit = () => {
+        this.setState({ loading: true });
+
         axios.get(`/apiGeoIpify/country,city?apiKey=${process.env.REACT_APP_GEO_API_KEY}&ipAddress=${this.state.inputIpaddr}`)
             .then(res => {
                 const locationString = `${res.data.location.city}, ${res.data.location.country} ${res.data.location.postalCode}`;
-
                 this.setState({
                     ipaddr: res.data.ip,
                     location: locationString,
                     timezone: res.data.location.timezone,
                     isp: res.data.isp,
                     lat: res.data.location.lat,
-                    lng: res.data.location.lng
+                    lng: res.data.location.lng,
+                    loading: false
                 });
             });
     }
@@ -83,13 +82,15 @@ class Main extends React.Component {
                         <button onClick={this.handleSubmit} type='button'></button>
                     </form>
                     <div className='addr__info'>
-                        <Section heading="IP Address" para={this.state.ipaddr} />
-                        <Section heading="Location" para={this.state.location} />
-                        <Section heading="Timezone" para={`UTC ${this.state.timezone}`} />
-                        <Section heading="ISP" para={this.state.isp} />
+                        <Section loading={this.state.loading} heading={SectionType.IPADDR} para={this.state.ipaddr} />
+                        <Section loading={this.state.loading} heading={SectionType.LOCATION} para={this.state.location} />
+                        <Section loading={this.state.loading} heading={SectionType.TIMEZONE} para={this.state.timezone} />
+                        <Section loading={this.state.loading} heading={SectionType.ISP} para={this.state.isp} />
                     </div>
                 </main>
-                {!this.state.loading && <Map lat={this.state.lat} lng={this.state.lng} />}
+                <div className='map__container'>
+                    <Map loading={this.state.loading} lat={this.state.lat} lng={this.state.lng} />
+                </div>
             </div>
         );
     }
