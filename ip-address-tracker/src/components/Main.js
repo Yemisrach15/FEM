@@ -18,16 +18,16 @@ class Main extends React.Component {
         loading: true
     }
 
-    getClientIP = () => {
-        axios.get(`/apiIpify/?format=json`)
+    getClientIP = async () => {
+        await axios.get(`/apiIpify/?format=json`)
             .then(res => {
                 this.setState({ clientIpaddr: res.data.ip })
             });
     }
 
-    componentDidMount() {
-        this.getClientIP();
-        axios.get(`/apiGeoIpify/country,city?apiKey=${process.env.REACT_APP_GEO_API_KEY}&ipAddress=${this.state.clientIpaddr}`)
+    async componentDidMount() {
+        await this.getClientIP();
+        await axios.get(`/apiGeoIpify/country,city?ipAddress=${this.state.clientIpaddr}`)
             .then(res => {
                 const locationString = `${res.data.location.city}, ${res.data.location.country} ${res.data.location.postalCode}`;
 
@@ -50,7 +50,7 @@ class Main extends React.Component {
     handleSubmit = () => {
         this.setState({ loading: true });
 
-        axios.get(`/apiGeoIpify/country,city?apiKey=${process.env.REACT_APP_GEO_API_KEY}&ipAddress=${this.state.inputIpaddr}`)
+        axios.get(`/apiGeoIpify/country,city?ipAddress=${this.state.inputIpaddr}`)
             .then(res => {
                 const locationString = `${res.data.location.city}, ${res.data.location.country} ${res.data.location.postalCode}`;
                 this.setState({

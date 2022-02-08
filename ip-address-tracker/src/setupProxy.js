@@ -26,6 +26,9 @@ module.exports = function (app) {
         "Connection": "keep-alive",
         "content-type": "application/json"
       },
+      onProxyReq: (proxyReq, req, res) => {
+        proxyReq.path += `&apiKey=${process.env.REACT_APP_GEO_API_KEY}`;
+      }
     })
   );
 }
