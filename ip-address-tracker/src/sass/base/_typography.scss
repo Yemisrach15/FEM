@@ -32,6 +32,11 @@ input {
   text-overflow: ellipsis;
 }
 
+small {
+  font-size: 70%;
+  letter-spacing: $letter-spacing + 0.04;
+}
+
 .addr__section {
   & p {
     font-size: 1.1em;

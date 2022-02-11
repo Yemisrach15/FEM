@@ -25,6 +25,10 @@ button {
   }
 }
 
+small {
+  color: $color-error;
+}
+
 .wrapper {
   background: url("../images/pattern-bg.png") no-repeat top center;
   background-size: auto $map-height;

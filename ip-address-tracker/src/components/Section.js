@@ -19,7 +19,7 @@ class Section extends React.Component {
                 <section className='addr__section'>
                     <h2>{this.props.heading}</h2>
                     <p>
-                        {this.props.heading === SectionType.TIMEZONE ? `UTC ${this.props.para}` : `${this.props.para}`}
+                        {this.props.heading === SectionType.TIMEZONE && this.props.para !== "-"? `UTC ${this.props.para}` : `${this.props.para}`}
                     </p>
                 </section>
             );

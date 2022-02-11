@@ -18,6 +18,9 @@ class Main extends React.Component {
         loading: true
     }
 
+    inputRef = React.createRef();
+    smallRef = React.createRef();
+
     getClientIP = async () => {
         await axios.get(`/apiIpify/?format=json`)
             .then(res => {
@@ -62,6 +65,20 @@ class Main extends React.Component {
                     lng: res.data.location.lng,
                     loading: false
                 });
+            })
+            .catch(err => {
+                this.setState({
+                    ipaddr: "-",
+                    location: "-",
+                    timezone: "-",
+                    isp: "-",
+                    loading: false
+                });
+
+                if (err.response.data.code === 422) {
+                    this.inputRef.current.classList.add('input--error');
+                    this.smallRef.current.classList.remove('hidden');
+                }
             });
     }
 
@@ -78,8 +95,11 @@ class Main extends React.Component {
                 <main className='addr'>
                     <h1>IP Address Tracker</h1>
                     <form>
-                        <input onChange={this.handleInputChange} name='addr' type='text' placeholder='Search for any IP address or domain' defaultValue={this.state.clientIpaddr} onKeyPress={this.preventSubmitOnEnter} />
-                        <button onClick={this.handleSubmit} type='button'></button>
+                        <div>
+                            <input onChange={this.handleInputChange} name='addr' type='text' placeholder='Search for any IP address or domain' defaultValue={this.state.clientIpaddr} onKeyPress={this.preventSubmitOnEnter} ref={this.inputRef} />
+                            <button onClick={this.handleSubmit} type='button'></button>
+                        </div>
+                        <small className='hidden' ref={this.smallRef}>Please enter a valid IPv4 or IPv6 address</small>
                     </form>
                     <div className='addr__info'>
                         <Section loading={this.state.loading} heading={SectionType.IPADDR} para={this.state.ipaddr} />
