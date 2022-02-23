@@ -97,7 +97,7 @@ class Main extends React.Component {
                     <form>
                         <div>
                             <input onChange={this.handleInputChange} name='addr' type='text' placeholder='Search for any IP address or domain' defaultValue={this.state.clientIpaddr} onKeyPress={this.preventSubmitOnEnter} ref={this.inputRef} />
-                            <button onClick={this.handleSubmit} type='button'></button>
+                            <button aria-label="Get IP Information" onClick={this.handleSubmit} type='button'></button>
                         </div>
                         <small className='hidden' ref={this.smallRef}>Please enter a valid IPv4 or IPv6 address</small>
                     </form>

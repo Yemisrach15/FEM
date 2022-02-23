@@ -71,6 +71,12 @@ small {
   margin-top: .5em;
 }
 
+input, button, a {
+  &:focus-visible{
+    outline: $primary-color-200 dashed 3px;
+  }
+}
+
 .wrapper {
   height: 107%;
   position: relative;

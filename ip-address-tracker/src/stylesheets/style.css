@@ -11,12 +11,12 @@
   padding: 0;
 }
 
-input {
+input, button, a {
   background: none;
   border: none;
 }
 
-input:focus-visible {
+input:focus-visible, button:focus-visible, a:focus-visible {
   outline: none;
 }
 
@@ -121,7 +121,7 @@ button:hover {
 }
 
 small {
-  color: #fd7c7c;
+  color: #ffe0e7;
 }
 
 .wrapper {
@@ -235,6 +235,10 @@ button {
 
 small {
   margin-top: .5em;
+}
+
+input:focus-visible, button:focus-visible, a:focus-visible {
+  outline: #2b2b2b dashed 3px;
 }
 
 .wrapper {
@@ -351,7 +355,7 @@ small {
 }
 
 .input--error {
-  outline: #fd7c7c 2px solid !important;
+  outline: #fc5f5f 2px solid !important;
 }
 
 .hidden {
