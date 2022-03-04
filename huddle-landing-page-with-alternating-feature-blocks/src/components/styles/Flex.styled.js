@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { space, flexbox } from "styled-system";
 
 export const Flex = styled.div`
     display: flex;
@@ -8,4 +9,7 @@ export const Flex = styled.div`
     & > * {
         flex: 1;
     }
+
+    ${space}
+    ${flexbox}
 `

@@ -1,28 +1,33 @@
 import styled from "styled-components";
+import { color, layout } from "styled-system";
 
 export const StyledHeader = styled.header`
-    background: ${({ theme }) => theme.colors.netural100};
-    padding: 2em 0;
+    padding: 1.4em 0 1.9em 0;
     text-align: center;
+    ${color}
 `
 
 export const Nav = styled.nav`
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
-    margin-bottom: 3em;
+    margin-bottom: 4.5em;
 `
 
 export const Logo = styled.img`
-    width: 30%;
+    ${layout}
 `
 
 export const H1 = styled.h1`
-    font-size: 1.5em;
-    margin-bottom: 1em;
+    font-size: 1.3em;
+    letter-spacing: 0.65px;
+    line-height: 1.6;
+    margin-bottom: 0.9em;
 `
 
 export const P = styled.p`
-    line-height: 1.5;
-    margin-bottom: 2em;
+    font-size: 0.85em;
+    letter-spacing: -0.3px;
+    line-height: 1.6;
+    margin-bottom: 1.8em;
 `
