@@ -7,7 +7,7 @@ export const Button = styled.button`
     box-shadow: 0px 2px 10px 3px hsl(208deg 11% 55% / 15%);
     font-size: 1em;
     font-weight: 700;
-	padding: 0.5em 2em;
+	padding: 0.3em 1.8em;
 
     ${props => props.primary && css`
         width: 80%;

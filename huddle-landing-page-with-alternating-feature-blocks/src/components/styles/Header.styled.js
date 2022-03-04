@@ -19,15 +19,17 @@ export const Logo = styled.img`
 `
 
 export const H1 = styled.h1`
+    font-family: 'Poppins', sans-serif;
     font-size: 1.3em;
-    letter-spacing: 0.65px;
+    letter-spacing: 0.2px;
     line-height: 1.6;
     margin-bottom: 0.9em;
 `
 
 export const P = styled.p`
     font-size: 0.85em;
-    letter-spacing: -0.3px;
+    letter-spacing: 0.1px;
     line-height: 1.6;
-    margin-bottom: 1.8em;
+    margin-bottom: 2em;
+    word-spacing: 1px;
 `
