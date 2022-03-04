@@ -4,7 +4,7 @@ import { space, flexbox } from "styled-system";
 export const Flex = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: ${props => props.gap? props.gap: "3em"};
 
     & > * {
         flex: 1;
