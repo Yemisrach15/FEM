@@ -1,15 +1,21 @@
 import styled from "styled-components";
-import { space, flexbox } from "styled-system";
+import { space, layout, flexbox, flex } from "styled-system";
 
 export const Flex = styled.div`
+    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: ${props => props.gap? props.gap: "3em"};
 
     & > * {
         flex: 1;
     }
+    & > :last-child {
+        ${flex}
+    }
 
-    ${space}
     ${flexbox}
+    ${layout}
+    ${space}
 `

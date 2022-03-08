@@ -1,35 +1,35 @@
 import styled from "styled-components";
-import { color, layout } from "styled-system";
+import { compose } from "styled-system";
+import { color, flexbox, space, typography, width } from "styled-system";
+import { Flex } from "./Flex.styled";
 
 export const StyledHeader = styled.header`
-    padding: 1.4em 0 1.9em 0;
     text-align: center;
-    ${color}
+    ${compose(color, space)}
+
+    @media screen and (min-width: 'breakpoints.1') {
+        text-align: left;
+    }
 `
 
-export const Nav = styled.nav`
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4.5em;
+export const Nav = styled(Flex)`
+    & > * {
+        flex: initial;
+    }
+    ${flexbox}
 `
 
 export const Logo = styled.img`
-    ${layout}
+    ${width}
 `
 
 export const H1 = styled.h1`
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.3em;
-    letter-spacing: 0.2px;
-    line-height: 1.6;
-    margin-bottom: 0.9em;
+    ${space}
+    ${typography}
 `
 
 export const P = styled.p`
-    font-size: 0.85em;
-    letter-spacing: 0.1px;
-    line-height: 1.6;
-    margin-bottom: 2em;
     word-spacing: 1px;
+    ${space}
+    ${typography}
 `
