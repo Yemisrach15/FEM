@@ -1,5 +1,5 @@
 import { StyledFooter, Logo, StyledParagraph, StyledSection, SocialIcon, CopyRightParagraph } from "./styles/Footer.styled";
-import { Flex } from "./styles/Flex.styled";
+import Flex from "./styles/Flex.styled";
 
 export function Footer() {
     return (

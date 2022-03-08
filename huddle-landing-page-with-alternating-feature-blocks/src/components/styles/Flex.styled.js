@@ -1,21 +1,22 @@
-import styled from "styled-components";
-import { space, layout, flexbox, flex } from "styled-system";
+import styled, { css } from "styled-components";
+import { space, layout, flexbox, flex, compose } from "styled-system";
 
-export const Flex = styled.div`
+const Flex = styled.div`
     align-items: center;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    gap: ${props => props.gap? props.gap: "3em"};
+    gap: ${props => props.gap ? props.gap : "3em"};
 
-    & > * {
-        flex: 1;
-    }
-    & > :last-child {
+    & > : lastChild {
         ${flex}
     }
 
-    ${flexbox}
-    ${layout}
-    ${space}
+    ${compose(flexbox, layout, space)}
+    ${props => props.equal && css`
+        & > * {
+            flex: 1;
+        }
+    `}
 `
+
+export default Flex;

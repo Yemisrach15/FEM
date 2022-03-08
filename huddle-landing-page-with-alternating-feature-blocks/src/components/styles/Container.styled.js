@@ -1,11 +1,18 @@
 import styled from "styled-components";
-import { layout } from "styled-system";
+import { color, space, layout, variant, compose } from "styled-system";
 
 const Container = styled.div`
     margin: 0 auto;
-    /* width: 91%; */
-
-    ${layout}
+    ${compose(
+        color,
+        layout,
+        space,
+        variant({
+            prop: 'width',
+            scale: 'width'
+        })
+    )
+    }
 `
 
 export default Container;

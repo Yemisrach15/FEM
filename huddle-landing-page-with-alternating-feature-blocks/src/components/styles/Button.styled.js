@@ -1,33 +1,36 @@
-import styled, { css } from "styled-components";
-import { color, space, typography, variant } from "styled-system";
+import styled from "styled-components";
+import { color, space, layout, typography, border, variant, shadow, compose } from "styled-system";
 
-export const Button = styled.button`
-    /* background: white; */
-	border-radius: 5em;
-    box-shadow: 0px 2px 10px 3px hsl(208deg 11% 55% / 15%);
-    font-weight: 700;
-	/* padding: 0.3em 1.8em; */
-/* 
-    ${props => props.primary && css`
-        width: 80%;
-    `} */
-    
-    ${color}
-    ${space}
-    ${typography}
-    ${
-        variant({
-            variants: {
-                primary: {
-                    color: "white",
-                    bg: "primary",
-                    width: "80%"
-                }, 
-                secondary: {
-                    color: "netural300",
-                    bg: "white"
-                }
-            }
-        })
-    }
+const Button = styled.a`
+	text-decoration: none;
+	&:hover {
+		opacity: 0.85;
+	}
+	${compose(
+		color,
+		space,
+		layout,
+		typography,
+		border,
+		shadow,
+		variant({
+			variants: {
+				primary: {
+					color: "white",
+					bg: "primary"
+				},
+				secondary: {
+					color: "netural300",
+					bg: "white"
+				}
+			}
+		})
+	)}
 `
+
+Button.defaultProps = {
+	variant: 'primary',
+	borderRadius: 1
+}
+
+export default Button;

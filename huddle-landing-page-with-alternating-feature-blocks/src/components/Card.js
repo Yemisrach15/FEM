@@ -1,5 +1,5 @@
 import { StyledCard } from "./styles/Main.styled";
-import { Flex } from "./styles/Flex.styled";
+import Flex from "./styles/Flex.styled";
 
 export function Card({ src, heading, para }) {
     return (

@@ -6,10 +6,6 @@ import { Flex } from "./Flex.styled";
 export const StyledHeader = styled.header`
     text-align: center;
     ${compose(color, space)}
-
-    @media screen and (min-width: 'breakpoints.1') {
-        text-align: left;
-    }
 `
 
 export const Nav = styled(Flex)`
