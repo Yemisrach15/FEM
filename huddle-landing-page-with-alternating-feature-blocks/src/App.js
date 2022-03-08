@@ -11,9 +11,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle color="netural300" />
       <Header />
-      {/* <Main />
-      <Footer />
-      <Attribution /> */}
+      <Main />
+      {/* <Footer /> */}
+      {/* <Attribution /> */}
     </ThemeProvider >
   );
 }

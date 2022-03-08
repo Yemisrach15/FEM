@@ -30,7 +30,7 @@ const Button = styled.a`
 
 Button.defaultProps = {
 	variant: 'primary',
-	borderRadius: 1
+	borderRadius: 2
 }
 
 export default Button;

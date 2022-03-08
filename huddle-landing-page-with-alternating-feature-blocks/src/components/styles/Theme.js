@@ -45,7 +45,7 @@
 // }
 
 let theme = {
-    breakpoints: ['375px', '768px', '1440px'],
+    breakpoints: ['376px', '769px', '1440px'],
     colors: {
         primary: 'hsl(322, 100%, 66%)',
         netural100: 'hsl(193, 100%, 96%)',
@@ -61,6 +61,8 @@ let theme = {
     letterSpacings: {
         compact: [
             "-2px",
+            "-0.8px",
+            "-0.6px",
         ],
         stretched: [
             "0.1px",
@@ -75,10 +77,10 @@ let theme = {
         1.5,
         1.6
     ],
-    radii: ["0em", "10em"],
+    radii: ["0em", "1em", "10em"],
     shadows: ["none", "0px 2px 10px 3px hsl(208deg 11% 55% / 15%)"],
-    sizes: ["0em", "1em", "2em", "3em", "4em", "5em", "6em", "7em", "8em", "9em", "10em", "11em"],
-    space: ["0em", "0.5em", "1em", "1.5em", "2em", "2.5em", "3em", "3.5em", "4em", "4.5em", "5em", "5.5em", "6em"],
+    sizes: ["0em", "1em", "2em", "3em", "4em", "5em", "6em", "7em", "8em", "9em", "10em", "11em", "12em", "13em", "14em", "15em", "16em", "17em", "18em"],
+    space: ["0em", "0.5em", "1em", "1.5em", "2em", "2.5em", "3em", "3.5em", "4em", "4.5em", "5em", "5.5em", "6em", "6.5em", "7em", "7.5em", "8em", "8.5em", "9em"],
     width: {
         extraSmall: {
             width: '70%'
