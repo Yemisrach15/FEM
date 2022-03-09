@@ -23,7 +23,7 @@ export function Header() {
 						py={"0.6em"} 
 						px={[5, 5, 8]} 
 						variant='secondary' 
-						fontSize={[0, 1, 1]} 
+						fontSize={[0, "0.6em", 1]} 
 						fontWeight={6}
 						boxShadow={1} 
 						borderRadius={2} 
@@ -34,13 +34,13 @@ export function Header() {
 				</Flex>
 				<Flex 
 					flexDirection={["column", "column", "row"]}
-					gap={"3.5em"}>
+					gap={{xs: 7, }}>
 					<TextTile
 						textAlign={['center', 'center', 'left']}
 						px={[2, 2, 0]}
 						pr={[null, null, 1]}>
 						<Heading
-							fontSize={[4, 4, 7]}
+							fontSize={{xs: 4, hybrid: 7}}
 							letterSpacing={['compact.0', null, 'none']}
 							lineHeight={[0, 0, 1]}
 							mb={"0.8em"}
@@ -48,24 +48,26 @@ export function Header() {
 							Build the community your fans will love
 						</Heading>
 						<Paragraph
-							fontSize={["0.9em", null, 2]}
+							fontSize={{xs: "0.9em", hybrid: 2}}
 							lineHeight={"1.47"}
-							mb={"2.3em"}>
+							mb={4}>
 							Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
 						</Paragraph>
 						<Button
 							px={[9, 9, 12]}
 							py={[2, 2, 3]}
+							m={['0 auto', null, 0]}
 							mb={[null, null, 5]}
 							fontSize={"0.7em"}
 							fontWeight={6}
+							display={'block'}
 							href="#">
 							Get Started For Free
 						</Button>
 					</TextTile>
 					<Image 
 						mb={1}
-						width={["87%", null, "54%"]} 
+						width={{xs: "87%", md: "40%", lg: "54%", hybrid: "45%"}} 
 						src="./images/illustration-mockups.svg" 
 						alt="" />
 				</Flex>

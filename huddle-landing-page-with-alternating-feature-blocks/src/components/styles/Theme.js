@@ -1,5 +1,5 @@
 let theme = {
-    breakpoints: ['376px', '769px', '1440px', '1000px', '0px'],
+    breakpoints: ['376px', '769px', '1440px', '1100px', '0px'],
     colors: {
         primary: 'hsl(322, 100%, 66%)',
         netural100: 'hsl(193, 100%, 96%)',
@@ -37,7 +37,7 @@ let theme = {
     space: ["0em", "0.5em", "1em", "1.5em", "2em", "2.5em", "3em", "3.5em", "4em", "4.5em", "5em", "5.5em", "6em", "6.5em", "7em", "7.5em", "8em", "8.5em", "9em"],
     width: {
         extraSmall: {
-            width: '70%'
+            width: '80%'
         },
         small: {
             width: '89%'

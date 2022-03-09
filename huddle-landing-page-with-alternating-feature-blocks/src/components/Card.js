@@ -31,14 +31,14 @@ export default function Card({ src, heading, body, reverse }) {
                     textAlign={['center', 'center', 'left']}>
                     <Heading 
                         as={'h2'} 
-                        fontSize={[3, null, 4]}
+                        fontSize={{xs: 3, hybrid: 4}}
                         letterSpacing={["compact.1", null, "stretched.2"]}
                         mb={"0.6em"}>
                         {heading}
                     </Heading>
                     <Paragraph
                         color={'netural200'}
-                        fontSize={[1, null, 2]}
+                        fontSize={{xs: 1, hybrid: 2}}
                         lineHeight={[0, null, 1]}
                         letterSpacing={["compact.2", null, "stretched.0"]}>
                         {body}

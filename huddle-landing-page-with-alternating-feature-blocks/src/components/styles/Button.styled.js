@@ -30,7 +30,8 @@ const Button = styled.a`
 
 Button.defaultProps = {
 	variant: 'primary',
-	borderRadius: 2
+	borderRadius: 2,
+	width: 'fit-content'
 }
 
 export default Button;
