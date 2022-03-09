@@ -1,24 +1,22 @@
 import styled, { css } from "styled-components";
-import { space, layout, flexbox, flex, compose } from "styled-system";
+import { space, layout, flexbox, flex, compose, system } from "styled-system";
+
+const gap = system({
+    gap: {
+        property: "gap",
+        scale: "space",
+    },
+});
 
 const Flex = styled.div`
     align-items: center;
     display: flex;
     justify-content: space-between;
-    gap: ${props => props.gap ? props.gap[0] : "3em"};
-
-    @media screen and (min-width: 'breakpoints.0') {
-        gap: ${props => props.gap ? props.gap[1] : props.gap[0]};
-    }
-    @media screen and (min-width: 'breakpoints.1') {
-        gap: ${props => props.gap ? props.gap[2] : props.gap[1]};
-    }
-
-    & > : lastChild {
+    & > :lastChild {
         ${flex}
     }
 
-    ${compose(flexbox, layout, space)}
+    ${compose(flexbox, layout, space, gap)}
     ${props => props.equal && css`
         & > * {
             flex: 1;
