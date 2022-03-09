@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { color, space, layout, typography, border, variant, shadow, compose } from "styled-system";
+import { color, space, layout, typography, border, borderColor, variant, shadow, compose } from "styled-system";
 
 const Button = styled.a`
 	text-decoration: none;
@@ -12,6 +12,7 @@ const Button = styled.a`
 		layout,
 		typography,
 		border,
+		borderColor,
 		shadow,
 		variant({
 			variants: {
@@ -22,7 +23,18 @@ const Button = styled.a`
 				secondary: {
 					color: "netural300",
 					bg: "white"
-				}
+				},
+				outlined: {
+					color: "white",
+					bg: 'transparent',
+					px: 1,
+					py: 1,
+					border: '1px solid'
+				}, 
+				disabled: {
+					color: 'white',
+					bg: 'netural200',
+				},
 			}
 		})
 	)}

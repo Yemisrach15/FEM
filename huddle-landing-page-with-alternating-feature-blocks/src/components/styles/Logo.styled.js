@@ -1,9 +1,15 @@
 import styled from "styled-components";
-import { color, layout, space, variant, compose, system } from "styled-system";
+import { color, layout, space, compose, system } from "styled-system";
+
+const filter = system({
+    filter: {
+        property: 'filter',
+        scale: 'filters'
+    }
+})
 
 const Logo = styled.img`
-    filter: ${props => props.filter? props.filter: 'none'};
-    ${compose(color, layout, space)}
+    ${compose(color, layout, space, filter)}
 `
 
 export default Logo;

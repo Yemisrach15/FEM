@@ -12,8 +12,8 @@ function App() {
       <GlobalStyle color="netural300" />
       <Header />
       <Main />
-      {/* <Footer /> */}
-      {/* <Attribution /> */}
+      <Footer />
+      <Attribution />
     </ThemeProvider >
   );
 }

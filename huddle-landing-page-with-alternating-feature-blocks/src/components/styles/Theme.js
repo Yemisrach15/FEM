@@ -6,6 +6,9 @@ let theme = {
         netural200: 'hsl(208, 11%, 55%)',
         netural300: 'hsl(192, 100%, 9%)'
     },
+    filters: {
+        white: 'brightness(1000%) saturate(0) contrast(1000%) invert(0)',
+    },
     fonts: {
         header: "'Poppins', sans-serif",
         other: "'Open Sans', sans-serif"

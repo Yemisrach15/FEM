@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { space, layout, flexbox, flex, compose, system } from "styled-system";
+import { space, layout, flexbox, flex, compose, system, color } from "styled-system";
 
 const gap = system({
     gap: {
@@ -15,8 +15,11 @@ const Flex = styled.div`
     & > :lastChild {
         ${flex}
     }
+    & * {
+        ${color}
+    }
 
-    ${compose(flexbox, layout, space, gap)}
+    ${compose(color, flexbox, layout, space, gap)}
     ${props => props.equal && css`
         & > * {
             flex: 1;
