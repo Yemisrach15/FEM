@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, layout, space, typography, compose } from 'styled-system';
+import { color, layout, space, typography, shadow, border, compose } from 'styled-system';
 
 export const Heading = styled.h1`
     text-transform: capitalize;
@@ -13,7 +13,7 @@ export const Paragraph = styled.p`
     ${compose(color, layout, space, typography)}
 `
 const TextTile = styled.div`
-    ${compose(color, layout, space, typography)}
+    ${compose(color, layout, space, typography, shadow, border)}
 `
 
 export default TextTile;

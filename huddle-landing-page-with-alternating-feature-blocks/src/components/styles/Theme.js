@@ -17,6 +17,7 @@ let theme = {
             "-2px",
             "-0.8px",
             "-0.6px",
+            "-0.4px",
         ],
         stretched: [
             "0.1px",
