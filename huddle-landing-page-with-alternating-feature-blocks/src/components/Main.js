@@ -1,12 +1,12 @@
-import { Card } from "./Card";
+import Card from "./Card";
 import Container from "./styles/Container.styled";
 
 export function Main() {
     return (
         <main>
             <Container 
-                px={["0.3em", null, 3]}
-                py={18}
+                px={{xs: "0.3em", sm: "0.3em", md: null, lg: 3, hybrid: 3}}
+                py={{xs: 7, md: 18, lg: 18, hybrid: 18}}
                 width={['medium', 'extraSmall', 'small']}>
                 <Card reverse
                     src="./images/illustration-grow-together.svg"

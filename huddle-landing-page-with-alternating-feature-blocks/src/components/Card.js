@@ -8,7 +8,7 @@ const CardStyled = styled.section`
     ${compose(border, color, space, shadow, layout)}
 `
 
-export function Card({ src, heading, body, reverse }) {
+export default function Card({ src, heading, body, reverse }) {
     const direction = reverse? "row-reverse": "row";
 
     return (
@@ -17,15 +17,15 @@ export function Card({ src, heading, body, reverse }) {
             borderRadius={1}
             maxWidth={[null, 18, "none"]}
             m={[null, "0 auto", null]}
-            mb={[4, 4, 4]}
-            px={[3, 4, 13]}
-            pr={[null, null, 4]}
+            mb={{xs: 4, sm: 4, md: 4, lg: 9, hybrid: 4}}
+            px={{xs: 3, sm: 3, md: 6, lg: 13, hybrid: 13}}
+            pr={{xs: 3, sm: 3, md: 6, lg: 4, hybrid: 4}}
             pt={6}
             pb={[4, null, 7]}>
             <Flex 
                 flexDirection={["column", "column", `${direction}`]}
                 alignItems="center" 
-                gap={["3.1em", null, "9.6em"]}>
+                gap={{xs: 6, sm: 6, md: null, lg: "16%", hybrid: "16%"}}>
                 <Image width={["84%", null, "38%"]}  src={src} alt="" />
                 <TextTile
                     textAlign={['center', 'center', 'left']}>

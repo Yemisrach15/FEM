@@ -15,4 +15,8 @@ const Container = styled.div`
     }
 `
 
+Container.defaultProps = {
+    maxWidth: '1600px', // FIXME: Do not hardcode value
+}
+
 export default Container;
