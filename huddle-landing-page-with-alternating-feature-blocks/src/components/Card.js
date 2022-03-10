@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { border, color, space, layout, shadow, compose } from "styled-system";
-import Flex from "./styles/Flex.styled";
-import Image from "./styles/Image.styled";
-import TextTile, { Heading, Paragraph } from "./styles/TextTile.styled";
+import { Flex, Heading, Image, Paragraph, TextTile } from './styles';
 
 const CardStyled = styled.section`
     ${compose(border, color, space, shadow, layout)}

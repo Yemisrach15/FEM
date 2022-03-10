@@ -1,4 +1,4 @@
-import { StyledAttribution } from "./styles/Attribution.styled";
+import { StyledAttribution } from "./styles";
 
 export default function Attribution() {
     return (

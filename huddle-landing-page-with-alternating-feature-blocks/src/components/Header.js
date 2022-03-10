@@ -1,17 +1,12 @@
-import Button from "./styles/Button.styled";
-import Logo from "./styles/Logo.styled";
-import Container from "./styles/Container.styled";
-import Flex from "./styles/Flex.styled";
-import TextTile, { Heading, Paragraph } from "./styles/TextTile.styled";
-import Image from "./styles/Image.styled";
 import styled from "styled-components";
 import { color, space, layout, compose } from 'styled-system';
+import { Button, Logo, Container, Flex, TextTile, Heading, Paragraph, Image } from './styles';
 
 const HeaderStyled = styled.header`
 	${compose(color, space, layout)}
 `
 
-export function Header() {
+export default function Header() {
 	return (
 		<HeaderStyled bg={'netural100'} py={["1.3em", null, 6]}>
 			<Container width={['medium', 'extraSmall', 'small']}>

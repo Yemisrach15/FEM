@@ -1,20 +1,11 @@
-import Flex from "./styles/Flex.styled";
 import styled from "styled-components";
 import { color, compose, layout, space } from "styled-system";
-import Container from "./styles/Container.styled";
-import TextTile, { Paragraph } from "./styles/TextTile.styled";
-import Logo from './styles/Logo.styled';
-import AnnotatedText, { Icon } from "./styles/AnnotatedText.styled";
-import IconButton from "./styles/IconButton.styled";
-import List from "./styles/List.styled";
-import Link from "./styles/Link.styled";
-import { useState } from "react";
+import { AnnotatedText, Container, Flex, Icon, IconButton, Link, List, Logo, Paragraph, TextTile } from "./styles";
 
 const FooterStyled = styled.footer`
     ${compose(color, layout, space)}
 `
-export function Footer() {
-    const [isLoading, setLoading] = useState(true);
+export default function Footer() {
     return (
         <FooterStyled
             bg={'netural300'}
@@ -68,14 +59,12 @@ export function Footer() {
                         </AnnotatedText>
                     </TextTile>
                     <List
-                        as='ul'
                         mb={4}
                         pl={{ hybrid: '11%' }}
                         gap={[2, null, '33.5%']}
                         flexDirection={['column', 'row', 'row']}
                         justifyContent={['center', null, 'space-around']}>
                         <List
-                            as='ul'
                             color='white'
                             gap={2}
                             flexDirection='column'
@@ -85,7 +74,6 @@ export function Footer() {
                             <li><Link href="#">FAQ</Link></li>
                         </List>
                         <List
-                            as='ul'
                             color='white'
                             gap={2}
                             flexDirection='column'
@@ -99,24 +87,18 @@ export function Footer() {
                         gap={2}
                         justifyContent={'center'}>
                         <IconButton
-                            isLoading={isLoading}
-                            onClick={() => setLoading(!isLoading)}
                             variant='outlined'
                             width={2}
                             height={2}
                             fontSize={1}
                             icon={<Icon className='fa fa-facebook' />} />
                         <IconButton
-                            isLoading={isLoading}
-                            onClick={() => setLoading(!isLoading)}
                             variant='outlined'
                             width={2}
                             height={2}
                             fontSize={1}
                             icon={<Icon className='fa fa-twitter' />} />
                         <IconButton
-                            isLoading={isLoading}
-                            onClick={() => setLoading(!isLoading)}
                             variant='outlined'
                             width={2}
                             height={2}

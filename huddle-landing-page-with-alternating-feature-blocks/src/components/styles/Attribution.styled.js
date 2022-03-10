@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledAttribution = styled.div`
+const StyledAttribution = styled.div`
     margin: 1em 0.5em;
 
     & > p {
@@ -11,3 +11,5 @@ export const StyledAttribution = styled.div`
         color: hsl(228, 45%, 44%);
     }
 `
+
+export default StyledAttribution;

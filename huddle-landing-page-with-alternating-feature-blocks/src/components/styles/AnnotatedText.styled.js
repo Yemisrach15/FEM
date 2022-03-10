@@ -1,17 +1,11 @@
 import styled from "styled-components";
-import { color, verticalAlign, layout, space, compose, typography, system, left, top, right, bottom } from "styled-system";
+import { color, layout, space, compose, typography, system, left, top, right, bottom } from "styled-system";
 
 const content = system({
     content: {
         property: 'content',
     }
 })
-
-export const Icon = styled.span`
-    color: inherit;
-    font-size: inherit;
-    ${compose(space, layout, content, verticalAlign, typography)}
-`
 
 const StyledAnnotatedText = styled.p`
     position: relative;

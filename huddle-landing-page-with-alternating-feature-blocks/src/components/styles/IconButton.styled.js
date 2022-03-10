@@ -9,11 +9,9 @@ const StyledIconButton = styled(Button)`
     ${compose(flexbox, typography)}
 `
 
-export default function IconButton({ isLoading, variant, icon, ...props }) {
+export default function IconButton({icon, ...props }) {
     return (
-        <StyledIconButton
-            variant={isLoading ? 'disabled' : variant}
-            {...props}>
+        <StyledIconButton {...props}>
             {icon}
         </StyledIconButton>
     );

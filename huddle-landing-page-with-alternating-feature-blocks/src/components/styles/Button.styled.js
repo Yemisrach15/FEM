@@ -30,10 +30,6 @@ const Button = styled.a`
 					px: 1,
 					py: 1,
 					border: '1px solid'
-				}, 
-				disabled: {
-					color: 'white',
-					bg: 'netural200',
 				},
 			}
 		})

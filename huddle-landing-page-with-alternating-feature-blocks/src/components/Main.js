@@ -1,9 +1,7 @@
-import Card from "./Card";
-import Container from "./styles/Container.styled";
-import TextTile, { Heading } from "./styles/TextTile.styled";
-import Button from './styles/Button.styled';
+import { Card } from "./";
+import { Button, Container, Heading, TextTile } from './styles';
 
-export function Main() {
+export default function Main() {
     return (
         <main>
             <Container 

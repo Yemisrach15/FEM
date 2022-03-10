@@ -9,4 +9,8 @@ const List = styled(Flex)`
     ${compose(typography)}
 `
 
+List.defaultProps = {
+    as: 'ul'
+}
+
 export default List;
