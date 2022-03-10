@@ -88,19 +88,25 @@ export default function Footer() {
                         gap={2}
                         justifyContent={'center'}>
                         <IconButton
+                            href='#'
                             variant='outlined'
+                            color='primary'
                             width={2}
                             height={2}
                             fontSize={1}
                             icon={<Icon className='fa fa-facebook' />} />
                         <IconButton
+                            href='#'
                             variant='outlined'
+                            color='primary'
                             width={2}
                             height={2}
                             fontSize={1}
                             icon={<Icon className='fa fa-twitter' />} />
                         <IconButton
+                            href='#'
                             variant='outlined'
+                            color='primary'
                             width={2}
                             height={2}
                             fontSize={1}

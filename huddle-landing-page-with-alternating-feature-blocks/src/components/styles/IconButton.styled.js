@@ -1,11 +1,15 @@
 import styled from "styled-components";
-import { compose, flexbox, typography } from "styled-system";
+import { color, compose, flexbox, typography } from "styled-system";
 import Button from "./Button.styled";
 
 const StyledIconButton = styled(Button)`
     align-items: center;
     display: flex;
     justify-content: center;
+    &:hover {
+        opacity: 1;
+        ${color}
+    }
     ${compose(flexbox, typography)}
 `
 

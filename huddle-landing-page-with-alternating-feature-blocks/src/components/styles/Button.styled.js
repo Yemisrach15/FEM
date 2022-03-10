@@ -4,10 +4,9 @@ import { color, space, layout, typography, border, borderColor, variant, shadow,
 const Button = styled.a`
 	text-decoration: none;
 	&:hover {
-		opacity: 0.85;
+		opacity: 0.75;
 	}
 	${compose(
-		color,
 		space,
 		layout,
 		typography,
