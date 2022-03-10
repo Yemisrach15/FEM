@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { color, layout, space, typography, shadow, border, compose } from 'styled-system';
+import { color, layout, position, space, typography, shadow, border, compose } from 'styled-system';
 
 const TextTile = styled.div`
-    ${compose(color, layout, space, typography, shadow, border)}
+    ${compose(color, layout, position, space, typography, shadow, border)}
 `
 
 export default TextTile;

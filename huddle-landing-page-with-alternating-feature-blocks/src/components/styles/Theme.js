@@ -38,7 +38,7 @@ let theme = {
     radii: ["0em", "1em", "10em"],
     shadows: ["none", "0px 2px 10px 3px hsl(208deg 11% 55% / 15%)"],
     sizes: ["0em", "1em", "2em", "3em", "4em", "5em", "6em", "7em", "8em", "9em", "10em", "11em", "12em", "13em", "14em", "15em", "16em", "17em", "18em"],
-    space: ["0em", "0.5em", "1em", "1.5em", "2em", "2.5em", "3em", "3.5em", "4em", "4.5em", "5em", "5.5em", "6em", "6.5em", "7em", "7.5em", "8em", "8.5em", "9em"],
+    space: ["0em", "0.5em", "1em", "1.5em", "2em", "2.5em", "3em", "3.5em", "4em", "4.5em", "5em", "5.5em", "6em", "6.5em", "7em", "7.5em", "8em", "8.5em", "9em", "9.5em", "10em", "10.5em", "11em", "11.5em", "12em", "12.5em", "13em", "13.5em", "14em", "14.5em", "15em"],
     width: {
         extraSmall: {
             width: '80%'

@@ -11,21 +11,22 @@ export default function Footer() {
             bg={'netural300'}
             px={0}
             pt={["7.7em", null, "10.7em"]}
-            pb={[5, null, 7]}>
+            pb={[5]}>
             <Container
+                pl={{ md: 5 }}
+                pr={{ md: 3 }}
                 width={['medium', 'extraSmall', 'small']}>
+                <Logo
+                    width={["9.3em", null, 13]}
+                    filter={'white'}
+                    mb={[2, null, 4]}
+                    src='./images/logo.svg' />
                 <Flex equal
                     mb={3}
                     gap={3}
-                    pl={{ md: 5 }}
-                    pr={{ md: 3 }}
-                    flexDirection={{ xs: 'column', hybrid: 'row' }}>
+                    flexDirection={{ xs: 'column', hybrid: 'row' }}
+                    alignItems={{xs: 'center', hybrid: 'flex-start'}}>
                     <TextTile>
-                        <Logo
-                            width={["9.3em", null, 13]}
-                            filter={'white'}
-                            mb={[2, null, 4]}
-                            src='./images/logo.svg' />
                         <AnnotatedText
                             color="white"
                             mb={3}
