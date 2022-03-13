@@ -1,12 +1,18 @@
-import { StyledAttribution } from "./styles";
+import { StyledAttribution } from './styles';
 
 export default function Attribution() {
-    return (
-        <StyledAttribution>
-            <p>
-                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
-                Coded by <a href="#">Yemisrach15</a>.
-            </p>
-        </StyledAttribution>
-    );
+	return (
+		<StyledAttribution>
+			<p>
+				Challenge by{' '}
+				<a
+					href='https://www.frontendmentor.io?ref=challenge'
+					target='_blank'
+					rel='noreferrer'>
+					Frontend Mentor
+				</a>
+				. Coded by <a href='#'>Yemisrach15</a>.
+			</p>
+		</StyledAttribution>
+	);
 }

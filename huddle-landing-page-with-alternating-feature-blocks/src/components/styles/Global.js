@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import { color, fontFamily, compose } from "styled-system";
+import { createGlobalStyle } from 'styled-components';
+import { color, fontFamily, compose } from 'styled-system';
 
 export default createGlobalStyle`
     * {
@@ -15,4 +15,4 @@ export default createGlobalStyle`
         border: none;
         cursor: pointer;
     }
-`
+`;
