@@ -10,7 +10,7 @@ export default function Header() {
 	return (
 		<HeaderStyled bg={'netural100'} py={['1.3em', null, 6]}>
 			<Container width={['medium', 'extraSmall', 'small']}>
-				<Flex gap={'1em'} mb={[9, null, '3.8em']}>
+				<Flex as='nav' gap={'1em'} mb={[9, null, '3.8em']}>
 					<Logo width={['5.8em', null, 11]} src='./images/logo.svg' />
 					<Button
 						py={'0.6em'}

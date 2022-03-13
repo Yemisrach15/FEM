@@ -99,35 +99,41 @@ export default function Footer() {
 							</li>
 						</List>
 					</List>
-					<Flex gap={2} justifyContent={'center'}>
-						<IconButton
-							href='#'
-							variant='outlined'
-							color='primary'
-							width={2}
-							height={2}
-							fontSize={1}
-							icon={<Icon className='fa fa-facebook' />}
-						/>
-						<IconButton
-							href='#'
-							variant='outlined'
-							color='primary'
-							width={2}
-							height={2}
-							fontSize={1}
-							icon={<Icon className='fa fa-twitter' />}
-						/>
-						<IconButton
-							href='#'
-							variant='outlined'
-							color='primary'
-							width={2}
-							height={2}
-							fontSize={1}
-							icon={<Icon className='fa fa-instagram' />}
-						/>
-					</Flex>
+					<List gap={2} justifyContent={'center'}>
+						<li>
+							<IconButton
+								href='#'
+								variant='outlined'
+								color='primary'
+								width={2}
+								height={2}
+								fontSize={1}
+								icon={<Icon className='fa fa-facebook' />}
+							/>
+						</li>
+						<li>
+							<IconButton
+								href='#'
+								variant='outlined'
+								color='primary'
+								width={2}
+								height={2}
+								fontSize={1}
+								icon={<Icon className='fa fa-twitter' />}
+							/>
+						</li>
+						<li>
+							<IconButton
+								href='#'
+								variant='outlined'
+								color='primary'
+								width={2}
+								height={2}
+								fontSize={1}
+								icon={<Icon className='fa fa-instagram' />}
+							/>
+						</li>
+					</List>
 				</Flex>
 				<Paragraph
 					color='white'
