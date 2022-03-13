@@ -1,5 +1,4 @@
-import { Card } from './';
-import { Button, Container, Heading, TextTile } from './styles';
+import { Button, Card, Container, Heading, TextTile } from './blocks';
 
 export default function Main() {
 	return (

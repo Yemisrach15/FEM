@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { color, compose, layout, space } from 'styled-system';
-import { AnnotatedText, Container, Flex, Icon, IconButton, Link, List, Logo, Paragraph, TextTile } from './styles';
+import { AnnotatedText, Container, Flex, Icon, IconButton, Link, List, Logo, Paragraph, TextTile } from './blocks';
 
 const FooterStyled = styled.footer`
 	${compose(color, layout, space)}

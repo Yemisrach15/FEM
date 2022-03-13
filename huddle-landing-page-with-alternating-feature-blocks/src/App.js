@@ -1,6 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import theme from './components/styles/Theme';
-import GlobalStyle from './components/styles/Global';
+import { theme, GlobalStyle } from './components/styles';
 import { Attribution, Footer, Header, Main } from './components/index';
 
 function App() {

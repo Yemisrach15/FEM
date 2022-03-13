@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { border, color, space, layout, shadow, compose } from 'styled-system';
-import { Flex, Heading, Image, Paragraph, TextTile } from './styles';
+import { Flex, Heading, Image, Paragraph, TextTile } from './';
 
 const CardStyled = styled.section`
 	&:hover {

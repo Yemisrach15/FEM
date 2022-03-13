@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { color, space, layout, compose } from 'styled-system';
-import { Button, Logo, Container, Flex, TextTile, Heading, Paragraph, Image } from './styles';
+import { Button, Logo, Container, Flex, TextTile, Heading, Paragraph, Image } from './blocks';
 
 const HeaderStyled = styled.header`
 	${compose(color, space, layout)}
