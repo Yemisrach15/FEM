@@ -8,6 +8,13 @@ h2 {
   color: $primary-color-100;
 }
 
+input,
+a {
+  &:focus {
+    outline: $primary-color-200 solid 2px;
+  }
+}
+
 input {
   background: $netural-color-white;
   color: $primary-color-200;
@@ -29,9 +36,9 @@ small {
   color: $color-error-text;
 }
 
-.wrapper {
-  background: url("../images/pattern-bg.png") no-repeat top center;
-  background-size: auto $map-height;
+.addr {
+  background: url("../images/pattern-bg.png") no-repeat 56% center;
+  background-size: cover;
 }
 
 .addr__info {
@@ -56,4 +63,9 @@ small {
 
 .attribution a {
   color: $secondary-color;
+}
+
+::selection {
+  background-color: $secondary-color;
+  color: $netural-color-white;
 }

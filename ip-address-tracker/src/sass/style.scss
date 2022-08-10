@@ -2,10 +2,6 @@
 @import "./themes/index";
 @import "./utils/index";
 
-body {
-  height: 100vh;
-}
-
 main,
 footer {
   margin: 1.5em auto;
@@ -33,7 +29,7 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 0.9em;
+  margin-bottom: 0.5em;
 
   @include screen-desktop {
     margin-bottom: 1.5em;
@@ -43,12 +39,12 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.35em;
   position: relative;
 
   @include screen-desktop {
-    margin-bottom: 1.2em;
-    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.4em;
+    width: 44%;
   }
 }
 
@@ -71,43 +67,45 @@ small {
   margin-top: .5em;
 }
 
-input, button, a {
-  &:focus-visible{
-    outline: $primary-color-200 dashed 3px;
-  }
-}
-
 .wrapper {
-  height: 107%;
-  position: relative;
-
-  @include screen-desktop {
-    height: 100%;
-  }
+  min-height: 100%;
 }
 
 .addr {
-  position: relative;
+  padding: 1.4em 0 7.3em;
+
+  &>div {
+    margin: 0 auto;
+    max-width: 400px;
+    position: relative;
+    width: 87%;
+  }
 
   @include screen-desktop {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 4.5em;
+
+    &>div {
+      max-width: 1440px;
+    }
   }
 }
 
 .addr__info {
   border-radius: $border-radius;
+  box-shadow: 0px 20px 20px 0px hsl(0deg 0% 59% / 29%);
   padding: 1.5em 2em;
   position: absolute;
+  text-align: center;
   width: 100%;
   z-index: 1002;
 
   @include screen-desktop {
     display: flex;
+    left: 5.5%;
+    margin: 0 auto;
     padding: 0;
-    position: static;
     text-align: left;
+    width: 89%;
   }
 
   @include screen-hybrid {
@@ -118,7 +116,7 @@ input, button, a {
 }
 
 .addr__section {
-  margin-bottom: 1.38em;
+  margin-bottom: 1.2em;
   position: relative;
 
   &:last-of-type {
@@ -127,7 +125,7 @@ input, button, a {
 
   @include screen-desktop {
     margin: 2em 0;
-    padding: 0 1.9em;
+    padding: 0 2em;
     width: 25%;
 
     &:last-of-type {
@@ -153,18 +151,25 @@ input, button, a {
       content: none;
     }
   }
+
+  @include screen-hybrid-max {
+    box-sizing: content-box;
+    flex: 1;
+  }
 }
 
 .map__container {
-  height: calc(100% - #{$map-height});
-  position: absolute;
-  top: $map-height;
+  height: 530px;
   width: 100%;
 }
 
 .map {
   height: 100%;
   width: 100%;
+}
+
+.leaflet-control-attribution a {
+  font-size: 11px;
 }
 
 .attribution {
@@ -176,10 +181,5 @@ input, button, a {
 }
 
 .hidden {
-  display: none;
-
-  @include screen-desktop {
-    display: initial;
-    visibility: hidden;
-  }
+  visibility: hidden;
 }

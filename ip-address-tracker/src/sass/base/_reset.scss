@@ -12,13 +12,11 @@ input, button, a {
     background: none;
     border: none;
 
-    &:focus-visible {
+    &:focus {
         outline: none;
     }
 }
 
 button {
-    background: none;
-    border: none;
     cursor: pointer;
 }

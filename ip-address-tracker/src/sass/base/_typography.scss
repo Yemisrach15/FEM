@@ -7,8 +7,9 @@ footer {
 
 h1 {
   font-size: 1.4em;
-  font-weight: 500;
-  letter-spacing: $letter-spacing;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-align: center;
 
   @include screen-desktop {
     font-size: 1.7em;
@@ -44,6 +45,7 @@ small {
 
     @include screen-desktop {
       font-size: 1.4em;
+	  line-height: 1.15;
     }
   }
 }

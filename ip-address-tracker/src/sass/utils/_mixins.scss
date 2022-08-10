@@ -13,3 +13,9 @@ $desktop-width: 1440px;
         @content;
     }
 }
+
+@mixin screen-hybrid-max {
+	@media screen and (min-width: $hybrid-width) {
+		@content;		
+	}
+}
