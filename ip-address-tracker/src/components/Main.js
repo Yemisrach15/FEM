@@ -52,7 +52,9 @@ class Main extends React.Component {
 
   handleSubmit = () => {
     this.setState({ loading: true });
-
+	this.inputRef.current.classList.remove('input--error');
+	this.smallRef.current.classList.add('hidden');
+	
     axios.get(`/apiGeoIpify/country,city?ipAddress=${this.state.inputIpaddr}`)
         .then(res => {
             const locationString = `${res.data.location.city}, ${res.data.location.country} ${res.data.location.postalCode}`;
