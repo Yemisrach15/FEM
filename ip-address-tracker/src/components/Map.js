@@ -28,7 +28,7 @@ class Map extends React.Component {
         }
         else {
             if (this.state.map)
-                this.state.map.panTo([this.props.lat, this.props.lng]);
+                this.state.map.panTo([this.props.lat + 0.019, this.props.lng]);
 
             return (
                 <MapContainer
@@ -42,7 +42,7 @@ class Map extends React.Component {
                         zoomOffset={-1}
                         maxZoom={18}
                         tileSize={512} />
-                    <Marker icon={this.locationIcon} position={[this.props.lat - 0.02, this.props.lng]} />
+                    <Marker icon={this.locationIcon} position={[this.props.lat, this.props.lng]} />
                 </MapContainer>
             );
         }
