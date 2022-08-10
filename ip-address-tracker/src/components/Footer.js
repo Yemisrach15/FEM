@@ -6,7 +6,7 @@ class Footer extends React.Component {
         return (
             <div className="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-                Coded by <a href="#">Yemisrach15</a>.
+                Coded by <a href="https://github.com/Yemisrach15/FEM">Yemisrach15</a>.
             </div>
         );
     }
