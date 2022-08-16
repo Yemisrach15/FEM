@@ -1,0 +1,12 @@
+{
+	"rewrites": [
+		{
+			"source": "/apiIpify",
+			"destination": "https://api.ipify.org"
+		},
+		{
+			"source": "/apiGeoIpify",
+			"destination": "https://geo.ipify.org/api/v2"
+		}
+	]
+}
