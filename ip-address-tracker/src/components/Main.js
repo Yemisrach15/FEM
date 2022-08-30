@@ -124,22 +124,22 @@ class Main extends React.Component {
     return (
       <>
         <div className='addr'>
-          <div>
-            <h1>IP Address Tracker</h1>
+          <section>
+			<h1>IP Address Tracker</h1>
             <form>
-              <div>
+              <section>
                 <input onChange={this.handleInputChange} name='addr' type='text' placeholder='Search for any IP address or domain' defaultValue={this.state.clientIpaddr} onKeyPress={this.preventSubmitOnEnter} ref={this.inputRef} />
                 <button aria-label="Get IP Information" onClick={this.handleSubmit} type='button'></button>
-              </div>
+              </section>
               <small className='hidden' ref={this.smallRef}>{this.state.errMessage}</small>
             </form>
-            <div className='addr__info'>
+            <article className='addr__info'>
               <Section loading={this.state.loading} heading={SectionType.IPADDR} para={this.state.ipaddr} />
               <Section loading={this.state.loading} heading={SectionType.LOCATION} para={this.state.location} />
               <Section loading={this.state.loading} heading={SectionType.TIMEZONE} para={this.state.timezone} />
               <Section loading={this.state.loading} heading={SectionType.ISP} para={this.state.isp} />
-            </div>
-          </div>
+            </article>
+          </section>
         </div>
         <div className='map__container'>
           <Map loading={this.state.loading} lat={this.state.lat} lng={this.state.lng} />

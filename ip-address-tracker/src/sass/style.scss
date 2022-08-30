@@ -2,7 +2,6 @@
 @import "./themes/index";
 @import "./utils/index";
 
-main,
 footer {
   margin: 1.5em auto;
   margin-top: 0;
@@ -74,7 +73,7 @@ small {
 .addr {
   padding: 1.4em 0 7.3em;
 
-  &>div {
+  &>section {
     margin: 0 auto;
     max-width: 400px;
     position: relative;
@@ -84,7 +83,7 @@ small {
   @include screen-desktop {
     padding-bottom: 4.5em;
 
-    &>div {
+    &>section {
       max-width: 1440px;
     }
   }
