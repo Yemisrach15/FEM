@@ -15,22 +15,35 @@ class Main extends React.Component {
     isp: "",
     lat: 0,
     lng: 0,
-    loading: true
+    loading: true,
+	errMessage: "",
   }
 
   inputRef = React.createRef();
   smallRef = React.createRef();
 
   getClientIP = async () => {
-    await axios.get(`/apiIpify/?format=json`)
-      .then(res => {
-        this.setState({ clientIpaddr: res.data.ip })
-      });
+	await axios.get('/api/ipify')
+		.then(res => {
+		this.setState({ clientIpaddr: res.data.ip })
+		})
+		.catch(err => {
+			this.setState({ 
+				ipaddr: "-",
+				location: "-",
+				timezone: "-",
+				isp: "-",
+				loading: false,
+				errMessage: err.response.data.message 
+			});
+			this.inputRef.current.classList.add('input--error');
+			this.smallRef.current.classList.remove('hidden');
+		})
   }
 
   async componentDidMount() {
     await this.getClientIP();
-    await axios.get(`/apiGeoIpify/country,city?ipAddress=${this.state.clientIpaddr}`)
+    await axios.get(`/api/geo-ipify?ipAddress=${this.state.clientIpaddr}`)
         .then(res => {
             const locationString = `${res.data.location.city}, ${res.data.location.country} ${res.data.location.postalCode}`;
 
@@ -43,6 +56,21 @@ class Main extends React.Component {
                 lng: res.data.location.lng,
                 loading: false
             });
+        })
+		.catch(err => {
+            this.setState({
+                ipaddr: "-",
+                location: "-",
+                timezone: "-",
+                isp: "-",
+                loading: false,
+				errMessage: "Please enter a valid IPv4 or IPv6 address"
+            });
+
+            if (err.response.data.code === 422) {
+                this.inputRef.current.classList.add('input--error');
+                this.smallRef.current.classList.remove('hidden');
+            }
         });
   }
 
@@ -54,8 +82,8 @@ class Main extends React.Component {
     this.setState({ loading: true });
 	this.inputRef.current.classList.remove('input--error');
 	this.smallRef.current.classList.add('hidden');
-	
-    axios.get(`/apiGeoIpify/country,city?ipAddress=${this.state.inputIpaddr}`)
+	console.log(this.state);
+    axios.get(`/api/geo-ipify?ipAddress=${this.state.inputIpaddr}`)
         .then(res => {
             const locationString = `${res.data.location.city}, ${res.data.location.country} ${res.data.location.postalCode}`;
             this.setState({
@@ -74,7 +102,8 @@ class Main extends React.Component {
                 location: "-",
                 timezone: "-",
                 isp: "-",
-                loading: false
+                loading: false,
+				errMessage: "Please enter a valid IPv4 or IPv6 address"
             });
 
             if (err.response.data.code === 422) {
@@ -102,7 +131,7 @@ class Main extends React.Component {
                 <input onChange={this.handleInputChange} name='addr' type='text' placeholder='Search for any IP address or domain' defaultValue={this.state.clientIpaddr} onKeyPress={this.preventSubmitOnEnter} ref={this.inputRef} />
                 <button aria-label="Get IP Information" onClick={this.handleSubmit} type='button'></button>
               </div>
-              <small className='hidden' ref={this.smallRef}>Please enter a valid IPv4 or IPv6 address</small>
+              <small className='hidden' ref={this.smallRef}>{this.state.errMessage}</small>
             </form>
             <div className='addr__info'>
               <Section loading={this.state.loading} heading={SectionType.IPADDR} para={this.state.ipaddr} />
