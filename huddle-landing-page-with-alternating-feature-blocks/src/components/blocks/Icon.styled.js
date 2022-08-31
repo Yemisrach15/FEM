@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { verticalAlign, layout, space, compose, typography, system } from 'styled-system';
+import { invalidHTMLProps } from './constants';
 
 const content = system({
 	content: {
@@ -7,7 +8,9 @@ const content = system({
 	}
 });
 
-const Icon = styled.span`
+const Icon = styled.span.withConfig({
+	shouldForwardProp: (prop, defaultValidatorFn) => !invalidHTMLProps.includes(prop) && defaultValidatorFn(prop),
+})`
 	color: inherit;
 	font-size: inherit;
 	${compose(space, layout, content, verticalAlign, typography)}

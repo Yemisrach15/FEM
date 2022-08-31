@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from './styles';
-import { Attribution, Footer, Header, Main } from './components/index';
+import { Footer, Header, Main } from './components/index';
 
 function App() {
 	return (
@@ -9,7 +9,6 @@ function App() {
 			<Header />
 			<Main />
 			<Footer />
-			<Attribution />
 		</ThemeProvider>
 	);
 }

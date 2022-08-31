@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { color, layout, space, compose, typography, system, left, top, right, bottom } from 'styled-system';
+import { invalidHTMLProps } from './constants';
 
 const content = system({
 	content: {
@@ -7,7 +8,9 @@ const content = system({
 	}
 });
 
-const StyledAnnotatedText = styled.p`
+const StyledAnnotatedText = styled.p.withConfig({
+	shouldForwardProp: (prop, defaultValidatorFn) => !invalidHTMLProps.includes(prop) && defaultValidatorFn(prop),
+})`
 	position: relative;
 	&:before {
 		left: 0;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { color, space, layout, compose } from 'styled-system';
 import { Button, Logo, Container, Flex, TextTile, Heading, Paragraph, Image } from './blocks';
 
@@ -11,7 +11,7 @@ export default function Header() {
 		<HeaderStyled bg={'netural100'} py={['1.3em', null, 6]}>
 			<Container width={['medium', 'extraSmall', 'small']}>
 				<Flex as='nav' gap={'1em'} mb={[9, null, '3.8em']}>
-					<Logo width={['5.8em', null, 11]} src='./images/logo.svg' />
+					<Logo width={['5.8em', null, 11]} src='./images/logo.svg' alt='Huddle Logo' />
 					<Button
 						py={'0.6em'}
 						px={[5, 5, 8]}
@@ -65,7 +65,7 @@ export default function Header() {
 						mb={1}
 						width={{ xs: '87%', md: '40%', lg: '54%', hybrid: '45%' }}
 						src='./images/illustration-mockups.svg'
-						alt=''
+						alt='Illustration mockups'
 					/>
 				</Flex>
 			</Container>

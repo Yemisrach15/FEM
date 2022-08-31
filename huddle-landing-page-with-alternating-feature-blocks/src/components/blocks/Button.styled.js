@@ -1,7 +1,10 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { space, layout, typography, border, borderColor, variant, shadow, compose } from 'styled-system';
+import { invalidHTMLProps } from './constants';
 
-const Button = styled.a`
+const Button = styled.a.withConfig({
+	shouldForwardProp: (prop, defaultValidatorFn) => !invalidHTMLProps.includes(prop) && defaultValidatorFn(prop),
+})`
 	text-decoration: none;
 	&:hover {
 		opacity: 0.75;

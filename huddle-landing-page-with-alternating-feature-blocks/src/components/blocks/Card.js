@@ -1,8 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { border, color, space, layout, shadow, compose } from 'styled-system';
 import { Flex, Heading, Image, Paragraph, TextTile } from './';
+import { invalidHTMLProps } from './constants';
 
-const CardStyled = styled.section`
+const CardStyled = styled.article.withConfig({
+	shouldForwardProp: (prop, defaultValidatorFn) => !invalidHTMLProps.includes(prop) && defaultValidatorFn(prop),
+})`
 	&:hover {
 		transform: scale(1.03);
 		transition: transform ease-in-out 0.2s;
@@ -10,7 +13,7 @@ const CardStyled = styled.section`
 	${compose(border, color, space, shadow, layout)}
 `;
 
-export default function Card({ src, heading, body, reverse }) {
+export default function Card({ src, alt, heading, body, reverse }) {
 	const direction = reverse ? 'row-reverse' : 'row';
 
 	return (
@@ -28,7 +31,7 @@ export default function Card({ src, heading, body, reverse }) {
 				flexDirection={['column', 'column', `${direction}`]}
 				alignItems='center'
 				gap={{ xs: 6, sm: 6, md: null, lg: '16%', hybrid: '16%' }}>
-				<Image width={['84%', null, '38%']} src={src} alt='' />
+				<Image width={['84%', null, '38%']} src={src} alt={alt} />
 				<TextTile textAlign={['center', 'center', 'left']}>
 					<Heading
 						as={'h2'}

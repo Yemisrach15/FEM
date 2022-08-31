@@ -11,7 +11,7 @@ export default function Attribution() {
 					rel='noreferrer'>
 					Frontend Mentor
 				</a>
-				. Coded by <a href='#'>Yemisrach15</a>.
+				. Coded by <a href='https://github.com/Yemisrach15/FEM'>Yemisrach15</a>.
 			</p>
 		</StyledAttribution>
 	);
