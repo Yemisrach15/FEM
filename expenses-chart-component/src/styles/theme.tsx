@@ -11,6 +11,9 @@ const theme: DefaultTheme = {
 		cream: 'hsl(27, 66%, 92%)',
 		paleOrange: 'hsl(33, 100%, 98%)',
 	},
+	fonts: {
+		primary: "'DM Sans', sans-serif",
+	}
 }
 
 export default theme;

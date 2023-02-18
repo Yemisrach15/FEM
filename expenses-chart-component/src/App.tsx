@@ -1,26 +1,27 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { BarChart, Container, Header, Main, Footer } from './components';
-import data from './data.json';
+import { BarChart, ChartContainer, Container, Footer, Header, HintText, LineChart, Main } from './components';
+import dataJson from './data.json';
 import GlobalStyle from './styles/global-style';
 import theme from './styles/theme';
 
 function App() {
-  const chartData = data.map((d) => {
+	const [toggleChart, setToggleChart] = React.useState<boolean>(true);
+  const data = dataJson.map((d) => {
     if (d.day === new Date().toDateString().slice(0, 3).toLocaleLowerCase()) {
       return {
-        label: d.day,
-        data: d.amount,
         backgroundColor: theme.colors.secondary,
+        data: d.amount,
         hoverBackgroundColor: theme.colors.secondaryHover,
+        label: d.day,
       };
     }
 
     return {
-      label: d.day,
-      data: d.amount,
       backgroundColor: theme.colors.primary,
+      data: d.amount,
       hoverBackgroundColor: theme.colors.primaryHover,
+      label: d.day,
     };
   });
 
@@ -30,9 +31,14 @@ function App() {
       <Container>
         <Header />
         <Main>
-          <BarChart id="spending-chart" dataset={chartData} />
+					<ChartContainer onClick={() => setToggleChart(!toggleChart)}>
+						{
+							toggleChart ? <BarChart id="spending-chart" dataset={data} /> : <LineChart id="spending-chart" dataset={data} />
+						}
+					</ChartContainer>
         </Main>
         <Footer />
+				<HintText />
       </Container>
     </ThemeProvider>
   );

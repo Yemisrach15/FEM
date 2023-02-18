@@ -46,7 +46,7 @@ const Header = () => {
         <p>$921.48</p>
       </div>
       <div>
-				<img src={logo} alt="" />
+				<img src={logo} height={44} width={50} alt="" />
 			</div>
     </StyledHeader>
   );

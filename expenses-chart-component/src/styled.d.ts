@@ -12,5 +12,8 @@ declare module 'styled-components' {
 			cream: string;
 			paleOrange: string;
     };
+		fonts: {
+			primary: string;
+		}
   }
 }
