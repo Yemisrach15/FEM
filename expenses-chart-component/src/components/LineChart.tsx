@@ -14,11 +14,11 @@ const LineChart = (props: ChartProps) => {
         font: {
           family: theme.fonts.primary,
         },
-				layout: {
-					padding: {
-						top: 16,
-					},
-				},
+        layout: {
+          padding: {
+            top: 16,
+          },
+        },
         plugins: {
           legend: {
             display: false,
@@ -26,7 +26,7 @@ const LineChart = (props: ChartProps) => {
           tooltip: {
             backgroundColor: theme.colors.darkBrown,
             bodyFont: {
-							family: theme.fonts.primary,
+              family: theme.fonts.primary,
               size: 12,
             },
             callbacks: {
@@ -68,11 +68,11 @@ const LineChart = (props: ChartProps) => {
               display: false,
             },
             ticks: {
-							font: {
-								family: theme.fonts.primary,
-								size: 9,
+              font: {
+                family: theme.fonts.primary,
+                size: 9,
               },
-							padding: 0,
+              padding: 0,
             },
           },
         },
@@ -84,10 +84,10 @@ const LineChart = (props: ChartProps) => {
             data: props.dataset.map((d) => d.data),
             backgroundColor: props.dataset.map((d) => d.backgroundColor),
             hoverBackgroundColor: props.dataset.map((d) => d.hoverBackgroundColor),
-						borderWidth: 1,
-						pointBorderColor: 'transparent',
-						pointRadius: 5,
-						tension: 0.3,
+            borderWidth: 1,
+            pointBorderColor: 'transparent',
+            pointRadius: 5,
+            tension: 0.3,
           },
         ],
       },
@@ -98,11 +98,7 @@ const LineChart = (props: ChartProps) => {
     };
   }, []);
 
-  return (
-    <div>
-      <canvas id={props.id} ref={chartRef} />
-    </div>
-  );
+  return <canvas id={props.id} ref={chartRef} />;
 };
 
 export default LineChart;

@@ -14,11 +14,11 @@ const BarChart = (props: ChartProps) => {
         font: {
           family: theme.fonts.primary,
         },
-				layout: {
-					padding: {
-						top: 16,
-					},
-				},
+        layout: {
+          padding: {
+            top: 16,
+          },
+        },
         plugins: {
           legend: {
             display: false,
@@ -26,7 +26,7 @@ const BarChart = (props: ChartProps) => {
           tooltip: {
             backgroundColor: theme.colors.darkBrown,
             bodyFont: {
-							family: theme.fonts.primary,
+              family: theme.fonts.primary,
               size: 12,
             },
             callbacks: {
@@ -68,11 +68,11 @@ const BarChart = (props: ChartProps) => {
               display: false,
             },
             ticks: {
-							font: {
-								family: theme.fonts.primary,
-								size: 9,
+              font: {
+                family: theme.fonts.primary,
+                size: 9,
               },
-							padding: 0,
+              padding: 0,
             },
           },
         },
@@ -96,11 +96,7 @@ const BarChart = (props: ChartProps) => {
     };
   }, []);
 
-  return (
-    <div>
-      <canvas id={props.id} ref={chartRef} />
-    </div>
-  );
+  return <canvas id={props.id} ref={chartRef} />;
 };
 
 export default BarChart;

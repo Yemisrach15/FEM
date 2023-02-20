@@ -1,12 +1,21 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { BarChart, ChartContainer, Container, Footer, Header, HintText, LineChart, Main } from './components';
+import {
+  BarChart,
+  ChartContainer,
+  Container,
+  Footer,
+  Header,
+  HintText,
+  LineChart,
+  Main,
+} from './components';
 import dataJson from './data.json';
 import GlobalStyle from './styles/global-style';
 import theme from './styles/theme';
 
 function App() {
-	const [toggleChart, setToggleChart] = React.useState<boolean>(true);
+  const [toggleChart, setToggleChart] = React.useState<boolean>(true);
   const data = dataJson.map((d) => {
     if (d.day === new Date().toDateString().slice(0, 3).toLocaleLowerCase()) {
       return {
@@ -29,16 +38,18 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Container>
+        <HintText />
         <Header />
         <Main>
-					<ChartContainer onClick={() => setToggleChart(!toggleChart)}>
-						{
-							toggleChart ? <BarChart id="spending-chart" dataset={data} /> : <LineChart id="spending-chart" dataset={data} />
-						}
-					</ChartContainer>
+          <ChartContainer onClick={() => setToggleChart(!toggleChart)}>
+            {toggleChart ? (
+              <BarChart id="spending-chart" dataset={data} />
+            ) : (
+              <LineChart id="spending-chart" dataset={data} />
+            )}
+          </ChartContainer>
         </Main>
         <Footer />
-				<HintText />
       </Container>
     </ThemeProvider>
   );
