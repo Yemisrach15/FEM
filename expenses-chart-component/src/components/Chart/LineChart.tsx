@@ -1,15 +1,15 @@
 import React from 'react';
 import Chart from 'chart.js/auto';
-import { ChartProps } from '../types';
-import theme from '../styles/theme';
+import { ChartProps } from './types';
+import theme from '../../styles/theme';
 
-const BarChart = (props: ChartProps) => {
+const LineChart = (props: ChartProps) => {
   const chartRef = React.createRef<HTMLCanvasElement>();
 
   React.useEffect(() => {
     const ctx = chartRef.current?.getContext('2d');
-    const barChart = new Chart(ctx!, {
-      type: 'bar',
+    const lineChart = new Chart(ctx!, {
+      type: 'line',
       options: {
         font: {
           family: theme.fonts.primary,
@@ -84,19 +84,21 @@ const BarChart = (props: ChartProps) => {
             data: props.dataset.map((d) => d.data),
             backgroundColor: props.dataset.map((d) => d.backgroundColor),
             hoverBackgroundColor: props.dataset.map((d) => d.hoverBackgroundColor),
-            borderRadius: 3,
-            borderSkipped: false,
+            borderWidth: 1,
+            pointBorderColor: 'transparent',
+            pointRadius: 5,
+            tension: 0.3,
           },
         ],
       },
     });
 
     return () => {
-      barChart.destroy();
+      lineChart.destroy();
     };
   }, []);
 
   return <canvas id={props.id} ref={chartRef} />;
 };
 
-export default BarChart;
+export default LineChart;

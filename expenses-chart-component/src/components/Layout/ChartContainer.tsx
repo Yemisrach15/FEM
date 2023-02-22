@@ -1,4 +1,4 @@
-import { ChartContainerProps } from '../types';
+import { ChartContainerProps } from './types';
 
 const ChartContainer = (props: ChartContainerProps) => {
   return (

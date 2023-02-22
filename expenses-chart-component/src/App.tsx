@@ -11,8 +11,7 @@ import {
   Main,
 } from './components';
 import dataJson from './data.json';
-import GlobalStyle from './styles/global-style';
-import theme from './styles/theme';
+import { GlobalStyle, theme } from './styles';
 
 function App() {
   const [toggleChart, setToggleChart] = React.useState<boolean>(true);
