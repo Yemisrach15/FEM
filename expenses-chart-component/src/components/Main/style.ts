@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexProps } from "./types";
+import { FlexProps, ParagraphProps } from "./types";
 
 export const TitleL2 = styled.h2`
 	color: ${({ theme }) => theme.colors.darkBrown};
@@ -10,10 +10,24 @@ export const TitleL2 = styled.h2`
 
 export const Flex = styled.div<FlexProps>`
 	display: flex;
-	flex-direction: ${({ $direction }) => $direction};
-	align-items: ${({ alignItems }) => alignItems};
-	justify-content: ${({ justifyContent }) => justifyContent};
-	gap: ${({ gap }) => gap};
+	flex-direction: ${({ $direction }) => $direction[1]};
+	align-items: ${({ $alignItems }) => $alignItems[1]};
+	justify-content: ${({ $justifyContent }) => $justifyContent[1]};
+	gap: ${({ $gap }) => $gap && $gap[1]};
+
+	@media screen and (max-width: 375px) {
+		flex-direction: ${({ $direction }) => $direction[0]};
+		align-items: ${({ $alignItems }) => $alignItems[0]};
+		justify-content: ${({ $justifyContent }) => $justifyContent[0]};
+		gap: ${({ $gap }) => $gap && $gap[0]};
+	}
+`;
+
+export const Text = styled.p<ParagraphProps>`
+	color: ${({ $color }) => $color};
+	font-size: ${({ $fontSize }) => $fontSize};
+	font-weight: ${({ $fontWeight }) => $fontWeight};
+	text-align: ${({ $textAlign }) => $textAlign};
 `;
 
 export const StyledMain = styled.main`
@@ -28,49 +42,19 @@ export const StyledMain = styled.main`
 	margin-top: 1.2rem;
 
 	& > p:first-child {
-		color: ${({ theme }) => theme.colors.mediumBrown};
-		font-size: 0.65rem;
 		margin-top: 1.2rem;
 	}
 
 	& > div {
-		/* display: flex;
-		justify-content: space-between; */
-
-		@media screen and (max-width: 375px) {
-			align-items: flex-start;
-			flex-direction: column;
-		}
-
-		& > p:first-child {
-			color: ${({ theme }) => theme.colors.darkBrown};
-			font-size: 1.7rem;
-			font-weight: 700;
-		}
-
 		& > p:last-child {
-			align-items: flex-end;
-			display: flex;
-			flex-direction: column;
-			gap: 0.15rem;
-			justify-content: center;
 			text-align: end;
 
 			@media screen and (max-width: 375px) {
-				align-items: flex-start;
 				border-top: 1px solid ${({ theme }) => theme.colors.cream};
 				margin-top: 1rem;
 				padding-top: 1rem;
 				width: 100%;
 			}
-
-			& > * {
-				font-size: 0.6rem;
-			}
-		}
-
-		& strong {
-			color: ${({ theme }) => theme.colors.darkBrown};
 		}
 	}
 }
