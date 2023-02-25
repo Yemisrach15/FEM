@@ -21,7 +21,9 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	#root {
-		width: 100%;
+		margin: 0 auto;
+		max-width: 341px;
+		width: 90%;
 	}
 `;
 

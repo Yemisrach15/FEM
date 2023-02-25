@@ -1,14 +1,14 @@
 import React from 'react';
 import { theme } from '@/styles';
 import { ContainerProps } from '@/components/Layout/types';
-import { Flex, StyledMain, Text, TitleL2 } from './style';
+import { ChartCaption, Flex, StyledMain, Text } from './style';
 
 const Main = ({ children }: ContainerProps) => {
   return (
     <StyledMain>
-      <TitleL2>Spending - Last 7 days</TitleL2>
+      <Text as='h2' $color={theme.colors.darkBrown} $fontSize='1.2rem'>Spending - Last 7 days</Text>
       {children}
-      <div>
+      <ChartCaption>
         <Text $color={theme.colors.mediumBrown} $fontSize="0.65rem">
           Total this month
         </Text>
@@ -35,7 +35,7 @@ const Main = ({ children }: ContainerProps) => {
             </Text>
           </Flex>
         </Flex>
-      </div>
+      </ChartCaption>
     </StyledMain>
   );
 };

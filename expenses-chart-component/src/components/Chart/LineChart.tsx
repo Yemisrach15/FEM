@@ -11,6 +11,7 @@ const LineChart = (props: ChartProps) => {
     const lineChart = new Chart(ctx!, {
       type: 'line',
       options: {
+				maintainAspectRatio: false,
         font: {
           family: theme.fonts.primary,
         },

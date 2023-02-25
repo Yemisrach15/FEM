@@ -11,6 +11,7 @@ const BarChart = (props: ChartProps) => {
 		const barChart = new Chart(ctx!, {
 			type: 'bar',
 			options: {
+				maintainAspectRatio: false,
 				font: {
 					family: theme.fonts.primary,
 				},

@@ -14,10 +14,6 @@ export const StyledHeader = styled.header`
 		letter-spacing: -0.5px;
 	}
 
-	& img {
-		width: 70%;
-	}
-
 	& > div {
 		display: flex;
 	}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactComponent as IconX } from '@/assets/icons/icon-remove.svg';
-import { StickyTopHint } from './style';
+import { SrOnlyText, StickyTopHint } from './style';
 
 const HintText = () => {
   const boxRef = React.useRef<HTMLDivElement>(null);
@@ -11,9 +11,9 @@ const HintText = () => {
   return (
     <StickyTopHint ref={boxRef}>
       <p>Hint: Click on the chart to toggle visualization type</p>
-      <button onClick={onXBtnClick}>
-        <span>Close</span>
-        <IconX />
+      <button onClick={onXBtnClick} title="Dismiss">
+        <SrOnlyText>Dismiss</SrOnlyText>
+        <IconX aria-hidden="true" focusable="false"/>
       </button>
     </StickyTopHint>
   );

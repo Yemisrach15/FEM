@@ -12,7 +12,7 @@ const slideUp = keyframes`
 	}
 `;
 
-const srOnly = css`
+export const SrOnlyText = styled.span`
 	clip-path: inset(50%);
 	clip: rect(0 0 0 0);
 	height: 1px;
@@ -20,7 +20,7 @@ const srOnly = css`
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
-`
+`;
 
 export const StickyTopHint = styled.div`
   align-items: center;
@@ -53,9 +53,5 @@ export const StickyTopHint = styled.div`
     position: absolute;
     right: 0.8rem;
     width: 0.5rem;
-  }
-
-  & span {
-    ${srOnly}
   }
 `;

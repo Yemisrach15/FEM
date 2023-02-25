@@ -3,7 +3,6 @@ import { ThemeProvider } from 'styled-components';
 import {
   BarChart,
   ChartContainer,
-  Container,
   Footer,
   Header,
   HintText,
@@ -36,20 +35,18 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Container>
-        <HintText />
-        <Header />
-        <Main>
-          <ChartContainer onClick={() => setToggleChart(!toggleChart)}>
-            {toggleChart ? (
-              <BarChart id="spending-chart" dataset={data} />
-            ) : (
-              <LineChart id="spending-chart" dataset={data} />
-            )}
-          </ChartContainer>
-        </Main>
-        <Footer />
-      </Container>
+			<HintText />
+			<Header />
+			<Main>
+				<ChartContainer onClick={() => setToggleChart(!toggleChart)}>
+					{toggleChart ? (
+						<BarChart id="spending-chart" dataset={data} />
+					) : (
+						<LineChart id="spending-chart" dataset={data} />
+					)}
+				</ChartContainer>
+			</Main>
+			<Footer />
     </ThemeProvider>
   );
 }
