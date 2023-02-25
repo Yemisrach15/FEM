@@ -1,6 +1,6 @@
 import React from 'react';
-import { theme } from '../../styles';
-import { ContainerProps } from '../Layout/types';
+import { theme } from '@/styles';
+import { ContainerProps } from '@/components/Layout/types';
 import { Flex, StyledMain, Text, TitleL2 } from './style';
 
 const Main = ({ children }: ContainerProps) => {

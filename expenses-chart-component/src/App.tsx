@@ -9,9 +9,9 @@ import {
   HintText,
   LineChart,
   Main,
-} from './components';
-import dataJson from './data.json';
-import { GlobalStyle, theme } from './styles';
+} from '@/components';
+import dataJson from '@/data.json';
+import { GlobalStyle, theme } from '@/styles';
 
 function App() {
   const [toggleChart, setToggleChart] = React.useState<boolean>(true);

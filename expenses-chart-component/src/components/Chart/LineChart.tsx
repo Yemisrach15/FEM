@@ -1,7 +1,7 @@
 import React from 'react';
 import Chart from 'chart.js/auto';
 import { ChartProps } from './types';
-import theme from '../../styles/theme';
+import theme from '@/styles/theme';
 
 const LineChart = (props: ChartProps) => {
   const chartRef = React.createRef<HTMLCanvasElement>();

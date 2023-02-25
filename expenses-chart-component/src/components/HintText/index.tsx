@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as IconX } from '../../assets/icons/icon-remove.svg';
+import { ReactComponent as IconX } from '@/assets/icons/icon-remove.svg';
 import { StickyTopHint } from './style';
 
 const HintText = () => {
