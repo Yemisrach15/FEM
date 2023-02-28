@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./docs/images/screenshot.png)
+![](./images/screenshot.png)
 
 ### Links
 
@@ -90,11 +90,11 @@ Based on my light search, accessibility for the `Canvas` element is a concern th
 
 I hide the table with `CSS` for visual users while making it accessible to screen readers for visually impaired users. Currently, the `canvas` element is not interactive, meaning keyboard users can not access the value you get when hovering over the bars. To overcome this, I made the table focusable so that it can be made visible by detecting when it receives focus. The `table` has a `tabindex` of `0` to make it focusable.
 
-![](./docs/images/screenshot-table.png)
+![](./images/screenshot-table.png)
 
 > As a bonus, I added a line chart to the project. I used the same approach as the bar chart. The only difference is that I used the `line` type instead of `bar` and adjusted some options. You can click on the chart to toggle between the two. 
 
-![](./docs/images/screenshot-line.png)
+![](./images/screenshot-line.png)
 
 ### Useful resources
 
