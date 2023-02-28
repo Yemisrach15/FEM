@@ -2,6 +2,10 @@
 
 This repo contains all the solutions I have done for the frontendmentor.io challenges. 
 
+#### Expenses chart component
+:arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/FEM/tree/main/expenses-chart-component)** <br>
+:arrow_upper_right: **[Live Site URL](https://fem-expenses-chart-component-yemisrach15.vercel.app/)**
+
 #### Interactive comments section
 :arrow_upper_right: **[Repository URL](https://github.com/Yemisrach15/interactive-comments-section)** <br>
 :arrow_upper_right: **[Live Site URL](https://interactive-comment-section-tawny.vercel.app/)**
