@@ -26,6 +26,7 @@ yarn-error.log*
 .vscode
 .env
 *.md
+!README.md
 
 design/
 .vercel
