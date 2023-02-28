@@ -6,11 +6,14 @@ import { StickyTopHint } from './style';
 const HintText = () => {
   const boxRef = React.useRef<HTMLDivElement>(null);
   const onXBtnClick = () => {
-    if (boxRef.current) boxRef.current.style.animationPlayState = 'running';
+    if (boxRef.current) {
+			boxRef.current.style.animationPlayState = 'running';
+			boxRef.current.style.display = 'none';
+		};
   };
 
   return (
-    <StickyTopHint ref={boxRef}>
+    <StickyTopHint ref={boxRef} aria-hidden='true'>
       <p>Hint: Click on the chart to toggle visualization type</p>
       <button onClick={onXBtnClick} title="Dismiss">
         <SrOnlyText>Dismiss</SrOnlyText>

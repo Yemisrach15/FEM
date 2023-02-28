@@ -104,26 +104,23 @@ const BarChart = (props: ChartProps) => {
         <Text as="h2" $color={theme.colors.darkBrown} $fontSize="1.2rem">
           Spending - Last 7 days
         </Text>
-        <Table>
+        <Table tabIndex={0}>
           <tbody>
             <tr>
               <th>Day</th>
               <th>Amount in Dollars</th>
             </tr>
-            {props.dataset.map((d) => (
-              <tr>
+            {props.dataset.map((d, i) => (
+              <tr key={i}>
                 <td>{d.label}</td>
                 <td>{d.data}</td>
               </tr>
             ))}
           </tbody>
         </Table>
-        <SrOnlyText as={'p'}>
-          Visual chart representation of the data above is provided below.
-        </SrOnlyText>
       </figcaption>
       <div>
-        <canvas id={props.id} ref={chartRef}>
+        <canvas id={props.id} ref={chartRef} aria-hidden='true'>
           {props.description}
         </canvas>
       </div>
