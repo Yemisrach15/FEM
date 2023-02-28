@@ -1,14 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import {
-  BarChart,
-  ChartContainer,
-  Footer,
-  Header,
-  HintText,
-  LineChart,
-  Main,
-} from '@/components';
+import { BarChart, ChartContainer, Footer, Header, HintText, LineChart, Main } from '@/components';
 import dataJson from '@/data.json';
 import { GlobalStyle, theme } from '@/styles';
 
@@ -35,18 +27,26 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-			<HintText />
-			<Header />
-			<Main>
-				<ChartContainer onClick={() => setToggleChart(!toggleChart)}>
-					{toggleChart ? (
-						<BarChart id="spending-chart" dataset={data} />
-					) : (
-						<LineChart id="spending-chart" dataset={data} />
-					)}
-				</ChartContainer>
-			</Main>
-			<Footer />
+      <HintText />
+      <Header />
+      <Main>
+        <ChartContainer onClick={() => setToggleChart(!toggleChart)}>
+          {toggleChart ? (
+            <BarChart
+              id="spending-chart"
+              dataset={data}
+              description="Bar chart showing spending in dollars of last seven days from Monday to Sunday. You need to enable javascript if disabled or update your browser to view the chart."
+            />
+          ) : (
+            <LineChart
+              id="spending-chart"
+              dataset={data}
+              description="Line chart showing spending in dollars of last seven days from Monday to Sunday. You need to enable javascript if disabled or update your browser to view the chart."
+            />
+          )}
+        </ChartContainer>
+      </Main>
+      <Footer />
     </ThemeProvider>
   );
 }

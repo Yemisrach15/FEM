@@ -1,29 +1,6 @@
 import styled from "styled-components";
-import { FlexProps, ParagraphProps } from "./types";
 
-export const Flex = styled.div<FlexProps>`
-	display: flex;
-	flex-direction: ${({ $direction }) => $direction[1]};
-	align-items: ${({ $alignItems }) => $alignItems[1]};
-	justify-content: ${({ $justifyContent }) => $justifyContent[1]};
-	gap: ${({ $gap }) => $gap && $gap[1]};
-
-	@media screen and (max-width: 375px) {
-		flex-direction: ${({ $direction }) => $direction[0]};
-		align-items: ${({ $alignItems }) => $alignItems[0]};
-		justify-content: ${({ $justifyContent }) => $justifyContent[0]};
-		gap: ${({ $gap }) => $gap && $gap[0]};
-	}
-`;
-
-export const Text = styled.p<ParagraphProps>`
-	color: ${({ $color }) => $color};
-	font-size: ${({ $fontSize }) => $fontSize};
-	font-weight: ${({ $fontWeight }) => $fontWeight};
-	text-align: ${({ $textAlign }) => $textAlign};
-`;
-
-export const ChartCaption = styled.div`
+export const ChartSummary = styled.div`
 	border-top: solid 1px ${({ theme }) => theme.colors.cream};
 	margin-top: 1.2rem;
 

@@ -1,14 +1,14 @@
 import React from 'react';
+import { ChartSummary, StyledMain } from './style';
+import { ContainerProps } from '@/types';
+import { Flex, Text } from '@/components';
 import { theme } from '@/styles';
-import { ContainerProps } from '@/components/Layout/types';
-import { ChartCaption, Flex, StyledMain, Text } from './style';
 
 const Main = ({ children }: ContainerProps) => {
   return (
     <StyledMain>
-      <Text as='h2' $color={theme.colors.darkBrown} $fontSize='1.2rem'>Spending - Last 7 days</Text>
       {children}
-      <ChartCaption>
+      <ChartSummary>
         <Text $color={theme.colors.mediumBrown} $fontSize="0.65rem">
           Total this month
         </Text>
@@ -35,7 +35,7 @@ const Main = ({ children }: ContainerProps) => {
             </Text>
           </Flex>
         </Flex>
-      </ChartCaption>
+      </ChartSummary>
     </StyledMain>
   );
 };

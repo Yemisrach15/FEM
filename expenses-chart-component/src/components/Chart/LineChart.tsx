@@ -1,7 +1,8 @@
 import React from 'react';
 import Chart from 'chart.js/auto';
 import { ChartProps } from './types';
-import theme from '@/styles/theme';
+import { theme } from '@/styles';
+import { SrOnlyText, Table, Text } from '@/components';
 
 const LineChart = (props: ChartProps) => {
   const chartRef = React.createRef<HTMLCanvasElement>();
@@ -11,7 +12,7 @@ const LineChart = (props: ChartProps) => {
     const lineChart = new Chart(ctx!, {
       type: 'line',
       options: {
-				maintainAspectRatio: false,
+        maintainAspectRatio: false,
         font: {
           family: theme.fonts.primary,
         },
@@ -99,7 +100,37 @@ const LineChart = (props: ChartProps) => {
     };
   }, []);
 
-  return <canvas id={props.id} ref={chartRef} />;
+  return (
+    <>
+      <figcaption>
+        <Text as="h2" $color={theme.colors.darkBrown} $fontSize="1.2rem">
+          Spending - Last 7 days
+        </Text>
+        <Table>
+          <tbody>
+            <tr>
+              <th>Day</th>
+              <th>Amount in Dollars</th>
+            </tr>
+            {props.dataset.map((d) => (
+              <tr>
+                <td>{d.label}</td>
+                <td>{d.data}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+        <SrOnlyText as={'p'}>
+          Visual chart representation of the data above is provided below.
+        </SrOnlyText>
+      </figcaption>
+      <div>
+        <canvas id={props.id} ref={chartRef}>
+          {props.description}
+        </canvas>
+      </div>
+    </>
+  );
 };
 
 export default LineChart;

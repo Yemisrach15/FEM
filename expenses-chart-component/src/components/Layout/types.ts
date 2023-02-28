@@ -1,9 +1,5 @@
-interface ContainerProps {
-	children: React.ReactNode;
-}
+import { ContainerProps } from "@/types";
 
-interface ChartContainerProps extends ContainerProps {
+export interface ChartContainerProps extends ContainerProps {
 	onClick: () => void;
 }
-
-export type { ChartContainerProps, ContainerProps };

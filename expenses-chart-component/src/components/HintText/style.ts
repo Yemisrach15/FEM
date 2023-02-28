@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const slideUp = keyframes`
 	0% {
@@ -10,16 +10,6 @@ const slideUp = keyframes`
 		opacity: 0;
 		transform: translateY(-2rem);
 	}
-`;
-
-export const SrOnlyText = styled.span`
-	clip-path: inset(50%);
-	clip: rect(0 0 0 0);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
 `;
 
 export const StickyTopHint = styled.div`

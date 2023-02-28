@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReactComponent as IconX } from '@/assets/icons/icon-remove.svg';
-import { SrOnlyText, StickyTopHint } from './style';
+import { SrOnlyText } from '@/components';
+import { StickyTopHint } from './style';
 
 const HintText = () => {
   const boxRef = React.useRef<HTMLDivElement>(null);
